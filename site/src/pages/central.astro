@@ -1,0 +1,131 @@
+---
+// Central: painel do que falta no livro. Só leitura.
+// O Pedro olha aqui e conversa no terminal; atualiza src/data/central.json.
+import Livro from '../layouts/Livro.astro';
+import db from '../data/central.json';
+import { capitulos } from '../data/capitulos.js';
+
+const brutos = import.meta.glob(['./*.md', './classes/*.md'], { query: '?raw', import: 'default', eager: true });
+const ST = ['fechado', 'consenso', 'proposta', 'aberto'];
+const contar = (t, re) => (t.match(re) || []).length;
+const contarCap = (c) => {
+  const arqs = c.arquivo === 'classes' ? [c.arquivo, ...capitulos.filter((x) => x.arquivo?.startsWith('classes/')).map((x) => x.arquivo)] : [c.arquivo];
+  return arqs.map((a) => brutos[`./${a}.md`] ?? '').join('\n');
+};
+const caps = capitulos
+  .filter((c) => c.arquivo && !c.arquivo.startsWith('classes/') && !['index', 'decisoes'].includes(c.arquivo))
+  .map((c) => {
+    const t = contarCap(c);
+    const n = Object.fromEntries(ST.map((k) => [k, contar(t, new RegExp(`class="st ${k}"`, 'g'))]));
+    return { ...c, n, total: ST.reduce((s, k) => s + n[k], 0) };
+  });
+const soma = Object.fromEntries(ST.map((k) => [k, caps.reduce((s, c) => s + c.n[k], 0)]));
+const total = ST.reduce((s, k) => s + soma[k], 0);
+const firmes = total ? Math.round(((soma.fechado + soma.consenso) / total) * 100) : 0;
+const cap = (arq) => capitulos.find((c) => c.arquivo === arq);
+const temas = [...new Set(db.falta.map((f) => f.tema))];
+const data = (iso) => iso.slice(0, 10).split('-').reverse().join('/');
+---
+<Livro title="Central" chap="Central">
+  <h2>Central</h2>
+  <p class="lede">O que falta para o livro ficar pronto. Olhe aqui e fale comigo no terminal.</p>
+
+  <div class="ct-num">
+    <div class="quente"><b>{db.falta.length}</b><span>decisões em aberto</span></div>
+    <div><b>{db.regras.length}</b><span>regras sem número</span></div>
+    <div><b>{db.decidido.length}</b><span>já decididas</span></div>
+    <div><b>{firmes}%</b><span>das regras firmes</span></div>
+  </div>
+
+  <h3>Páginas visuais</h3>
+  <p class="ct-meta">Tudo que eu desenhei para explicar. Abre numa aba nova.</p>
+  <div class="ct-pags">
+    {(db.paginas ?? []).map((p) => (
+      <a href={p.ver} target="_blank" rel="noopener"><b>{p.titulo} ↗</b><span>{p.texto}</span></a>
+    ))}
+  </div>
+
+  <h3>Falta decidir</h3>
+  {temas.map((t) => (
+    <div class="ct-grupo">
+      <h4>{t}</h4>
+      <ul class="ct-lista">
+        {db.falta.filter((f) => f.tema === t).map((f) => (
+          <li>
+            <span>{f.pergunta}</span>
+            <span class="ct-links">
+              {cap(f.onde) && <a href={cap(f.onde).href}>{cap(f.onde).label}</a>}
+              {f.ver && <a href={f.ver} target="_blank" rel="noopener">ver explicação ↗</a>}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+
+  <h3>Regras que ainda não têm número</h3>
+  <p class="ct-meta">Apareceram quando montamos a ficha.</p>
+  <ul class="ct-check">{db.regras.map((r) => <li>{r}</li>)}</ul>
+
+  <h3>Já decidido</h3>
+  <ul class="ct-feito">
+    {db.decidido.map((d) => (
+      <li><b>{d.titulo}</b> {d.texto} {d.ver && <a href={d.ver} target="_blank" rel="noopener">↗</a>}</li>
+    ))}
+  </ul>
+
+  <h3>Como está cada capítulo</h3>
+  <table class="ct-caps">
+    <tbody>
+      {caps.map((c) => (
+        <tr>
+          <td><a href={c.href}>{c.label}</a></td>
+          <td><div class="ct-barra">{(c.total ? ST : ['vazio']).map((k) => <i class={k} style={`flex:${c.n[k] ?? 1}`}></i>)}</div></td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+  <div class="legend">{ST.map((k) => <span><span class={`st ${k}`}>{k}</span> {soma[k]}</span>)}</div>
+
+  {db.ideias.length > 0 && <h3>Ideias guardadas</h3>}
+  {db.ideias.length > 0 && <ul class="ct-feito">{db.ideias.map((i) => <li><b>{i.titulo}</b> {i.texto}</li>)}</ul>}
+
+  <h3>Diário</h3>
+  <ol class="ct-diario">{[...db.diario].reverse().map((e) => <li><time>{data(e.em)}</time> {e.texto}</li>)}</ol>
+</Livro>
+
+<style is:global>
+  .ct-num{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:14px 0 8px}
+  .ct-num div{border:1px solid var(--rule);border-radius:6px;padding:12px 14px;background:var(--soft)}
+  .ct-num div.quente{border-color:var(--s-aberto)}
+  .ct-num div.quente b{color:var(--s-aberto)}
+  .ct-num b{display:block;font:800 32px/1.1 var(--display)}
+  .ct-num span{font-size:14px;color:var(--muted)}
+  .ct-pags{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:10px 0 18px}
+  .ct-pags a{display:block;border:2px solid var(--ink,currentColor);padding:12px 14px;text-decoration:none;color:inherit;background:var(--page)}
+  .ct-pags a:hover{background:var(--soft)}
+  .ct-pags b{display:block;margin-bottom:4px}
+  .ct-pags span{font-size:15px;color:var(--muted)}
+  .ct-grupo h4{margin-top:18px}
+  .ct-lista{list-style:none;padding:0;margin:0;display:grid;gap:8px;max-width:none}
+  .ct-lista li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 16px;align-items:baseline;border:1px solid var(--rule);border-left:4px solid var(--s-aberto);border-radius:6px;padding:10px 14px;background:var(--page);margin:0}
+  @media(max-width:640px){.ct-lista li{grid-template-columns:1fr}}
+  .ct-links{display:flex;gap:12px;flex-wrap:wrap;font-size:14px;white-space:nowrap}
+  .ct-meta{font-size:15px;color:var(--muted)}
+  .ct-check{list-style:none;padding:0;display:grid;gap:6px}
+  .ct-check li{padding-left:28px;position:relative;margin:0}
+  .ct-check li::before{content:"";position:absolute;left:0;top:5px;width:16px;height:16px;border:2px solid var(--muted);border-radius:3px}
+  .ct-feito{list-style:none;padding:0;display:grid;gap:6px}
+  .ct-feito li{padding-left:28px;position:relative;margin:0}
+  .ct-feito li::before{content:"✓";position:absolute;left:2px;top:0;color:var(--s-fechado);font-weight:700}
+  .ct-feito b{margin-right:4px}
+  .ct-caps{display:table}
+  .ct-caps td:last-child{width:55%}
+  .ct-barra{display:flex;height:10px;border-radius:99px;overflow:hidden;background:var(--soft);gap:2px}
+  .ct-barra i{display:block;min-width:0}
+  .ct-barra .fechado{background:var(--s-fechado)}.ct-barra .consenso{background:var(--s-consenso)}
+  .ct-barra .proposta{background:var(--s-proposta)}.ct-barra .aberto{background:var(--s-aberto)}.ct-barra .vazio{background:var(--rule)}
+  .ct-diario{list-style:none;padding:0}
+  .ct-diario li{padding:7px 0;border-bottom:1px solid var(--rule);margin:0}
+  .ct-diario time{font:500 13px var(--mono);color:var(--muted);margin-right:10px}
+</style>

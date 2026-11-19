@@ -1,0 +1,304 @@
+---
+// Modo folhear: o livro inteiro numa única caixa de colunas CSS.
+// Cada coluna é uma página; a "janela" mostra duas (ou uma, no celular)
+// e anda por translateX. Nada de medir página a página.
+import '../styles/livro.css';
+import '../styles/folhear.css';
+import { capitulos } from '../data/capitulos.js';
+import { abrir, pecadoDe } from '../lib/abertura.js';
+import { gravuras } from '../data/gravuras.js';
+
+const mods = import.meta.glob(['./*.md', './classes/*.md'], { eager: true });
+// compiledContent() devolve só o corpo do markdown, sem o layout da página.
+const caps = await Promise.all(
+  capitulos
+    .filter((c) => c.arquivo && mods[`./${c.arquivo}.md`])
+    .map(async (c) => {
+      const mod = mods[`./${c.arquivo}.md`];
+      const html = (await mod.compiledContent()).replaceAll(' loading="lazy"', '');
+      return { ...c, pecado: pecadoDe(mod.frontmatter), html: abrir(html, mod.frontmatter, gravuras[c.arquivo]) };
+    })
+);
+---
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Folhear · Penasia</title>
+  <meta name="description" content="O livro de Penasia em páginas, para folhear." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pirata+One&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+</head>
+<body class="fb-body">
+  <header class="fb-bar">
+    <div class="fb-g">
+      <a class="fb-bt" href="/" title="Início" aria-label="Início">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+      </a>
+      <button class="fb-bt" id="bIndice" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span>Índice</span>
+      </button>
+    </div>
+    <div class="fb-titulo" id="titulo" aria-live="polite" data-pecado="nenhum"><span>Capa</span></div>
+    <div class="fb-g fb-dir">
+      <button class="fb-bt" id="bPapel" type="button" title="Papel dia ou noite" aria-label="Alternar papel dia ou noite">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <div class="fb-modo" role="group" aria-label="Modo de leitura">
+        <span class="on"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h7a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H2zM22 5h-7a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h8z"/></svg>Livro</span>
+        <a href="/mundo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18H6zM9 7h6M9 11h6M9 15h4"/></svg>Contínuo</a>
+      </div>
+      <a class="fb-bt fb-central" href="/central"><span>Central</span></a>
+      <button class="fb-bt" id="bTela" type="button" title="Tela cheia" aria-label="Tela cheia">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="fb-palco" id="palco">
+    <button class="fb-seta" id="bAnt" type="button" aria-label="Página anterior">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+
+    <div class="fb-escala" id="escala">
+      <div class="fb-livro" id="livro" data-papel="dia" data-vista="capa">
+        <div class="fb-capa" aria-label="Capa">
+          <div class="fb-capa-moldura">
+            <div class="fb-capa-grav" aria-hidden="true"></div>
+            <div class="fb-capa-topo">Livro de regras</div>
+            <div class="fb-roda" aria-hidden="true">
+              <i class="ira"></i><i class="lux"></i><i class="pre"></i><i class="gan"></i><i class="inv"></i><i class="gul"></i><i class="org"></i>
+            </div>
+            <div class="fb-capa-nome">Penasia</div>
+            <div class="fb-capa-tag">Todo poder é crédito.<br />Toda dívida é cobrada.</div>
+            <div class="fb-capa-pe">Em escrita · v0.2</div>
+          </div>
+        </div>
+
+        <div class="fb-folha fb-esq"></div>
+        <div class="fb-folha fb-dir"></div>
+        <div class="fb-lombada"></div>
+        <div class="fb-cab fb-esq" id="cabE"></div>
+        <div class="fb-cab fb-dir" id="cabD"></div>
+        <div class="fb-num fb-esq" id="numE"></div>
+        <div class="fb-num fb-dir" id="numD"></div>
+
+        <div class="fb-janela" id="janela">
+          <div class="fb-fluxo" id="fluxo">
+            {caps.map(({ href, label, html, pecado }) => (
+              <section class="fb-cap" data-href={href} data-label={label.trim().replace(/^· /, '')} data-pecado={pecado}>
+                <Fragment set:html={html} />
+              </section>
+            ))}
+            <section class="fb-cap fb-fim" data-href="/central" data-label="Fim">
+              <p class="fb-fim-txt">Este livro ainda está sendo escrito.<br />O que falta decidir está na <a href="/central">Central</a>.</p>
+              <span id="sentinela"></span>
+            </section>
+          </div>
+        </div>
+
+        <div class="fb-vira" id="vira" aria-hidden="true"><i class="frente"></i><i class="verso"></i></div>
+      </div>
+    </div>
+
+    <button class="fb-seta" id="bProx" type="button" aria-label="Próxima página">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </main>
+
+  <footer class="fb-pe">
+    <input type="range" id="regua" min="0" max="1" value="0" step="1" aria-label="Posição no livro" />
+    <span id="pos" class="fb-pos">Capa</span>
+  </footer>
+
+  <dialog class="fb-indice" id="indice" aria-label="Índice">
+    <div class="fb-indice-topo">
+      <strong>Índice</strong>
+      <button type="button" class="fb-bt" id="fIndice" aria-label="Fechar índice">✕</button>
+    </div>
+    <ol id="listaIndice"></ol>
+  </dialog>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const livro = $('livro'), escala = $('escala'), fluxo = $('fluxo'), palco = $('palco');
+    const regua = $('regua'), vira = $('vira');
+    const secoes = [...fluxo.querySelectorAll('.fb-cap')];
+    const reduzir = matchMedia('(prefers-reduced-motion: reduce)');
+
+    const W = 560, H = 780;            // tamanho base de uma página (px)
+    let duplo = true, zoom = 1, total = 1, inicios = [], vista = 0, girando = false;
+
+    const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch {} };
+    const ler = (k) => { try { return localStorage.getItem(k); } catch { return null; } };
+
+    // vista 0 = capa; vista v>=1 = dupla (ou página) v-1
+    const paginaDaVista = (v) => (v <= 0 ? -1 : duplo ? (v - 1) * 2 : v - 1);
+    const vistaDaPagina = (p) => (p < 0 ? 0 : duplo ? Math.floor(p / 2) + 1 : p + 1);
+    const ultimaVista = () => vistaDaPagina(total - 1);
+
+    function medir() {
+      // posição horizontal (sem escala) de um ponto do fluxo => número da página
+      const base = fluxo.getBoundingClientRect().left;
+      const pag = (x) => Math.max(0, Math.floor(((x - base) / zoom + 1) / W));
+      inicios = secoes.map((s) => pag(s.getClientRects()[0]?.left ?? base));
+      total = pag($('sentinela').getBoundingClientRect().left) + 1;
+      regua.max = String(ultimaVista());
+      montarIndice();
+    }
+
+    function ajustar() {
+      const larg = innerWidth, alt = innerHeight - 56 - 52;
+      duplo = larg >= 900;
+      livro.classList.toggle('simples', !duplo);
+      const lw = duplo ? W * 2 : W;
+      const folga = duplo ? 140 : 16;
+      zoom = Math.min((larg - folga) / lw, alt / H, 1.35);
+      escala.style.width = lw * zoom + 'px';
+      escala.style.height = H * zoom + 'px';
+      livro.style.transform = `scale(${zoom})`;
+    }
+
+    function capituloDa(p) {
+      let i = 0;
+      for (let k = 0; k < inicios.length; k++) if (inicios[k] <= p) i = k;
+      return secoes[i];
+    }
+
+    function pintar() {
+      const p = paginaDaVista(vista);
+      livro.dataset.vista = vista === 0 ? 'capa' : 'miolo';
+      livro.style.translate = vista === 0 && duplo ? `${(-W / 2) * zoom}px 0` : '0 0';
+      fluxo.style.transform = `translateX(${-(Math.max(p, 0)) * W}px)`;
+      const rotulo = (n) => {
+        if (n < 0 || n >= total) return ['', ''];
+        const sec = capituloDa(n);
+        return [String(n + 1), inicios[secoes.indexOf(sec)] === n ? '' : sec.dataset.label.replace(/^[A-Z]+ · |^[IVX]+ · /, '')];
+      };
+      const [nE, cE] = rotulo(p), [nD, cD] = duplo ? rotulo(p + 1) : ['', ''];
+      $('numE').textContent = nE; $('cabE').textContent = cE;
+      $('numD').textContent = nD; $('cabD').textContent = cD;
+      if (p >= 0) $('cabE').dataset.pecado = capituloDa(p).dataset.pecado;
+      if (p + 1 < total) $('cabD').dataset.pecado = capituloDa(p + 1).dataset.pecado;
+      livro.classList.toggle('sem-dir', duplo && p + 1 >= total);
+      // se um capítulo abre na página da direita, ele dá o nome à dupla
+      const pt = duplo && p + 1 < total && inicios.includes(p + 1) ? p + 1 : p;
+      const t = vista === 0 ? 'Capa' : capituloDa(pt).dataset.label;
+      $('titulo').firstChild.textContent = innerWidth < 700 ? t.replace(/^[A-Z]+ · /, '') : t;
+      $('titulo').dataset.pecado = vista === 0 ? 'nenhum' : capituloDa(pt).dataset.pecado;
+      regua.value = String(vista);
+      $('pos').textContent = vista === 0 ? 'Capa' : duplo && p + 1 < total ? `${p + 1}–${p + 2} de ${total}` : `${p + 1} de ${total}`;
+      $('bAnt').disabled = vista === 0;
+      $('bProx').disabled = vista >= ultimaVista();
+      document.querySelectorAll('#listaIndice a').forEach((a) => {
+        a.toggleAttribute('aria-current', vista > 0 && capituloDa(p) === secoes[+a.dataset.i]);
+      });
+      if (vista > 0) history.replaceState(null, '', '#p' + (p + 1)); else history.replaceState(null, '', location.pathname);
+      guardar('penasia-pagina', String(p));
+    }
+
+    function ir(v, animar = true) {
+      v = Math.max(0, Math.min(ultimaVista(), v));
+      if (v === vista || girando) return;
+      const frente = v > vista;
+      const anima = animar && !reduzir.matches && Math.abs(v - vista) === 1 && vista !== 0 && v !== 0;
+      if (!anima) { vista = v; pintar(); return; }
+      girando = true;
+      vira.className = 'fb-vira ' + (duplo ? (frente ? 'para-esq' : 'para-dir') : 'simples');
+      const quadros = duplo
+        ? (frente ? [{ transform: 'perspective(4500px) rotateY(0deg)' }, { transform: 'perspective(4500px) rotateY(-180deg)' }] : [{ transform: 'perspective(4500px) rotateY(0deg)' }, { transform: 'perspective(4500px) rotateY(180deg)' }])
+        : [{ opacity: 1, transform: 'translateX(0)' }, { opacity: 0, transform: `translateX(${frente ? -40 : 40}px)` }];
+      const an = vira.animate(quadros, { duration: duplo ? 560 : 220, easing: 'cubic-bezier(.45,.05,.3,1)' });
+      setTimeout(() => { vista = v; pintar(); }, duplo ? 280 : 0);
+      an.onfinish = an.oncancel = () => { vira.className = 'fb-vira'; girando = false; };
+    }
+
+    function montarIndice() {
+      const ol = $('listaIndice');
+      ol.innerHTML = '';
+      secoes.forEach((s, i) => {
+        if (s.classList.contains('fb-fim')) return;
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = '#p' + (inicios[i] + 1);
+        a.dataset.i = String(i);
+        a.dataset.pecado = s.dataset.pecado;
+        a.innerHTML = `<span></span><i></i><b>${inicios[i] + 1}</b>`;
+        a.firstChild.textContent = s.dataset.label;
+        if (s.dataset.href.startsWith('/classes/')) li.className = 'sub';
+        a.addEventListener('click', (e) => { e.preventDefault(); $('indice').close(); ir(vistaDaPagina(inicios[i]), false); });
+        li.append(a);
+        ol.append(li);
+      });
+    }
+
+    // links internos do texto levam ao capítulo dentro do livro
+    fluxo.addEventListener('click', (e) => {
+      const a = e.target.closest('a[href^="/"]');
+      if (!a) return;
+      const i = secoes.findIndex((s) => s.dataset.href === a.getAttribute('href'));
+      if (i >= 0 && a.getAttribute('href') !== '/central') { e.preventDefault(); ir(vistaDaPagina(inicios[i]), false); }
+    });
+
+    $('bAnt').onclick = () => ir(vista - 1);
+    $('bProx').onclick = () => ir(vista + 1);
+    regua.oninput = () => ir(+regua.value, false);
+    $('bIndice').onclick = () => $('indice').showModal();
+    $('fIndice').onclick = () => $('indice').close();
+    $('indice').addEventListener('click', (e) => { if (e.target === e.currentTarget) e.currentTarget.close(); });
+    $('bTela').onclick = () => (document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen?.());
+    $('bPapel').onclick = () => {
+      livro.dataset.papel = livro.dataset.papel === 'dia' ? 'noite' : 'dia';
+      guardar('penasia-papel', livro.dataset.papel);
+    };
+    livro.addEventListener('click', (e) => { if (vista === 0 && !e.target.closest('a')) ir(1, false); });
+
+    addEventListener('keydown', (e) => {
+      if (e.target.closest?.('input,textarea,dialog[open]')) return;
+      if (e.key === 'ArrowRight' || e.key === 'PageDown') ir(vista + 1);
+      else if (e.key === 'ArrowLeft' || e.key === 'PageUp') ir(vista - 1);
+      else if (e.key === 'Home') ir(0, false);
+      else if (e.key === 'End') ir(ultimaVista(), false);
+    });
+
+    let x0 = null;
+    palco.addEventListener('pointerdown', (e) => { if (e.pointerType !== 'mouse') x0 = e.clientX; });
+    palco.addEventListener('pointerup', (e) => {
+      if (x0 === null) return;
+      const dx = e.clientX - x0; x0 = null;
+      if (Math.abs(dx) > 50) ir(vista + (dx < 0 ? 1 : -1));
+    });
+
+    function recompor() {
+      const p = paginaDaVista(vista);
+      ajustar(); medir();
+      vista = p < 0 ? 0 : Math.min(vistaDaPagina(Math.min(p, total - 1)), ultimaVista());
+      pintar();
+    }
+
+    const papel = ler('penasia-papel');
+    if (papel === 'dia' || papel === 'noite') livro.dataset.papel = papel;
+    else if (matchMedia('(prefers-color-scheme: dark)').matches) livro.dataset.papel = 'noite';
+
+    let tRes;
+    addEventListener('resize', () => { clearTimeout(tRes); tRes = setTimeout(recompor, 120); });
+
+    const iniciar = () => {
+      ajustar(); medir();
+      const m = location.hash.match(/^#p(\d+)$/);
+      const salva = ler('penasia-pagina');
+      const p = m ? +m[1] - 1 : salva !== null ? +salva : -1;
+      vista = Number.isFinite(p) && p >= 0 ? Math.min(vistaDaPagina(Math.min(p, total - 1)), ultimaVista()) : 0;
+      pintar();
+      livro.classList.add('pronto');
+    };
+    iniciar();
+    document.fonts?.ready.then(recompor);
+    // imagens mudam a altura do fluxo: repagina quando todas estiverem prontas
+    Promise.all([...fluxo.querySelectorAll('img')].map((i) => i.decode().catch(() => {}))).then(recompor);
+  </script>
+</body>
+</html>

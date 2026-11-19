@@ -1,0 +1,71 @@
+---
+import '../styles/livro.css';
+import { capitulos as lista } from '../data/capitulos.js';
+import { abrir, pecadoDe } from '../lib/abertura.js';
+import { gravuras } from '../data/gravuras.js';
+const { frontmatter = {}, title: propTitle, chap: propChap } = Astro.props;
+const title = propTitle ?? frontmatter.title ?? 'Penasia';
+const chap = propChap ?? frontmatter.chap ?? '';
+const desc = frontmatter.description ?? 'Penasia: um sistema de RPG onde todo poder é crédito e toda dívida é cobrada.';
+const pecado = pecadoDe(frontmatter);
+// páginas .md: o corpo vira string para ganhar a abertura negra
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const corpo = Astro.props.frontmatter ? abrir(await Astro.slots.render('default'), frontmatter, gravuras[path === '/' ? 'index' : path.slice(1)]) : null;
+
+const capitulos = lista.map((c) => [c.href, c.label]);
+const i = capitulos.findIndex(([href]) => href === path);
+const prev = i > 0 ? capitulos[i - 1] : null;
+const next = i >= 0 && i < capitulos.length - 1 ? capitulos[i + 1] : null;
+---
+<!doctype html>
+<html lang="pt-BR" data-pecado={pecado}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>{path === '/' ? 'Penasia' : `${title} · Penasia`}</title>
+  <meta name="description" content={desc} />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pirata+One&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="mtop">
+    <a class="marca" href="/">Penasia</a>
+    <a class="mlink" href="/livro">Folhear</a>
+    <a class="mlink" href="/central">Central</a>
+    <a class="mlink" href="/ficha">Ficha</a>
+    <details class="mnav">
+      <summary>Capítulos</summary>
+      <nav aria-label="Capítulos">
+        {capitulos.map(([href, label]) => <a href={href} aria-current={href === path ? 'page' : undefined}>{label}</a>)}
+      </nav>
+    </details>
+  </header>
+  <div class="shell">
+    <aside class="toc">
+      <a class="marca" href="/">Penasia</a>
+      <div class="ver">Livro em escrita · v0.2</div>
+      <div class="atalhos">
+        <a href="/livro" aria-current={path === '/livro' ? 'page' : undefined}>Folhear</a>
+        <a href="/central" aria-current={path === '/central' ? 'page' : undefined}>Central</a>
+        <a href="/ficha" aria-current={path === '/ficha' ? 'page' : undefined}>Ficha</a>
+      </div>
+      <nav aria-label="Capítulos">
+        {capitulos.map(([href, label]) => <a href={href} aria-current={href === path ? 'page' : undefined}>{label}</a>)}
+      </nav>
+    </aside>
+    <main id="conteudo">
+      <article class="page">
+        {corpo !== null ? <Fragment set:html={corpo} /> : <>{chap && <div class="chap">{chap}</div>}<slot /></>}
+      </article>
+      <nav class="pager" aria-label="Navegação entre capítulos">
+        {prev ? <a href={prev[0]}>← {prev[1]}</a> : <span></span>}
+        {next ? <a class="nx" href={next[0]}>{next[1]} →</a> : <span></span>}
+      </nav>
+      <footer>Penasia é um sistema em construção. Nada aqui foi testado em mesa ainda; os números vêm de simulações.</footer>
+    </main>
+  </div>
+</body>
+</html>

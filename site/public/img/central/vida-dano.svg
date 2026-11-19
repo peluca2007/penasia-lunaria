@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" font-family="Georgia, serif" role="img" aria-label="Fluxo do ataque: rolar, margem, dano, vida desce, Feridas">
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#231d19"/>
+    </marker>
+  </defs>
+  <rect width="900" height="640" fill="#f4ecdb"/>
+  <text x="450" y="52" text-anchor="middle" font-size="34" fill="#231d19" font-weight="bold">Um ataque</text>
+
+  <!-- 1 ROLAR -->
+  <g>
+    <rect x="20" y="90" width="190" height="200" rx="16" fill="#fff8ea" stroke="#231d19" stroke-width="3"/>
+    <text x="115" y="125" text-anchor="middle" font-size="24" fill="#231d19" font-weight="bold">1 · Rolar</text>
+    <polygon points="70,150 100,165 100,200 70,215 40,200 40,165" fill="#8a2c1d"/>
+    <text x="70" y="192" text-anchor="middle" font-size="26" fill="#f4ecdb" font-weight="bold">9</text>
+    <polygon points="160,150 190,165 190,200 160,215 130,200 130,165" fill="#8a6410"/>
+    <text x="160" y="192" text-anchor="middle" font-size="26" fill="#f4ecdb" font-weight="bold">2</text>
+    <text x="70" y="245" text-anchor="middle" font-size="19" fill="#8a2c1d">você</text>
+    <text x="160" y="245" text-anchor="middle" font-size="19" fill="#8a6410">Guarda</text>
+    <text x="115" y="275" text-anchor="middle" font-size="18" fill="#231d19">9 ≥ 2 acertou!</text>
+  </g>
+  <line x1="212" y1="190" x2="240" y2="190" stroke="#231d19" stroke-width="4" marker-end="url(#seta)"/>
+
+  <!-- 2 MARGEM -->
+  <g>
+    <rect x="245" y="90" width="190" height="200" rx="16" fill="#fff8ea" stroke="#231d19" stroke-width="3"/>
+    <text x="340" y="125" text-anchor="middle" font-size="24" fill="#231d19" font-weight="bold">2 · Margem</text>
+    <text x="340" y="200" text-anchor="middle" font-size="44" fill="#231d19">9 − 2</text>
+    <text x="340" y="262" text-anchor="middle" font-size="50" fill="#8a2c1d" font-weight="bold">= 7</text>
+  </g>
+  <line x1="437" y1="190" x2="465" y2="190" stroke="#231d19" stroke-width="4" marker-end="url(#seta)"/>
+
+  <!-- 3 DANO -->
+  <g>
+    <rect x="470" y="90" width="190" height="200" rx="16" fill="#fff8ea" stroke="#231d19" stroke-width="3"/>
+    <text x="565" y="125" text-anchor="middle" font-size="24" fill="#231d19" font-weight="bold">3 · Dano</text>
+    <!-- machado -->
+    <line x1="505" y1="215" x2="545" y2="150" stroke="#231d19" stroke-width="6" stroke-linecap="round"/>
+    <path d="M535,150 Q560,140 560,170 Q545,170 535,160 z" fill="#8a2c1d"/>
+    <text x="610" y="180" text-anchor="middle" font-size="30" fill="#231d19">6 + 7</text>
+    <text x="565" y="262" text-anchor="middle" font-size="50" fill="#8a2c1d" font-weight="bold">= 13</text>
+  </g>
+  <line x1="662" y1="190" x2="690" y2="190" stroke="#231d19" stroke-width="4" marker-end="url(#seta)"/>
+
+  <!-- 4 ARMADURA -->
+  <g>
+    <rect x="695" y="90" width="185" height="200" rx="16" fill="#fff8ea" stroke="#231d19" stroke-width="3"/>
+    <text x="787" y="125" text-anchor="middle" font-size="24" fill="#231d19" font-weight="bold">4 · Armadura</text>
+    <path d="M787,145 L825,158 L822,195 Q815,220 787,232 Q759,220 752,195 L749,158 z" fill="#8a6410" stroke="#231d19" stroke-width="2"/>
+    <text x="787" y="198" text-anchor="middle" font-size="26" fill="#f4ecdb" font-weight="bold">−0</text>
+    <text x="787" y="268" text-anchor="middle" font-size="19" fill="#231d19">come o dano</text>
+  </g>
+
+  <!-- seta para a barra -->
+  <path d="M787,292 L787,330 L450,330 L450,370" fill="none" stroke="#231d19" stroke-width="4" marker-end="url(#seta)"/>
+  <text x="620" y="320" text-anchor="middle" font-size="22" fill="#8a2c1d" font-weight="bold">−13 Vida</text>
+
+  <!-- 5 BARRA DE VIDA -->
+  <text x="40" y="405" font-size="26" fill="#231d19" font-weight="bold">5 · Vida desce</text>
+  <!-- barra 14 de vida: 0..14 em x 60..840 (55.7 por ponto) -->
+  <rect x="60" y="425" width="780" height="60" rx="10" fill="#e6d8bb" stroke="#231d19" stroke-width="3"/>
+  <rect x="60" y="425" width="56" height="60" rx="10" fill="#8a2c1d"/>
+  <!-- parte perdida tracejada -->
+  <rect x="116" y="425" width="724" height="60" fill="#8a2c1d" fill-opacity="0.18"/>
+  <text x="820" y="465" text-anchor="end" font-size="24" fill="#231d19">14 → 1</text>
+  <!-- marca metade -->
+  <line x1="450" y1="412" x2="450" y2="498" stroke="#8a6410" stroke-width="5"/>
+  <!-- marca zero -->
+  <line x1="60" y1="412" x2="60" y2="498" stroke="#231d19" stroke-width="5"/>
+
+  <!-- limiares -->
+  <!-- metade -->
+  <circle cx="450" cy="540" r="24" fill="#8a6410"/>
+  <text x="450" y="548" text-anchor="middle" font-size="22" fill="#f4ecdb" font-weight="bold">½</text>
+  <text x="450" y="592" text-anchor="middle" font-size="22" fill="#231d19">metade</text>
+  <text x="450" y="620" text-anchor="middle" font-size="22" fill="#8a6410" font-weight="bold">Ferida Leve</text>
+
+  <!-- golpe 10+ -->
+  <circle cx="710" cy="540" r="24" fill="#8a2c1d"/>
+  <text x="710" y="548" text-anchor="middle" font-size="20" fill="#f4ecdb" font-weight="bold">10+</text>
+  <text x="710" y="592" text-anchor="middle" font-size="22" fill="#231d19">um golpe 10+</text>
+  <text x="710" y="620" text-anchor="middle" font-size="22" fill="#8a2c1d" font-weight="bold">Ferida Grave</text>
+
+  <!-- zero -->
+  <circle cx="110" cy="540" r="24" fill="#231d19"/>
+  <!-- caveira simples -->
+  <circle cx="110" cy="536" r="11" fill="#f4ecdb"/>
+  <rect x="104" y="543" width="12" height="7" fill="#f4ecdb"/>
+  <circle cx="106" cy="535" r="3" fill="#231d19"/>
+  <circle cx="114" cy="535" r="3" fill="#231d19"/>
+  <text x="110" y="592" text-anchor="middle" font-size="22" fill="#231d19">Vida 0</text>
+  <text x="110" y="620" text-anchor="middle" font-size="22" fill="#231d19" font-weight="bold">À Beira</text>
+</svg>

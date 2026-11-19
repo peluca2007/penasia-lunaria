@@ -1,0 +1,353 @@
+{
+  "falta": [
+    {
+      "tema": "Classes",
+      "pergunta": "Aprovar as 11 classes (cada uma com um verbo único com os dados na mesa)?",
+      "onde": "classes"
+    },
+    {
+      "tema": "Combate",
+      "pergunta": "Um golpe de 20+ quebra a fase inteira do chefe, ou só metade dela?",
+      "onde": "combate"
+    },
+    {
+      "tema": "Combate",
+      "pergunta": "Com dois ou mais dados somados, quando o dado explode?",
+      "onde": "balanca"
+    },
+    {
+      "tema": "Combate",
+      "pergunta": "Golpe de Misericórdia: como se mata quem está À Beira no Sangue na Mesa?",
+      "onde": "combate"
+    },
+    {
+      "tema": "Progressão",
+      "pergunta": "O maior dado da criação é d10 ou d8?",
+      "onde": "personagem"
+    },
+    {
+      "tema": "Classes",
+      "pergunta": "7 classes com 40 subclasses? O Ungido entra no Confessor ou fica separado? O sorteio da Vocação vale para todos ou é opcional?",
+      "onde": "classes"
+    },
+    {
+      "tema": "Nomes",
+      "pergunta": "Entidades com mitologia: misturar culturas ou fechar famílias de nomes? O nome mitológico substitui o atual ou vira o nome verdadeiro?",
+      "onde": "pacto"
+    },
+    {
+      "tema": "Nomes",
+      "pergunta": "Vocabulário: Marca para a dificuldade, Tinta para a progressão, Pena só para a ficha dourada?",
+      "onde": "glossario"
+    },
+    {
+      "tema": "Nomes",
+      "pergunta": "O cachorro que matou a Bruxa da Gula: Galdor ou Galdalf?",
+      "onde": "mundo"
+    },
+    {
+      "tema": "Mapa",
+      "pergunta": "Aprovar o subtítulo \"ano 1020\" e o rótulo \"Gula, morta\"? O Ossário fica mais visível?",
+      "onde": "mundo"
+    },
+    {
+      "tema": "Combate",
+      "pergunta": "Conferir números que escolhi na reescrita: bênçãos curam o dobro em Vida (4 e 8), Queda tira 3× N, escudo corta um golpe pela metade 1×/cena, Tudo ou Nada dá +2 de dano por aposta.",
+      "onde": "combate"
+    },
+    {
+      "tema": "Classes",
+      "pergunta": "A Postura do Veterano passa a ter três faces com pecados (Ira, Gula, Inveja)? A Graça do Ungido vira fichas que os aliados seguram e gastam?",
+      "onde": "classes"
+    },
+    {
+      "tema": "Classes",
+      "pergunta": "Pares de ataque novos: Brigão Ira+Orgulho (o Troco vira de Orgulho), Confessor Luxúria+Ganância, Herdeiro Gula+Luxúria, Avatar Inveja+Orgulho. Quatro classes atacam com Orgulho. Está bom?",
+      "onde": "classes"
+    },
+    {
+      "tema": "Classes",
+      "pergunta": "Dados que ficam na mesa: a Marca do Vigia dura entre rodadas; o Rancor do Brigão dura até o próximo turno dele (ou até o alvo sair da zona); a Badalada do Confessor segura dados por uma rodada. Aceita as duas exceções?",
+      "onde": "combate"
+    },
+    {
+      "tema": "Classes",
+      "pergunta": "A Estaca do Armador muda o pecado só dos inimigos da zona (aliados escolhem)?",
+      "onde": "classes"
+    },
+    {
+      "tema": "Mesa",
+      "pergunta": "Cores dos dados: o Rancor (d12) e o sangue do Herdeiro (d6) são vermelhos. O Rancor vira preto? Dados por pecado com cor própria (a Navalha precisa saber o pecado de cada dado)?",
+      "onde": "combate"
+    },
+    {
+      "tema": "Classes",
+      "pergunta": "O pecado-assinatura do Avatar é o menor pecado dele (Harmonia)? O copo do Andarilho e a cartela do Avatar furam o teto de 3 do recurso de propósito.",
+      "onde": "classes"
+    },
+    {
+      "tema": "Combate",
+      "pergunta": "Vida do chefe: 30 por fase cai em 2,3 rodadas contra 4 jogadores. Recomendação: 15 por fase para cada jogador (4 jogadores = 60 por fase, ~4 rodadas). Aceita?",
+      "onde": "combate"
+    },
+    {
+      "tema": "Classes",
+      "pergunta": "O Ungido ainda é o mais forte em grupo (−12% de rodadas). Tirar a Graça do Juramento resolve, mas muda a mecânica. Mexer?",
+      "onde": "classes"
+    },
+    {
+      "tema": "Classes",
+      "pergunta": "Talentos: aceitar o Rancor dado por Sinergia? Animal Amaldiçoado toma Latir para a Lua sem Vocação? Avatar pode tomar Vocação? Holy Diver fica Brigão → Ungido?",
+      "onde": "classes"
+    },
+    {
+      "tema": "Mecânicas",
+      "pergunta": "Domínio vira \"zona com Lei\" (uma frase por pecado), abrindo na 1ª Quebra de Limite? Os pactos antigos voltam só como maldição narrada?",
+      "onde": "progressao"
+    },
+    {
+      "tema": "Mecânicas",
+      "pergunta": "Cortar os Treinos (a Missão de Desafio vira Juramento de Interlúdio = 1 talento) e voltar com os Relógios das Bruxas?",
+      "onde": "progressao"
+    },
+    {
+      "tema": "Mecânicas",
+      "pergunta": "Simplificar: manobras de 8 para 5, Rasgo em d6 de 6 linhas, usos gerais do recurso de 5 para 2, talentos gerais com meta de 60?",
+      "onde": "combate"
+    },
+    {
+      "tema": "Mecânicas",
+      "pergunta": "Inventário por espaços volta (espaços = lados do dado de Gula)?",
+      "onde": "personagem"
+    },
+    {
+      "tema": "Visual",
+      "pergunta": "Capítulo → pecado: Balança=Inveja, Combate=Ira, Magia=Ganância, Pactos=Luxúria, Progressão=Orgulho; Mundo e Personagem só P&B. Orgulho virou violeta (antes era dourado como a Ganância). Aprovar?",
+      "onde": "combate"
+    },
+    {
+      "tema": "Visual",
+      "pergunta": "Origens: revisar as frases de Humanos, Anões, Elfos, Miúdos, Gnomos e Animais Amaldiçoados (escritas agora). Anões, Miúdos e Gnomos ainda não têm imagem.",
+      "onde": "personagem"
+    },
+    {
+      "tema": "Lore",
+      "pergunta": "Modos de campanha (o \"antes e depois\" caiu): A) só Lunária; o Anaviosi fica no livro dele. B) Lunária + Anaviosi como modo extra, com o d20 dele. C) três modos: Pena, Anaviosi e Lunária.",
+      "onde": "mundo"
+    },
+    {
+      "tema": "Lore",
+      "pergunta": "O Reset e Altiva (o texto dizia que o plano dela dispara o Reset): A) o Reset da Morte é passado; Altiva ameaça um segundo Reset, e a Mancha é o sinal. B) Altiva não causa Reset; a Mancha é a cicatriz do Reset antigo voltando. C) Altiva quer imitar a Morte: matar as outras Bruxas e comer a autoridade delas.",
+      "onde": "mundo"
+    },
+    {
+      "tema": "Lore",
+      "pergunta": "O Anaviosi era pobre e de sucata; agora é avançado: A) avançado no auge, sucata no fim (o Protocolo da Eternidade mostra o fim). B) as duas coisas: cidades de máquina, e fora delas sucata. C) só avançado; a sucata passa a ser de Lunária, que acha as relíquias.",
+      "onde": "mundo"
+    },
+    {
+      "tema": "Lore",
+      "pergunta": "Se a Morte matou todas as Bruxas, de onde vêm as de Lunária? A) são novas: Lume e Torvo fizeram outras sete. B) são as almas das antigas, renascidas. C) a autoridade que a Morte comeu vazou quando ela morreu e virou Bruxas de novo.",
+      "onde": "mundo"
+    },
+    {
+      "tema": "Lore",
+      "pergunta": "Quem criou o mundo: Lume e Torvo (o mito) ou a Morte e o outro cavaleiro? A) Lume e Torvo SÃO os dois cavaleiros, lembrados errado. B) Lume e Torvo vieram depois e criaram só as coisas de Lunária. C) Luz e Sombra nasceram dos corpos dos dois cavaleiros.",
+      "onde": "mundo"
+    },
+    {
+      "tema": "Lore",
+      "pergunta": "Genbu e o Observador (o Observador \"nasceu com o universo\", ensinou a tecnologia e tem um casco): A) são o mesmo; o \"nasceu com o universo\" é mentira ou fé. B) são dois: Genbu traz a técnica, o Observador ensina os Monges. C) Genbu ensinou tudo ao Observador e morreu.",
+      "onde": "mundo"
+    },
+    {
+      "tema": "Lore",
+      "pergunta": "Duas Mortes: o cavaleiro Morte e Agouro, \"a Própria Morte\" de Lunária. A) Agouro troca o título (\"o Fim de Cada Um\"). B) Agouro é o que sobrou da Morte. C) os dois ficam; o povo confunde, e isso vira gancho.",
+      "onde": "mundo"
+    },
+    {
+      "tema": "Lore",
+      "pergunta": "Qual é o outro cavaleiro que criou o Anaviosi com a Morte? A) a Guerra. B) a Fome. C) a Peste (ou a Conquista).",
+      "onde": "mundo"
+    },
+    {
+      "tema": "Lore",
+      "pergunta": "A palavra Pena agora é o mundo antigo. Ela também é a Rainha-Pena e talvez a ficha dourada. A) fica tudo, e o eco é de propósito. B) a ficha dourada troca de nome. C) o mundo antigo troca de nome.",
+      "onde": "mundo"
+    },
+    {
+      "tema": "Balanço das classes",
+      "pergunta": "Ungido forte demais (chefe cai 37% mais rápido no Peso 6). Ajuste: golpe consagrado não quebra a fase, ou Graça 1 no Peso 6?",
+      "onde": "classes"
+    },
+    {
+      "tema": "Balanço das classes",
+      "pergunta": "Mago forte demais em grupo (+53%). Ajuste: feitiço ecoado soma 2 a menos de força?",
+      "onde": "classes"
+    },
+    {
+      "tema": "Balanço das classes",
+      "pergunta": "Herdeiro forte sozinho no Peso 6 (+29%). Ajuste: a sangria não soma força?",
+      "onde": "classes"
+    },
+    {
+      "tema": "Balanço das classes",
+      "pergunta": "Veterano fraco no Peso 6 (−16%). Ajuste: +1 de dano em todo golpe?",
+      "onde": "classes"
+    },
+    {
+      "tema": "Balanço das classes",
+      "pergunta": "Vigia fraco em grupo (−30%). Ajuste: +1 de dano por alfinete no Tiro Paciente?",
+      "onde": "classes"
+    }
+  ],
+  "regras": [
+    "A Guarda extra da classe tem dado próprio?",
+    "O Repertório cabe dentro das 5 opções do Cinto ou fica separado?",
+    "Qual o teto de caixas de Dívida?",
+    "Ausa, o Vazio, não tem pecado associado.",
+    "Cicatriz, Condenação e Danação misturam nomes.",
+    "As técnicas das classes têm nome, mas o efeito ainda não está escrito.",
+    "A Saturação do Andarilho do Vazio não diz como contar."
+  ],
+  "decidido": [
+    {
+      "titulo": "Lunária",
+      "texto": "O mundo se chama Lunária. Penasia é o nome do sistema e do livro."
+    },
+    {
+      "titulo": "Linha do tempo",
+      "texto": "Pena (Bruxas e cavaleiros) → a Morte reseta → Anaviosi → cerca de 20.000 anos → Lunária, onde o livro se passa."
+    },
+    {
+      "titulo": "Anaviosi",
+      "texto": "Vem depois do Reset da Morte. Genbu trouxe a tecnologia de Pena: é bem avançado."
+    },
+    {
+      "titulo": "Nomes sérios",
+      "texto": "Nome oficial sério; o engraçado vira apelido do povo (Carmina, Carmesina)."
+    },
+    {
+      "titulo": "Mapa",
+      "texto": "Anel na ordem da Roda, desenho irregular de fantasia."
+    },
+    {
+      "titulo": "Sangue na Mesa",
+      "texto": "Vida em pontos, o dado é o dano, o dado fica na mesa para o combo, Essência para magia."
+    },
+    {
+      "titulo": "Escada do Poder",
+      "texto": "Começa fraco, sobe por Peso, Quebras de Limite por Prova, dados somados no topo."
+    }
+  ],
+  "ideias": [
+    {
+      "titulo": "Capítulo de playtest",
+      "texto": "Uma one-shot de 2 horas para 3 jogadores, e uma página para anotar o que quebrou na mesa. Os números do livro só vêm de simulação até agora."
+    }
+  ],
+  "diario": [
+    {
+      "em": "2026-11-18",
+      "texto": "Livro v0.2 publicado em Astro, com oito capítulos, ferramentas e glossário."
+    },
+    {
+      "em": "2026-11-18",
+      "texto": "Nasceram o modo folhear (/livro) e a Central."
+    },
+    {
+      "em": "2026-11-19",
+      "texto": "O mundo passou a se chamar Lunária (Penasia é o sistema)."
+    },
+    {
+      "em": "2026-11-19",
+      "texto": "O Reset virou regra fechada: dois modos de campanha, antes e depois."
+    },
+    {
+      "em": "2026-11-19",
+      "texto": "O Anaviosi entrou no livro como o mundo depois do Reset, e a descrição errada saiu."
+    },
+    {
+      "em": "2026-11-19",
+      "texto": "Mapa do Anel redesenhado como mapa de fantasia em pergaminho."
+    },
+    {
+      "em": "2026-11-19",
+      "texto": "Nasceu a ficha de personagem para imprimir (/ficha), em A4 frente e verso."
+    },
+    {
+      "em": "2026-11-19",
+      "texto": "Nomes oficiais sérios, apelidos cômicos do povo (Carmina, Carmesina, Galdor)."
+    },
+    {
+      "em": "2026-11-19",
+      "texto": "Debate do combate: os três agentes assinaram o Sangue na Mesa."
+    },
+    {
+      "em": "2026-11-19",
+      "texto": "Proposta da Escada do Poder: dados somados no topo e Quebras de Limite."
+    },
+    {
+      "em": "2026-11-19",
+      "texto": "Combate, Magia, Balança, Personagem, Progressão, Pactos, Glossário e ficha reescritos com o Sangue na Mesa e a Escada do Poder. 25 imagens leves entraram no site."
+    },
+    {
+      "em": "2026-11-19",
+      "texto": "As 11 classes foram desenhadas, revisadas e balanceadas por simulação; 29 Sinergias e talentos de Jejum, Vício e origem criados."
+    },
+    {
+      "em": "2026-11-19",
+      "texto": "Revisão de todas as mecânicas (manter, simplificar, voltar, cortar) e proposta de Domínio simples."
+    },
+    {
+      "em": "2026-11-19",
+      "texto": "Novo visual: preto, branco e pecado. Aberturas negras, ornamento e cor de cada pecado, classes com retrato em P&B. +18 KB no site."
+    },
+    {
+      "em": "2026-11-19",
+      "texto": "Visual no estilo Mörk Borg/Shadowdark/DCC: P&B duro, títulos góticos, gravuras antigas em domínio público tingidas na cor do pecado. Nova página: Referência rápida."
+    },
+    {
+      "em": "2026-11-19",
+      "texto": "Nova linha do tempo: Pena → Reset da Morte → Anaviosi → 20.000 anos → Lunária. Cronologia esticada; o \"antes e depois\" saiu de decidido; 9 perguntas de lore na lista."
+    },
+    {
+      "em": "2026-11-19",
+      "texto": "Página de balanço das 11 classes (Peso 1 e Peso 6) e 5 ajustes sugeridos na Central. Central ganhou o bloco Páginas visuais."
+    }
+  ],
+  "paginas": [
+    {
+      "titulo": "Linha do tempo",
+      "texto": "Pena, o Reset, Anaviosi, 20 mil anos, Lunária. E as perguntas de lore."
+    },
+    {
+      "titulo": "Balanço das classes",
+      "texto": "As 11 lado a lado: dano, papel, como funciona, ajustes."
+    },
+    {
+      "titulo": "Combate: 3 propostas lado a lado",
+      "texto": "Vantagens e desvantagens de cada combate, com magia."
+    },
+    {
+      "titulo": "Debate do combate",
+      "texto": "Os agentes brigando até chegar no Sangue na Mesa."
+    },
+    {
+      "titulo": "Luta de exemplo",
+      "texto": "Tarsa, Ilo e Vessa contra um chefe, passo a passo. Usa a escada antiga."
+    },
+    {
+      "titulo": "Escada do Poder",
+      "texto": "Os degraus dos dados e as Quebras de Limite."
+    },
+    {
+      "titulo": "As 11 classes",
+      "texto": "Verbo de cada classe e dois Brigões diferentes."
+    },
+    {
+      "titulo": "Mecânicas e Domínio",
+      "texto": "O que fica, o que sai, e o Domínio simplificado."
+    }
+  ]
+}

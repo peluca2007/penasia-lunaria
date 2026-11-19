@@ -1,0 +1,108 @@
+@page { size: A4; margin: 10mm }
+:root{--bg:#0a0a0a;--page:#f5f2ec;--ink:#151413;--muted:#5d5852;--rule:#b9b4ab;--accent:#151413;
+  --ira:#ff2414;--lux:#ff1f8f;--pre:#4a74ff;--gan:#ffd400;--inv:#00d85a;--gul:#ff7a00;--org:#a855ff;
+  --display:'Pirata One',Georgia,serif;--grito:'Anton',Impact,sans-serif;--body:'Spectral',Georgia,serif;--mono:var(--grito)}
+*{box-sizing:border-box}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:12px;line-height:1.3}
+.barra{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:10px 16px;color:#ece4d6;font-family:var(--mono);font-size:12px}
+.barra a{color:#fff}
+.barra button{font:400 13px var(--grito);background:#fff;color:#000;border:0;padding:8px 18px;border-radius:0;cursor:pointer}
+.folhas{padding:0 8px 24px;display:flex;flex-direction:column;align-items:center;gap:16px}
+.folha{background:var(--page);width:100%;max-width:190mm;min-height:277mm;padding:6mm 7mm 12mm;border:1.5px solid var(--ink);outline:1px solid var(--ink);outline-offset:-5px;position:relative}
+.topo{display:flex;align-items:baseline;justify-content:space-between;border-bottom:4px solid var(--ink);padding-bottom:3px;margin-bottom:6px}
+.topo h1{font:400 40px/.9 var(--display);margin:0;color:var(--accent);transform:rotate(-3deg);transform-origin:0 100%}
+.sub{font:400 10px var(--grito);text-transform:uppercase;letter-spacing:.15em;color:var(--muted)}
+.campo{display:block;margin:0 0 5px}
+.campo b{display:block;font:400 9px var(--grito);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.campo i{display:block;height:17px;border-bottom:1px solid var(--ink)}
+.id{display:grid;grid-template-columns:repeat(4,1fr);gap:0 10px}
+.id.dois{grid-template-columns:1fr 1fr}
+.meio{display:grid;grid-template-columns:.9fr 1.7fr .9fr;gap:8px;margin-top:6px}
+.col,.centro{display:flex;flex-direction:column;gap:6px;min-width:0}
+.bloco{border:2px solid var(--ink);border-radius:0;padding:5px 6px;break-inside:avoid;background:rgba(255,255,255,.35)}
+h2{font:400 13px var(--grito);margin:0 0 4px;text-transform:uppercase;letter-spacing:.05em;color:var(--accent);border-bottom:2px solid var(--ink);padding-bottom:1px}
+h2.h2b{margin-top:8px}
+h2 small{font:italic 400 9px var(--body);text-transform:none;letter-spacing:0;color:var(--muted);margin-left:4px}
+.nota{font-size:9px;font-style:italic;color:var(--muted);margin:3px 0 0}
+.cx{display:inline-block;width:13px;height:13px;border:1.5px solid var(--ink);background:#fff;vertical-align:middle;margin:1px 2px}
+.cxs{display:flex;flex-wrap:wrap}
+.cxs.grande .cx{width:22px;height:22px;margin:3px 4px}
+.dado{display:inline-block;border:1.5px solid var(--ink);background:#fff;border-radius:4px;width:34px;height:22px}
+.dado.peq{width:26px;height:17px;margin-left:auto}
+.linha{display:flex;align-items:center;gap:6px;font-size:10px;margin:3px 0}
+.vida{display:flex;gap:6px}
+.vida label{flex:1;text-align:center}
+.vida b{display:block;font:400 9px var(--grito);text-transform:uppercase;color:var(--muted)}
+.dado.vgrande{display:block;width:100%;height:46px;margin:2px 0 0;border-width:2px}
+.dado.largo{width:70px;height:17px;margin-left:auto}
+.pecs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:2px 12px}
+.pecs li{display:flex;align-items:center;gap:4px;font-size:11px}
+.pecs b{font-weight:600}
+.quebras{display:flex;flex-direction:column;font-size:10px}
+.escada{margin-top:4px}
+.guardas{list-style:none;margin:0;padding:0}
+.guardas li{display:flex;align-items:center;gap:4px;font-size:11px;padding:2px 0;border-bottom:1px dotted var(--rule)}
+.guardas b{font-weight:600}
+.guardas em{font:400 9px var(--grito);color:var(--muted)}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+.roda{width:100%;height:auto;display:block}
+.roda .anel{fill:none;stroke:var(--rule);stroke-width:1.5;stroke-dasharray:3 4}
+.roda .no{fill:#fff;stroke-width:3.5}
+.roda .nome{font:400 10px var(--grito);text-anchor:middle;letter-spacing:.05em}
+.roda .seta{fill:var(--ink)}
+.legenda{font-size:9px;text-align:center;margin:0;color:var(--muted)}
+.vj{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ferida{display:flex;align-items:center;gap:3px;font-size:11px;margin-bottom:3px}
+.ferida b{width:42px}
+.ferida em{font-size:8.5px;color:var(--muted);margin-left:3px}
+.baixo{display:grid;grid-template-columns:1.5fr 1fr;gap:8px;margin-top:10px}.baixo .campo i{height:24px}.guardas li{padding:4px 0!important}
+.credores{display:flex;flex-wrap:wrap;gap:0 8px;font-size:10px;margin-bottom:4px}
+.divida{margin:3px 0}
+.divida>div:first-child{display:flex;align-items:center;gap:6px}
+.divida .cx{width:16px;height:16px}
+.faixas{display:flex;gap:10px;font:400 9px var(--grito);color:var(--muted)}
+.peq-t{font:400 9px var(--grito);color:var(--muted)}
+.cinto,.linhas{list-style:none;margin:0;padding:0;counter-reset:n}
+.cinto li,.linhas li{counter-increment:n;display:flex;align-items:flex-end;gap:5px;height:27px}
+.cinto li::before,.linhas li::before{content:counter(n);font:400 10px var(--grito);color:var(--muted);width:10px}
+.cinto li i,.linhas li i{flex:1;border-bottom:1px solid var(--ink);height:16px}
+.inl{flex:1;border-bottom:1px solid var(--ink);height:14px}
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.prog{display:grid;grid-template-columns:1fr 1fr;gap:4px 14px}
+.prog b{font:400 10px var(--grito);text-transform:uppercase;color:var(--muted)}
+.pe{position:absolute;left:7mm;right:7mm;bottom:5mm;text-align:center;font:400 9px var(--grito);color:var(--muted);border-top:1px solid var(--rule);padding-top:3px}
+@media(max-width:640px){.id{grid-template-columns:1fr 1fr}.meio,.baixo,.duas{grid-template-columns:1fr}.folha{padding:12px}.pe{position:static;margin-top:8px}}
+@media print{
+  html,body{background:#fff}
+  .barra{display:none}
+  body{color:#000;font-size:11px}
+  .folhas{padding:0;gap:0;display:block}
+  .folha{width:190mm;max-width:none;height:276mm;min-height:0;margin:0;padding:5mm 6mm;border:1.5px solid #000;outline:1px solid #000;break-after:page;break-inside:avoid;overflow:hidden}
+  .folha:last-child{break-after:auto}
+  .bloco{background:none;border-color:#000;break-inside:avoid}
+  .nota,.sub,.legenda,.campo b,h2 small,.guardas em,.ferida em,.faixas,.peq-t,.pe,.cinto li::before,.linhas li::before,.prog b{color:#444}
+  h2,.topo h1{color:#000}
+}
+.roda{max-width:80%;margin:0 auto}
+.baixo{margin-top:6px}.baixo .campo i{height:20px}
+.cinto li{height:23px}
+.h2b{margin-top:4px}
+.credores{margin-bottom:2px}
+.pecs{gap:3px 12px}
+.divida .cx{width:14px;height:14px}
+.linhas li:last-child{margin-bottom:3px}
+@media print{.folha{background:#fff}.baixo{margin-top:4px}}
+/* cor só como marca; texto sempre preto (amarelo e verde não se leem no branco) */
+.roda .nome{fill:var(--ink)!important;font-size:10.5px}
+.roda .no{stroke-width:5}
+.dot{outline:1px solid #000;border-radius:0;transform:rotate(45deg) scale(.85)}
+/* cabe em uma A4 com as fontes novas */
+.topo h1{font-size:32px}
+h2{margin-bottom:3px}
+.cinto li{height:21px}
+.linhas li{height:25px}
+.baixo .campo i{height:18px}
+@media print{.guardas li{padding:3px 0!important}}
+.roda{max-width:70%}
+.cinto li{height:20px}

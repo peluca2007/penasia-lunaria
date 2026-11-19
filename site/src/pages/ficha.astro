@@ -1,0 +1,185 @@
+---
+import '../styles/ficha.css';
+const nos = [['Ira','ira'],['Luxúria','lux'],['Preguiça','pre'],['Ganância','gan'],['Inveja','inv'],['Gula','gul']].map(([n,c],i)=>{
+  const a=(-90+60*i)*Math.PI/180, m=(-90+60*i+30)*Math.PI/180;
+  return {n,c,x:140+100*Math.cos(a),y:140+100*Math.sin(a),mx:140+100*Math.cos(m),my:140+100*Math.sin(m),rot:-90+60*i+30+90,ly:i===0?102:140+100*Math.sin(a)+43};
+});
+const q=(n)=>Array.from({length:n});
+const pecados=[['Ira','ira'],['Luxúria','lux'],['Gula','gul'],['Preguiça','pre'],['Inveja','inv'],['Ganância','gan'],['Orgulho','org']];
+const guardas=[['Aparar','Ira','ira'],['Esquivar','Preguiça','pre'],['Aguentar','Gula','gul'],['Antecipar','Inveja','inv'],['Desviar','Luxúria','lux'],['Calcular','Ganância','gan'],['Impor','Orgulho','org']];
+const credores=[['Rubra','ira'],['Carmina','lux'],['Fauce','gul'],['Modorra','pre'],['Cisma','inv'],['Usura','gan'],['Altiva','org'],['Ausa','']];
+---
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ficha · Penasia</title>
+  <meta name="description" content="Ficha de personagem de Penasia, em branco, para imprimir em A4." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pirata+One&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="barra">
+    <a href="/">← Voltar ao livro</a>
+    <span>Ficha de personagem · A4, frente e verso</span>
+    <button type="button" onclick="window.print()">Imprimir</button>
+  </div>
+
+  <main class="folhas">
+  <section class="folha">
+    <header class="topo">
+      <h1>Penasia</h1>
+      <div class="sub">Ficha de personagem</div>
+    </header>
+    <div class="id">
+      <label class="campo"><b>Nome</b><i></i></label>
+      <label class="campo"><b>Jogador</b><i></i></label>
+      <label class="campo"><b>Origem / Herança</b><i></i></label>
+      <label class="campo"><b>Classe</b><i></i></label>
+      <label class="campo"><b>Subclasse / Culto</b><i></i></label>
+      <label class="campo"><b>Peso</b><i></i></label>
+      <label class="campo"><b>Prova vencida</b><i></i></label>
+      <label class="campo"><b>Marcos</b><i></i></label>
+    </div>
+
+    <div class="meio">
+      <div class="col">
+        <div class="bloco">
+          <h2>Guarda <small>declare no fim do turno</small></h2>
+          <ul class="guardas">
+            {guardas.map(([g,p,c])=><li><span class="cx"></span><span class="dot" style={`background:var(--${c})`}></span><b>{g}</b><em>{p}</em><span class="dado peq"></span></li>)}
+          </ul>
+          <p class="nota">Aparar, Esquivar e Aguentar: todos. As outras: a sua classe dá uma extra (teto d10).</p>
+        </div>
+        <div class="bloco">
+          <h2>Vida <small>10 + máx. do dado de Gula</small></h2>
+          <div class="vida">
+            <label><b>Atual</b><span class="dado vgrande"></span></label>
+            <label><b>Máximo</b><span class="dado vgrande"></span></label>
+          </div>
+          <p class="nota">0 = À Beira. Vida cheia: nenhum golpe sozinho te leva abaixo de 1. Respirar cura d6, uma vez por cena.</p>
+        </div>
+        <div class="bloco">
+          <h2>Essência <small>máx. do dado de Orgulho</small></h2>
+          <div class="linha"><span>Máximo</span><span class="dado peq"></span><span>Atual</span><span class="dado peq"></span></div>
+          <p class="nota">Paga magias. Sem Essência, paga com Vida. Volta no fim da cena.</p>
+        </div>
+      </div>
+
+      <div class="centro">
+        <svg class="roda" viewBox="0 -4 280 296" role="img" aria-label="A Roda dos sete pecados">
+          <circle cx="140" cy="140" r="100" class="anel"/>
+          {nos.map(n=><g>
+            <path d="M-6 -5 L6 0 L-6 5 Z" transform={`translate(${n.mx.toFixed(1)} ${n.my.toFixed(1)}) rotate(${n.rot})`} class="seta"/>
+            <circle cx={n.x.toFixed(1)} cy={n.y.toFixed(1)} r="29" class="no" style={`stroke:var(--${n.c})`}/>
+            <text x={n.x.toFixed(1)} y={n.ly.toFixed(1)} class="nome" style={`fill:var(--${n.c})`}>{n.n.toUpperCase()}</text>
+          </g>)}
+          <circle cx="140" cy="140" r="29" class="no" style="stroke:var(--org)"/>
+          <text x="140" y="187" class="nome" style="fill:var(--org)">ORGULHO</text>
+        </svg>
+        <p class="legenda">Escreva o dado em cada círculo (aceita 2d8, d6+d8...). Na criação: <b>d10 · d8 · d8 · d6 · d6 · d4 · d4</b>. Cada pecado domina os dois seguintes no sentido horário: +1 degrau.</p>
+        <div class="vj">
+          <label class="campo"><b>Vício (maior dado)</b><i></i></label>
+          <label class="campo"><b>Jejum (um d4)</b><i></i></label>
+        </div>
+        <div class="bloco escada">
+          <h2>Dados na Escada <small>um campo por pecado</small></h2>
+          <ul class="pecs">{pecados.map(([n,c])=><li><span class="dot" style={`background:var(--${c})`}></span><b>{n}</b><span class="dado largo"></span></li>)}</ul>
+          <p class="nota">d4 · d6 · d8 · d10 · d12 · 2d6 · d6+d8 · 2d8 · d8+d10 · 2d10 · d10+d12 · 2d12 · 2d12+d4 · +d6 · +d8. Cada Peso: +1 degrau num pecado.</p>
+        </div>
+        <div class="bloco">
+          <h2>Quebras de Limite <small>por Prova da história</small></h2>
+          <div class="quebras">
+            <span><span class="cx"></span>1ª · Peso 5 · até 2d8</span>
+            <span><span class="cx"></span>2ª · Peso 8 · até 2d10</span>
+            <span><span class="cx"></span>3ª · Peso 11 · até 2d12</span>
+          </div>
+          <p class="nota">Sem Quebra, o teto é d12 (Pesos 1–4). Além: Peso 13.</p>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="bloco">
+          <h2>Recurso da classe</h2>
+          <label class="campo"><b>Nome</b><i></i></label>
+          <div class="linha"><span>0 a 3, zera no fim da cena</span></div>
+          <div class="cxs grande">{q(3).map(()=><span class="cx"></span>)}</div>
+          <p class="nota">Ganha 1: ataque contra você falha, leva Ferida, Fecha a Guarda. Gasta 1: trocar Guarda, Proteger, Revidar, manobra, Arrancada.</p>
+        </div>
+        <div class="bloco">
+          <h2>Feridas</h2>
+          <p class="nota">Golpe de 12+: Leve. Golpe de 20+: Grave.</p>
+          <div class="ferida"><b>Leve</b><span class="cx"></span><span class="cx"></span><em>reduz a Vida máx. em 2</em></div>
+          <div class="ferida"><b>Grave</b><span class="cx"></span><em>−1 degrau físico + Cicatriz</em></div>
+          <div class="ferida"><b>Mortal</b><span class="cx"></span><em>À Beira</em></div>
+          <div class="campo"><b>Cicatrizes (3 palavras cada)</b><i></i><i></i></div>
+          <p class="nota">Caixa cheia transborda para a de cima.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="baixo">
+      <div class="bloco">
+        <h2>Credor e Dívida <small>opcional</small></h2>
+        <div class="credores">{credores.map(([c,k])=><span><span class="cx" style={k?`border-color:var(--${k})`:''}></span>{c}</span>)}</div>
+        <div class="id dois">
+          <label class="campo"><b>Credor</b><i></i></label>
+          <label class="campo"><b>Voto</b><i></i></label>
+        </div>
+        <div class="divida">
+          <div><b>Dívida</b><div class="cxs">{q(10).map(()=><span class="cx"></span>)}</div></div>
+          <div class="faixas"><span>1–3 Credor atento</span><span>4–6 Cobrança</span><span>7+ Execução</span></div>
+        </div>
+        <div class="linha"><span><b>Tentação</b> (caixas do Voto)</span><span class="cx"></span><span class="cx"></span><span class="cx"></span><span class="peq-t">falha · Condenação · Danação</span></div>
+        <label class="campo"><b>Prova de Redenção</b><i></i></label>
+        <label class="campo"><b>Bênçãos a crédito</b><i></i><i></i></label>
+      </div>
+      <div class="bloco">
+        <h2>Cinto <small>máx. 5 opções ativas</small></h2>
+        <ol class="cinto">{q(5).map(()=><li><i></i></li>)}</ol>
+        <h2 class="h2b">Repertório <small>1 fixa + 2 de 6</small></h2>
+        <ol class="cinto">{q(4).map(()=><li><i></i></li>)}</ol>
+      </div>
+    </div>
+    <div class="pe">Coração maior ou igual vence. Margem 4+ é sucesso forte. Cada Peso: +1 degrau num pecado. Dano = dado + arma − armadura.</div>
+  </section>
+
+  <section class="folha verso">
+    <header class="topo"><h1>Penasia</h1><div class="sub">Ficha de personagem · verso</div></header>
+    <div class="duas">
+      <div class="bloco"><h2>Talentos <small>Pesos 1, 2, 5, 8, 10; treino; Vocação</small></h2><ol class="linhas">{q(8).map(()=><li><i></i></li>)}</ol></div>
+      <div class="bloco"><h2>Vocação <small>Peso 4</small></h2>
+        <label class="campo"><b>Classe da Vocação</b><i></i></label>
+        <label class="campo"><b>Técnica</b><i></i></label>
+        <label class="campo"><b>Dote</b><i></i></label>
+        <label class="campo"><b>Sinergias</b><i></i><i></i></label>
+        <h2 class="h2b">Treinos de Interlúdio <small>3 etapas cada</small></h2>
+        <ol class="linhas">{q(3).map(()=><li><i></i><span class="cx"></span><span class="cx"></span><span class="cx"></span></li>)}</ol>
+      </div>
+    </div>
+    <div class="duas">
+      <div class="bloco"><h2>Magias e Descobertas <small>grimório</small></h2><ol class="linhas">{q(9).map(()=><li><i></i></li>)}</ol></div>
+      <div class="bloco"><h2>Inventário</h2>
+        <div class="linha"><span>Armadura</span><i class="inl"></i><span>Proteção</span><span class="dado peq"></span></div>
+        <div class="linha"><span>Arma</span><i class="inl"></i><span>Dano</span><span class="dado peq"></span></div>
+        <div class="linha"><span>Escudo</span><i class="inl"></i><span class="cx"></span><span>racha</span></div>
+        <ol class="linhas">{q(7).map(()=><li><i></i></li>)}</ol>
+        <label class="campo" style="margin-top:6px"><b>Ouro e posses</b><i></i></label>
+      </div>
+    </div>
+    <div class="bloco"><h2>Progressão <small>você sobe pelo que paga, não pelo que mata</small></h2>
+      <div class="prog">
+        <div><b>Feridas Graves</b><div class="cxs">{q(10).map(()=><span class="cx"></span>)}</div></div>
+        <div><b>Dívida quitada</b><div class="cxs">{q(10).map(()=><span class="cx"></span>)}</div></div>
+        <div><b>Quedas na Contenção</b><div class="cxs">{q(10).map(()=><span class="cx"></span>)}</div></div>
+        <div><b>Descobertas</b><div class="cxs">{q(10).map(()=><span class="cx"></span>)}</div></div>
+      </div>
+    </div>
+    <div class="bloco" style="margin-top:8px"><h2>Notas, laços, história</h2><ol class="linhas">{q(7).map(()=><li><i></i></li>)}</ol></div>
+  </section>
+  </main>
+</body>
+</html>

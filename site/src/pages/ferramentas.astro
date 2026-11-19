@@ -1,0 +1,114 @@
+---
+import Livro from '../layouts/Livro.astro';
+---
+<Livro title="Ferramentas da mesa" chap="Ferramentas">
+  <h2>Ferramentas da mesa</h2>
+  <p class="lede">A Roda para consultar durante a luta e uma calculadora de chances exatas.</p>
+
+  <h3>A Roda</h3>
+  <p>Toque num pecado para ver quem ele domina.</p>
+  <div class="roda">
+    <svg id="svg" viewBox="0 0 600 600" role="img" aria-label="Roda dos Pecados interativa"></svg>
+    <div id="info" class="box" aria-live="polite"></div>
+  </div>
+
+  <h3>Calculadora de chances</h3>
+  <div class="calc">
+    <div>
+      <div class="fld"><span class="lb">Seu dado</span><div class="seg" id="cDie"></div></div>
+      <div class="fld"><span class="lb">Seus degraus</span><div class="seg" id="cSt"></div></div>
+      <div class="fld"><span class="lb">Contra</span><div class="seg" id="cMode"></div></div>
+      <div class="fld" id="fFix"><span class="lb">Número</span><div class="seg" id="cFix"></div></div>
+      <div id="fOpp" hidden>
+        <div class="fld"><span class="lb">Dado do oponente</span><div class="seg" id="oDie"></div></div>
+        <div class="fld"><span class="lb">Degraus do oponente</span><div class="seg" id="oSt"></div></div>
+      </div>
+    </div>
+    <div aria-live="polite">
+      <div class="lb">Chance de sucesso</div>
+      <div class="big" id="rP">–</div>
+      <div class="bar"><i id="rBar"></i></div>
+      <p id="rS"></p>
+      <p id="rD" class="mut"></p>
+    </div>
+  </div>
+</Livro>
+
+<style>
+  .roda{display:grid;gap:24px;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center}
+  @media(max-width:860px){.roda{grid-template-columns:1fr}}
+  #svg{width:100%;max-width:500px;height:auto;margin:0 auto;display:block}
+  .calc{display:grid;gap:24px;grid-template-columns:1fr 1fr;border:1px solid var(--rule);border-radius:4px;padding:20px}
+  @media(max-width:820px){.calc{grid-template-columns:1fr}}
+  .fld{display:grid;gap:6px;margin-bottom:12px}
+  .lb{font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .big{font:900 clamp(56px,10vw,88px)/1 var(--display);font-variant-numeric:tabular-nums}
+  .bar{height:10px;border-radius:99px;background:var(--soft);overflow:hidden;margin:10px 0}
+  .bar i{display:block;height:100%;background:var(--accent);width:0}
+  .mut{color:var(--muted);font-size:15px}
+  :global(.seg){display:flex;flex-wrap:wrap;gap:6px}
+  :global(.seg button){font:600 14px var(--mono);padding:8px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--page);color:var(--ink);cursor:pointer;min-height:40px}
+  :global(.seg button[aria-pressed="true"]){background:var(--ink);color:var(--page);border-color:var(--ink)}
+  :global(.node){cursor:pointer}
+  :global(.chip){display:inline-block;font:600 12px var(--mono);padding:2px 8px;border-radius:99px;border:1px solid var(--rule);margin:2px 4px 2px 0}
+</style>
+
+<script>
+  const $ = (s: string) => document.querySelector(s) as HTMLElement;
+  const W = ['Ira','Luxúria','Preguiça','Ganância','Inveja','Gula'];
+  const COL: Record<string,string> = {Ira:'--ira','Luxúria':'--lux','Preguiça':'--pre','Ganância':'--gan',Inveja:'--inv',Gula:'--gul'};
+  const cx=300, cy=300, R=210, r=50;
+  const P = W.map((_,i)=>{const a=(-90+60*i)*Math.PI/180;return [cx+R*Math.cos(a), cy+R*Math.sin(a)];});
+  const sh=(a:number[],b:number[],x:number,y:number)=>{const dx=b[0]-a[0],dy=b[1]-a[1],L=Math.hypot(dx,dy);return [a[0]+dx/L*x,a[1]+dy/L*x,b[0]-dx/L*y,b[1]-dy/L*y];};
+  let s='<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="context-stroke"/></marker></defs>';
+  for(let i=0;i<6;i++) for(const k of [1,2]){const c=sh(P[i],P[(i+k)%6],r+4,r+10);s+=`<line class="ed" data-i="${i}" data-j="${(i+k)%6}" x1="${c[0]}" y1="${c[1]}" x2="${c[2]}" y2="${c[3]}" stroke="var(--rule)" stroke-width="${k===1?3:2}" marker-end="url(#ah)"/>`;}
+  W.forEach((n,i)=>{s+=`<g class="node" tabindex="0" role="button" aria-label="${n}" data-n="${i}"><circle cx="${P[i][0]}" cy="${P[i][1]}" r="${r}" fill="var(--page)" stroke="var(${COL[n]})" stroke-width="5"/><text x="${P[i][0]}" y="${P[i][1]+6}" text-anchor="middle" font-size="19" font-weight="700" fill="var(--ink)" font-family="Fraunces,Georgia,serif">${n}</text></g>`;});
+  s+=`<g class="node" tabindex="0" role="button" aria-label="Orgulho" data-n="6"><circle cx="300" cy="300" r="60" fill="var(--page)" stroke="var(--org)" stroke-width="5"/><text x="300" y="306" text-anchor="middle" font-size="19" font-weight="700" fill="var(--ink)" font-family="Fraunces,Georgia,serif">Orgulho</text></g>`;
+  $('#svg').innerHTML = s;
+  function sel(n:number){
+    const eds = document.querySelectorAll<SVGLineElement>('.ed');
+    eds.forEach(e=>{e.setAttribute('stroke','var(--rule)');e.setAttribute('stroke-width','2');e.style.opacity='1';});
+    if(n===6){
+      eds.forEach(e=>e.style.opacity='.35');
+      $('#info').innerHTML='<b>Orgulho</b><p>Fora da roda. Só ganha +1 degrau contra quem ele desafiou ou quem o desafiou.</p><span class="chip">Nunca recebe ajuda</span><span class="chip">Perde ao ceder</span>';
+      return;
+    }
+    eds.forEach(e=>{const i=+e.dataset.i!, j=+e.dataset.j!;
+      if(i===n){e.setAttribute('stroke',`var(${COL[W[n]]})`);e.setAttribute('stroke-width','4');}
+      else if(j===n){e.setAttribute('stroke','var(--muted)');}
+      else e.style.opacity='.25';});
+    const chip=(x:number)=>`<span class="chip">${W[x]}</span>`;
+    $('#info').innerHTML=`<b>${W[n]}</b><p>Domina (+1 degrau): ${chip((n+1)%6)}${chip((n+2)%6)}</p><p>Teme: ${chip((n+5)%6)}${chip((n+4)%6)}</p><p>Neutro: ${chip((n+3)%6)}</p>`;
+  }
+  document.querySelectorAll<SVGGElement>('.node').forEach(g=>{
+    g.addEventListener('click',()=>sel(+g.dataset.n!));
+    g.addEventListener('keydown',(e)=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();sel(+g.dataset.n!);}});
+  });
+  sel(0);
+
+  const L=[4,6,8,10,12];
+  function dist(die:number,st:number){const i=L.indexOf(die)+st;if(i<0)return null;const p=new Array(13).fill(0);if(i<=4){const n=L[i];for(let k=1;k<=n;k++)p[k]=1/n;}else{for(let k=1;k<=12;k++)p[k]=(2*k-1)/144;}return p;}
+  function label(die:number,st:number){const i=L.indexOf(die)+st;if(i<0)return 'abaixo do d4 (falha automática)';if(i>4)return '2d12, fica o maior';return 'd'+L[i];}
+  const S:any={die:8,st:0,mode:'fix',fix:5,od:8,os:0};
+  function seg(id:string,vals:any[],key:string,fmt:(v:any)=>string){
+    const el=$(id);el.innerHTML=vals.map(v=>`<button type="button" aria-pressed="${S[key]===v}" data-v="${v}">${fmt(v)}</button>`).join('');
+    el.onclick=(e)=>{const b=(e.target as HTMLElement).closest('button');if(!b)return;const v=b.dataset.v!;S[key]=isNaN(+v)?v:+v;draw();};
+  }
+  const sign=(v:number)=>v>0?'+'+v:''+v;
+  function draw(){
+    seg('#cDie',L,'die',v=>'d'+v); seg('#cSt',[-3,-2,-1,0,1,2],'st',sign);
+    seg('#cMode',['fix','open'],'mode',v=>v==='fix'?'Número fixo':'Dado do oponente');
+    seg('#cFix',[3,4,5,6,7],'fix',String); seg('#oDie',L,'od',v=>'d'+v); seg('#oSt',[-3,-2,-1,0,1,2],'os',sign);
+    $('#fFix').hidden=S.mode!=='fix'; $('#fOpp').hidden=S.mode!=='open';
+    const a=dist(S.die,S.st); let ok=0, strong=0;
+    if(a){
+      if(S.mode==='fix'){for(let i=1;i<=12;i++){if(i>=S.fix)ok+=a[i];if(i-S.fix>=4)strong+=a[i];}}
+      else{const b=dist(S.od,S.os);if(!b){ok=1;strong=1;}else{for(let i=1;i<=12;i++)for(let j=1;j<=12;j++){if(i>=j)ok+=a[i]*b[j];if(i-j>=4)strong+=a[i]*b[j];}}}
+    }
+    const pct=Math.round(ok*100);
+    $('#rP').textContent=pct+'%'; ($('#rBar') as HTMLElement).style.width=pct+'%';
+    $('#rS').innerHTML='Sucesso forte (margem 4+): <b>'+Math.round(strong*100)+'%</b>';
+    $('#rD').textContent='Seu dado: '+label(S.die,S.st)+(S.mode==='open'?' · oponente: '+label(S.od,S.os):' · contra '+S.fix)+'.';
+  }
+  draw();
+</script>

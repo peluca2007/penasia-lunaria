@@ -1,0 +1,208 @@
+/* Modo folhear: o livro aberto sobre o vazio negro. Papel dia (claro) ou noite
+   (negro), independentes do tema do sistema. Mesma linguagem do contínuo:
+   xerox, gótico torto nas aberturas, cor só onde há pecado. */
+.fb-body{margin:0;padding:0;height:100dvh;overflow:hidden;color:#efece4;font-family:var(--body);
+  background:var(--grao-b),#000;
+  display:grid;grid-template-rows:56px 1fr 52px}
+.fb-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 max(14px,env(safe-area-inset-left));background:#000;border-bottom:2px solid #fff}
+.fb-g{display:flex;align-items:center;gap:6px;flex:1;min-width:0}
+.fb-g.fb-dir{justify-content:flex-end}
+.fb-titulo{font:400 16px var(--grito);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:40vw;text-align:center;display:flex;align-items:center;gap:10px;min-width:0}
+.fb-titulo::before{content:"";flex:none;width:14px;height:14px;background:var(--cor-abre);-webkit-mask:var(--orn) center/contain no-repeat;mask:var(--orn) center/contain no-repeat}
+.fb-titulo span{overflow:hidden;text-overflow:ellipsis}
+.fb-bt{display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 10px;border:2px solid transparent;
+  background:none;color:inherit;font:400 14px var(--grito);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;cursor:pointer}
+.fb-bt:hover{border-color:#fff}
+.fb-bt svg,.fb-modo svg,.fb-seta svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:square;stroke-linejoin:miter}
+.fb-modo{display:flex;border:2px solid #fff;padding:2px}
+.fb-modo>*{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 10px;font:400 14px var(--grito);letter-spacing:.08em;text-transform:uppercase;color:inherit;text-decoration:none}
+.fb-modo .on{background:#fff;color:#000}
+.fb-modo a:hover{background:#222}
+.fb-central{border-color:#fff}
+@media(max-width:700px){.fb-bt span,.fb-modo{display:none}.fb-central span{display:inline}.fb-titulo{font-size:13px;flex:1 1 0;max-width:none;justify-content:center}.fb-g{flex:0 0 auto}.fb-g.fb-dir{flex:0 0 auto}.fb-bar{gap:4px}#bTela{display:none}.fb-bt{padding:0 7px}}
+
+.fb-palco{position:relative;display:flex;align-items:center;justify-content:center;min-height:0;touch-action:pan-y}
+.fb-seta{position:absolute;top:50%;translate:0 -50%;z-index:5;width:48px;height:72px;border:0;background:none;color:#aaa;cursor:pointer}
+.fb-seta:first-child{left:6px}.fb-seta:last-child{right:6px}
+.fb-seta:hover:not(:disabled){color:#fff}
+.fb-seta:disabled{opacity:.15;cursor:default}
+.fb-seta svg{width:32px;height:32px;stroke-width:2.4}
+@media(max-width:899px){.fb-seta{display:none}}
+
+.fb-escala{position:relative}
+.fb-livro{--W:560px;--H:780px;--P:46px;--UT:calc(var(--H) - 2*var(--P) - 16px);position:absolute;left:0;top:0;width:calc(var(--W)*2);height:var(--H);transform-origin:0 0;opacity:0;transition:opacity .2s}
+.fb-livro.pronto{opacity:1}
+.fb-livro.simples{width:var(--W)}
+
+/* papel */
+.fb-livro[data-papel="dia"]{--papel:#f4f1e8;--papel2:#e4e0d5;--ink:#0b0b0b;--muted:#3f3c37;--rule:#bdb8ad;--soft:#e6e2d7;--page:#f4f1e8;--accent:#0b0b0b;--borda:#bdb8ad;
+  --grao:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3 .98'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");color-scheme:light}
+.fb-livro[data-papel="noite"]{--papel:#0e0e0e;--papel2:#181818;--ink:#efece4;--muted:#b9b4aa;--rule:#3a3835;--soft:#1c1b19;--page:#0e0e0e;--accent:#efece4;--borda:#2a2a2a;
+  --grao:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 -3 .96'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");color-scheme:dark}
+.fb-folha{position:absolute;top:0;width:var(--W);height:var(--H);background:var(--grao),var(--papel)}
+.fb-folha.fb-esq{left:0;box-shadow:-2px 2px 0 var(--borda),-4px 4px 0 var(--papel2),-6px 6px 0 #000,0 30px 70px rgba(0,0,0,.9)}
+.fb-folha.fb-dir{left:var(--W);box-shadow:2px 2px 0 var(--borda),4px 4px 0 var(--papel2),6px 6px 0 #000,0 30px 70px rgba(0,0,0,.9)}
+/* lombada: dobra seca */
+.fb-lombada{position:absolute;left:calc(var(--W) - 40px);top:0;width:80px;height:var(--H);z-index:3;pointer-events:none;
+  background:linear-gradient(to right,transparent 0,rgba(0,0,0,.08) 40%,rgba(0,0,0,.45) 49.5%,rgba(0,0,0,.6) 50%,rgba(0,0,0,.3) 51%,rgba(0,0,0,.06) 62%,transparent 100%)}
+.fb-livro.sem-dir .fb-folha.fb-dir{visibility:hidden}
+.fb-livro.sem-dir .fb-lombada{width:40px;background:linear-gradient(to right,transparent,rgba(0,0,0,.35))}
+.fb-livro.simples .fb-folha.fb-dir,.fb-livro.simples .fb-dir{display:none}
+.fb-livro.simples .fb-folha.fb-esq{box-shadow:2px 2px 0 var(--borda),4px 4px 0 var(--papel2),6px 6px 0 #000,0 24px 60px rgba(0,0,0,.9)}
+.fb-livro.simples .fb-lombada{left:0;width:24px;background:linear-gradient(to right,rgba(0,0,0,.4),transparent)}
+
+.fb-cab,.fb-num{position:absolute;font:400 11px var(--grito);letter-spacing:.2em;text-transform:uppercase;color:var(--ink);z-index:2}
+.fb-cab{top:18px;width:calc(var(--W) - 2*var(--P));display:flex;align-items:center;gap:8px}
+.fb-cab:not(:empty)::before{content:"";flex:none;width:14px;height:14px;background:var(--cor);-webkit-mask:var(--orn) center/contain no-repeat;mask:var(--orn) center/contain no-repeat}
+.fb-cab[data-pecado="todos"]::before{background:conic-gradient(var(--ira) 0 14.3%,var(--lux) 0 28.6%,var(--pre) 0 42.9%,var(--gan) 0 57.1%,var(--inv) 0 71.4%,var(--gul) 0 85.7%,var(--org) 0)}
+.fb-num{bottom:14px;font-size:15px;letter-spacing:.04em;min-width:30px;padding:1px 6px;text-align:center}
+.fb-num:not(:empty){background:var(--ink);color:var(--papel)}
+.fb-cab.fb-esq,.fb-num.fb-esq{left:var(--P)}
+.fb-cab.fb-dir{left:calc(var(--W) + var(--P));flex-direction:row-reverse}
+.fb-num.fb-dir{right:var(--P)}
+
+.fb-janela{position:absolute;inset:0;overflow:hidden;z-index:1}
+.fb-fluxo{position:absolute;left:var(--P);top:calc(var(--P) + 6px);width:calc(var(--W) - 2*var(--P));height:var(--UT);
+  column-width:calc(var(--W) - 2*var(--P));column-gap:calc(2*var(--P));column-fill:auto;
+  color:var(--ink);font:15px/1.58 var(--body);will-change:transform;hyphens:manual;text-align:left}
+
+/* capa: negra, xerox, o nome gótico torto sobre as sete manchas */
+.fb-capa{position:absolute;left:var(--W);top:0;width:var(--W);height:var(--H);z-index:3;cursor:pointer;overflow:hidden;isolation:isolate;
+  background:var(--grao-b),#000;color:#fff;
+  box-shadow:0 30px 70px rgba(0,0,0,.9),inset 4px 0 0 #1a1a1a;display:none}
+.fb-livro[data-vista="capa"] .fb-capa{display:block}
+.fb-livro[data-vista="capa"] :is(.fb-folha,.fb-lombada,.fb-cab,.fb-num,.fb-janela){visibility:hidden}
+.fb-livro.simples .fb-capa{left:0}
+.fb-capa-moldura{position:absolute;inset:0;display:block}
+.fb-capa-grav{position:absolute;inset:0;z-index:-2;background:url(/img/estilo/dore-lucifer.webp) 50% 62%/cover no-repeat;filter:grayscale(1) invert(1) contrast(1.6);opacity:.22;mix-blend-mode:screen}
+.fb-capa-topo{position:absolute;left:34px;top:30px;font:400 15px var(--grito);letter-spacing:.42em;text-transform:uppercase;color:#fff}
+.fb-capa-nome{position:absolute;left:16px;right:0;top:170px;font:400 164px/.8 var(--display);color:#fff;transform:rotate(-9deg);text-shadow:6px 6px 0 #000,9px 9px 0 var(--ira)}
+.fb-capa-tag{position:absolute;left:34px;bottom:118px;font:400 27px/1.08 var(--grito);letter-spacing:.02em;text-transform:uppercase;color:#000;background:#fff;padding:10px 14px 8px;transform:rotate(2deg);max-width:340px}
+.fb-capa-pe{position:absolute;left:34px;bottom:34px;font:400 13px var(--grito);letter-spacing:.32em;text-transform:uppercase;color:#bbb}
+/* as sete manchas */
+.fb-roda{position:absolute;z-index:-1;left:-40px;right:-40px;top:380px;height:230px;transform:rotate(-9deg)}
+.fb-roda i{display:block;height:33px;margin-bottom:0;clip-path:var(--rasgo)}
+.fb-roda i:nth-child(odd){margin-left:28px}
+.fb-roda i:nth-child(3n){margin-right:60px}
+
+/* folha que vira: só transform e uma sombra que escurece até a dobra */
+.fb-vira{position:absolute;top:0;width:var(--W);height:var(--H);z-index:4;display:none;transform-style:preserve-3d;pointer-events:none}
+.fb-vira i{position:absolute;inset:0;background:var(--papel);backface-visibility:hidden}
+.fb-vira i::after{content:"";position:absolute;inset:0;opacity:0}
+.fb-vira .verso{transform:rotateY(180deg);background:var(--papel2)}
+.fb-vira.para-esq{display:block;left:var(--W);transform-origin:0 50%}
+.fb-vira.para-dir{display:block;left:0;transform-origin:100% 50%}
+.fb-vira.para-esq .frente::after,.fb-vira.para-dir .verso::after{background:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,.08) 30%,rgba(0,0,0,.2))}
+.fb-vira.para-esq .verso::after,.fb-vira.para-dir .frente::after{background:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,.08) 30%,rgba(0,0,0,.2))}
+.fb-vira.para-esq i::after,.fb-vira.para-dir i::after{animation:fb-dobra var(--dur,560ms) cubic-bezier(.45,.05,.3,1)}
+@keyframes fb-dobra{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+.fb-vira.simples{display:block;left:0;background:var(--papel);box-shadow:0 10px 30px rgba(0,0,0,.6)}
+.fb-vira.simples i{display:none}
+
+/* tipografia dentro da página */
+.fb-cap{break-before:column}
+.fb-cap:first-child{break-before:auto}
+.fb-fluxo h1{font-size:70px;margin:6px 0 12px}
+.fb-fluxo h2{font-size:38px;margin:0 0 14px;break-after:avoid}
+.fb-fluxo h3{font-size:22px;margin:26px 0 10px;break-after:avoid;break-inside:avoid}
+.fb-fluxo h4{font-size:13px;margin:16px 0 6px;break-after:avoid;border-bottom-width:2px}
+.fb-fluxo p,.fb-fluxo ul,.fb-fluxo ol{max-width:none;margin:0 0 10px;orphans:2;widows:2}
+.fb-fluxo ul,.fb-fluxo ol{padding-left:20px}
+.fb-fluxo li{margin-bottom:4px}
+.fb-fluxo .lede{font-size:17px;line-height:1.45}
+.fb-fluxo .tag{font-size:19px}
+.fb-fluxo :is(.abre + p,.abre + h3 + p)::first-letter{font-size:3.6em}
+.fb-fluxo table{display:table;width:100%;min-width:0;font-size:12.5px;line-height:1.38;margin:10px 0 16px;break-inside:auto;table-layout:auto;border-bottom-width:2px}
+.fb-fluxo thead{display:table-header-group}
+.fb-fluxo tr{break-inside:avoid}
+.fb-fluxo tr:first-child{break-after:avoid}
+.fb-fluxo th{font-size:11px;padding:5px 6px 4px;white-space:normal}
+.fb-fluxo td{padding:5px 6px}
+.fb-fluxo .box,.fb-fluxo .rev{padding:11px 14px;margin:14px 6px 18px 0;break-inside:avoid;font-size:14px}
+.fb-fluxo .box{box-shadow:5px 5px 0 var(--cor);border-width:2.5px}
+.fb-fluxo [data-pecado="nenhum"] .box,.fb-fluxo [data-pecado="todos"] .box,.fb-cap[data-pecado="nenhum"] .box,.fb-cap[data-pecado="todos"] .box{box-shadow:5px 5px 0 var(--ink)}
+.fb-fluxo .rev>p:first-child::before{font-size:10.5px}
+.fb-fluxo blockquote{margin:16px 0;padding:2px 0 2px 16px;break-inside:avoid;border-left-width:5px}
+.fb-fluxo :is(.abre + .box + blockquote,.abre + blockquote){padding:26px 6% 4px;margin:26px 0 18px}
+.fb-fluxo :is(.abre + .box + blockquote,.abre + blockquote)::before{font-size:60px;top:-14px}
+.fb-fluxo svg{max-height:calc(var(--UT) - 30px);break-inside:avoid}
+.fb-fluxo .st{font-size:9.5px;padding:0 5px;vertical-align:2px;margin-left:6px}
+.fb-fluxo .st.fechado{border-width:3px}
+.fb-fluxo h3 .st{font-size:9px}
+.fb-fluxo .legend{font-size:13px}
+.fb-fluxo pre,.fb-fluxo code{white-space:pre-wrap;word-break:break-word}
+.fb-fluxo hr{margin:16px 0}
+.fb-fim-txt{margin-top:40%!important;text-align:center!important;font:400 34px/1.1 var(--display);color:var(--ink)}
+.fb-fim-txt a{text-decoration-color:currentColor}
+
+/* abertura: a página inteira fica negra (a sombra cobre as margens da folha) */
+.fb-fluxo .abre{height:var(--UT);min-height:0;margin:0;padding:6px 4px;break-inside:avoid;break-after:column;justify-content:center;
+  box-shadow:0 -24px 0 var(--P) #000,0 24px 0 var(--P) #000;overflow:hidden;background:#000}
+.fb-fluxo .abre .orn{width:64px;right:6px;top:6px}
+.fb-fluxo .abre .chap{font-size:12px}
+.fb-fluxo .abre .chap b{font-size:120px}
+.fb-fluxo .abre :is(h1,h2){font-size:88px;margin:8px 0 22px}
+.fb-fluxo .abre h1{font-size:120px}
+.fb-fluxo .abre .sub{font-size:10.5px;margin-bottom:18px;line-height:1.6;padding:3px 9px}
+.fb-fluxo .abre .lede,.fb-fluxo .abre .tag{font-size:17px;line-height:1.45;max-width:none}
+.fb-fluxo .abre .fig.gravura{margin:8px 0 20px;width:100%}
+.fb-fluxo .abre .fig.gravura img{max-height:300px;width:100%;object-fit:cover}
+.fb-fluxo .abre.com-fig .chap b{font-size:84px}
+.fb-fluxo .abre.com-fig :is(h1,h2){font-size:70px;margin:0 0 14px}
+.fb-fluxo .abre.com-fig .orn{width:52px}
+.fb-fluxo .abre.curta{height:auto;break-after:auto;padding:10px 4px 22px;margin-bottom:22px;box-shadow:0 -24px 0 var(--P) #000}
+.fb-fluxo .abre.curta :is(h1,h2){font-size:62px;margin:4px 0 12px}
+.fb-fluxo .abre.curta .chap b{font-size:60px}
+.fb-fluxo .abre.curta .orn{width:44px}
+
+.fb-fluxo .fig{max-width:none;margin:12px 0;float:none;width:auto;break-inside:avoid}
+.fb-fluxo .fig img{width:auto;max-width:100%;max-height:calc(var(--UT) - 64px);object-fit:contain;border-width:2px}
+/* imagem solta (mapa): proporção própria e nunca maior que a página */
+.fb-fluxo :is(p,section)>img:not(.fig img){display:block;height:auto;width:auto;max-width:100%;max-height:calc(var(--UT) - 170px);margin:8px auto;break-inside:avoid}
+.fb-fluxo .fig.pagina{break-before:column;break-after:column;position:relative;height:var(--UT);margin:0}
+.fb-fluxo .fig.pagina img{width:100%;height:100%;max-height:none;object-fit:cover}
+.fb-fluxo .fig.pagina figcaption{position:absolute;left:0;right:0;bottom:0;margin:0;padding:8px 12px;color:#fff;background:#000}
+.fb-fluxo .fig.lado img{max-height:300px}
+.fb-livro[data-papel="noite"] .fb-fluxo{-webkit-font-smoothing:antialiased}
+.fb-livro[data-papel="noite"] .fb-fluxo .fig img{filter:grayscale(1) contrast(1.25) invert(.92)}
+.fb-livro[data-papel="noite"] .fb-fluxo .abre .fig img{filter:grayscale(1) contrast(1.35) brightness(1.05)}
+
+.fb-pe{display:flex;align-items:center;justify-content:center;gap:16px;padding:0 16px}
+.fb-pe input{width:min(460px,60vw);accent-color:#fff}
+.fb-pos{font:400 14px var(--grito);letter-spacing:.08em;color:#ccc;min-width:96px}
+
+/* índice: sumário de livro velho */
+.fb-indice{background:var(--grao-b),#000;color:#efece4;border:3px solid #fff;padding:0;width:min(460px,calc(100vw - 32px));max-height:82dvh}
+.fb-indice::backdrop{background:rgba(0,0,0,.8)}
+.fb-indice-topo strong{color:inherit;font-weight:400}
+.fb-indice-topo{display:flex;justify-content:space-between;align-items:center;padding:16px 20px 10px;border-bottom:3px solid #fff;font:400 40px/1 var(--display)}
+.fb-indice ol{list-style:none;margin:0;padding:10px 12px 16px}
+.fb-indice a{display:flex;align-items:baseline;gap:10px;padding:6px 8px;color:inherit;text-decoration:none;font:400 19px var(--grito);letter-spacing:.03em;text-transform:uppercase}
+.fb-indice a::before{content:"";flex:none;width:14px;height:14px;transform:translateY(1px);background:var(--cor-abre);-webkit-mask:var(--orn) center/contain no-repeat;mask:var(--orn) center/contain no-repeat}
+.fb-indice a[data-pecado="todos"]::before{background:conic-gradient(var(--ira) 0 14.3%,var(--lux) 0 28.6%,var(--pre) 0 42.9%,var(--gan) 0 57.1%,var(--inv) 0 71.4%,var(--gul) 0 85.7%,var(--org) 0)}
+.fb-indice a span{flex:none;max-width:75%}
+.fb-indice a i{flex:1;border-bottom:2px dotted #555;transform:translateY(-4px)}
+.fb-indice a b{font:400 15px var(--grito);color:#bbb}
+.fb-indice li.sub a{padding-left:30px;font:400 16px var(--body);text-transform:none;color:#cfcac1}
+.fb-indice a:hover{background:#1a1a1a}
+.fb-indice a[aria-current]{background:var(--cor-abre);color:#000}
+.fb-indice a[aria-current]::before{background:#000}
+.fb-indice a[aria-current] b{color:#000}
+.fb-body :focus-visible{outline:3px solid #fff;outline-offset:2px}
+@media (prefers-reduced-motion: reduce){.fb-livro{transition:none}}
+
+/* Origens no folhear: uma coluna de cartas compactas, nunca partidas */
+.fb-fluxo .origens{grid-template-columns:1fr;gap:6px;margin:10px 0 0}
+.fb-fluxo .origem{padding:6px 10px;gap:9px;break-inside:avoid;font-size:12.5px;border-width:2px}
+.fb-fluxo .origem img{width:44px;height:55px}
+.fb-fluxo .origem h4{font-size:14px;margin:0 0 2px}
+.fb-fluxo .origem .o-fr{font-size:12px;margin-bottom:5px;line-height:1.35}
+.fb-fluxo .origem ul{font-size:12px;line-height:1.35;padding:0}
+.fb-fluxo .origem li{margin-bottom:2px}
+.fb-fluxo .origem :is(h4,p,li){text-align:left}
+
+/* Referência rápida no folhear: uma coluna, tabelas compactas */
+.fb-fluxo .ref-grade{display:block}
+.fb-fluxo .ref-grade h3{margin-top:16px;font-size:18px}
+.fb-fluxo .ref-grade table{font-size:12px;margin:6px 0 10px}
+.fb-fluxo .ref-grade p{margin-bottom:6px}

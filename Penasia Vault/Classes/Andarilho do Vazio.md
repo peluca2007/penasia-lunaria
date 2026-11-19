@@ -1,0 +1,122 @@
+---
+tags: [penasia, classes, andarilho]
+---
+# Andarilho do Vazio (Saturação)
+Voidwalker · escaramuçador que vira a mesa · Pecados de Ofício: **Preguiça** e **Gula** (opostos, nunca vizinhos) · Guarda de classe: **Desviar** (Luxúria): "você não está mais lá".
+
+> **Identidade:** o Vazio mora dentro dele como um copo que só enche, e um dia ele vira na mesa de todo mundo.
+> **Imagem:** `yami.webp` (kanji 闇, "Chuva de Meteoros do Vazio"; é ficha, serve de referência). Arte limpa alternativa: `re-dodo.webp`.
+
+> **Em uma frase:** cada poder enche um copo de dados; um dia ele vira na mesa de todo mundo.
+> **Seu turno:** ponha mais um dado no copo e bata mais forte, ou derrame agora, antes de passar do Limite.
+> **O momento uau:** o copo com 6 dados vira no meio de três inimigos e cada figura ganha um dado ao lado.
+
+**Pecado-assinatura:** Preguiça (o Vazio é ausência). Passiva: +1 degrau em Preguiça nos Pesos 3, 6 e 9.
+**Ataque:** Preguiça (de longe) e Gula (de perto, devorar).
+
+## Mechanic
+- **tag:** Derramar
+- **hook:** "Você nunca gasta. Você só enche, e escolhe a hora de virar."
+- **loop:**
+  1. **Encha.** Todo poder põe 1 ou 2 d6 dentro do copo. Mais dados, golpe mais forte.
+  2. **Segure.** Até o Limite você é perigoso e intocável na Roda. Passou do Limite, o copo vira sozinho no fim do turno.
+  3. **Derrame.** Role o copo: dano em área, e os dados caem na mesa ao lado de **todos** na zona.
+- **cost:** Não tem válvula: o copo só esvazia virando. Virou sozinho? Acerta os aliados da zona, deixa você **Exposto** e cada 1 dói dobrado. Num corredor cheio de amigos, é uma bomba sem pino.
+
+## O recurso na mesa: o Copo
+**Objeto:** um copo de verdade e um punhado de d6.
+
+| | Regra |
+|:--|:--|
+| **Ganha** | Cada técnica põe d6 no copo. As ações gerais do recurso (trocar Guarda, Proteger, Revidar, Arrancada) também **põem 1 d6** em vez de gastar. |
+| **Pressão** | Pressão = dados no copo. Golpes do Vazio somam **+Pressão ao dano** (máximo = Limite). |
+| **Limite Seguro** | Escolha a **Âncora** (qualquer pecado). Limite = metade do máximo dela: d4 = 2 · d6 = 3 · d8 = 4 · d10 = 5 · d12 = 6. |
+| **Roda** | Com o copo na **metade do Limite ou mais**, ninguém domina você. |
+| **Teto** | Não há teto. Passou do Limite? **Transborda** no fim do seu turno. |
+| **Zera** | Ao Derramar, ao Transbordar e no fim da cena (esvazia sem rolar). |
+
+### Derramar e Transbordar
+
+| | **Derramar** (você escolhe) | **Transbordar** (o copo escolhe) |
+|:--|:--|:--|
+| Quando | Sua Ação | Fim do turno com o copo acima do Limite |
+| Quem leva dano | **Inimigos** da zona | **Todos** da zona, aliados também |
+| Dano | Maior dado + Pressão, ignora armadura, sem rolar contra a Guarda | Maior dado, ignora armadura |
+| Cada **1** | 1 Vida em você | 2 Vida em você, e fica **Exposto** até o seu turno |
+| Os dados caem | Você põe 1 ao lado de cada figura da zona (inimigos primeiro), o resto onde quiser | 1 ao lado de cada figura, **você primeiro**, depois aliados, depois inimigos |
+
+Os dados que caem são **dados na mesa** (+1 degrau contra aquela figura, teto +2), recolhidos no fim da rodada.
+
+**O Vazio não mata por azar.** A Vida perdida para o copo para em 1; o resto vira **Ferida Leve (Marca do Vazio)**.
+
+## Curva do risco (conferida em script)
+
+| Dados no copo | Sai algum 1 | 2 ou mais uns | Dano médio em você ao Transbordar |
+|:-:|:-:|:-:|:-:|
+| 5 | 60% | 20% | 1,7 |
+| 6 | 66% | 26% | 2 |
+| 8 | 77% | 40% | 2,7 |
+| 10 | 84% | 52% | 3,3 (máx. 20) |
+
+O perigo de verdade não é o 1: é ficar **Exposto**, com dado do copo ao seu lado e aliados levando o golpe junto.
+
+## Verbo com os dados na mesa: **derramar**
+**Decisão do turno:** "Ponho mais um dado ou viro agora?"
+**Faixa exclusiva:** único recurso que nunca se gasta; único que põe dados ao lado de aliados **e** inimigos.
+
+**Momento uau:** o copo com 6 dados vira no meio de três inimigos. Seis dados batem na mesa, cada figura ganha um, e todo mundo, até o chefe, ataca com +1.
+
+## Repertório
+**Assinatura fixa: Golpe de Evento.** Ataque com Preguiça (até 1 zona) ou Gula (contato). Antes de rolar, ponha **1 ou 2 d6** no copo. Dano = dado + arma − armadura + Pressão.
+
+**Escolha 2 de 6:**
+
+| Técnica | Copo | Efeito |
+|:--|:-:|:--|
+| **Nulo** | +2 | Junto de um ataque ou defesa: neste teste a Roda **não existe para ninguém**. |
+| **Cintilação** | +1 | Reação ao ser atacado: teleporta 1 zona, sem golpe livre. Se o golpe acertou, dano −3. |
+| **Gravidade Oca** | +2 | Ação: inimigos de 1 zona vizinha rolam Gula contra a sua Âncora. Quem perde vem para a sua zona, Caído. |
+| **Beber o Golpe** | +1 por 4 de dano | Reação ao ser ferido: −2 de dano por d6 que você põe (até 3 d6). |
+| **Apagar Nome** | +1 | Manobra de Preguiça: o alvo esquece você. No turno dele, não pode atacar você. |
+| **Passo Ausente** | +1 | Movimento: atravessa 2 zonas, paredes e inimigos. O próximo ataque contra quem não te viu sobe +1 degrau. |
+
+## Subclasses (Peso 2)
+
+### Titã do Vácuo (sem Credor): o soco que vira o copo
+- **Peso 2 · Punho de Evento:** quando o Golpe de Evento põe 2 d6, o alvo é empurrado 1 zona. Para dentro de zona Perigosa = golpe de dano 8.
+- **Peso 6 · Singularidade:** ao Derramar, puxe antes todos os inimigos das zonas vizinhas para a sua. O Derramar acerta todos.
+- **Peso 11 · Quebra de Limite: Colapso Estelar.** Uma vez por cena, com o copo acima do **dobro** do Limite, Derrame: cada inimigo leva a **soma de todos os dados**. Dez dados ≈ 35: fase de chefe quebrada.
+
+### Fantasma (sem Credor): o copo que cai onde você quer
+- **Peso 2 · Lâminas do Horizonte:** o Golpe de Evento alcança qualquer zona que você vê. +1 d6 por alvo extra (até 2 extras, cada um defende sozinho).
+- **Peso 6 · Chuva Dirigida:** os dados derramados ou transbordados vão para **qualquer figura que você vê**, em qualquer zona. Você escolhe até no Transbordo.
+- **Peso 11 · Quebra de Limite: O Fim dos Tempos.** Derrame e tome **um turno extra agora**, com os dados derramados ainda na mesa.
+
+### Soberano do Nada (pacto: Ausa, o Vazio)
+- **Peso 2 · Copo de Ausa:** o seu copo usa **d8** no lugar de d6. Maior dano, menos uns (1 em 8). Cada cena em que você Transborda, +1 Dívida com Ausa (Cobrança: esquecem o seu nome).
+- **Peso 6 · Coroa Oca:** inimigo com um dado do seu copo ao lado não pode trocar de Guarda.
+- **Peso 11 · Quebra de Limite: O Fim de Todas as Coisas.** Uma vez por campanha, toque um alvo e vire o copo nele. Falhou na Contenção: é **apagado da história**. Passou: Ferida Grave. Seu copo volta cheio até o Limite.
+
+## Talentos de Classe
+- **Fome do Vazio:** sua Âncora pode ser o Jejum (d4, Limite 2). Cada dado no copo vale 2 de Pressão. Você vira a cada dois turnos.
+- **Copo Rachado:** no início do turno, tire 1 dado do copo sem rolar e ponha ao lado de um inimigo. Você goteja em vez de explodir.
+- **Âncora Dupla:** escolha dois pecados de Âncora e troque no início do turno. O Limite muda no meio da luta.
+- **Eco do Copo ◇:** quando um aliado acerta um alvo com dado do seu copo ao lado, ponha 1 d6 no copo. A mesa enche você.
+
+## Guarda extra
+**Desviar (Luxúria),** teto d10. **Toque do Andarilho:** com o copo na metade do Limite ou mais, Desviar põe +1 d6 no copo quando o golpe erra.
+
+## Dois Titãs do Vácuo no Peso 6
+
+| | **"Bomba" (Kael)** | **"Goteira" (Ivi)** |
+|:--|:--|:--|
+| Âncora | Gula d12 (Limite 6, Vida 22) | Jejum d4 com *Fome do Vazio* (Limite 2) |
+| Técnicas | Gravidade Oca, Beber o Golpe | Nulo, Passo Ausente |
+| Talentos | Âncora Dupla | Copo Rachado, Eco do Copo |
+| Turno | Puxa todo mundo, aguenta, enche até 7 e **deixa transbordar** no meio dos inimigos. | Pressão alta com 2 dados, goteja 1 dado por turno no chefe e vira cedo e sempre. |
+
+## Combo: Andarilho + Navalha (Colher)
+O Andarilho Derrama ao lado do chefe: 4 a 6 d6 caem na mesa. A **Navalha** chega com Gume 3 e **colhe** os três maiores (os 6!) para o Desfecho: 20+ fácil.
+
+## Conta (Peso 1, Preguiça d10, arma padrão, Guarda d8, armadura 1)
+Ciclo seguro (2, 2, 1, Derrama): **8,8** por turno. Guloso (2, 2, 2, transborda): **10,5**, mas acerta aliados e fica Exposto.
