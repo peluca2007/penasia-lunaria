@@ -39,7 +39,7 @@
   --grao:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3 .98'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");color-scheme:light}
 .fb-livro[data-papel="noite"]{--papel:#0e0e0e;--papel2:#181818;--ink:#efece4;--muted:#b9b4aa;--rule:#3a3835;--soft:#1c1b19;--page:#0e0e0e;--accent:#efece4;--borda:#2a2a2a;
   --grao:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 -3 .96'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");color-scheme:dark}
-.fb-folha{position:absolute;top:0;width:var(--W);height:var(--H);background:var(--grao),var(--papel)}
+.fb-folha{position:absolute;top:0;width:var(--W);height:var(--H);background:var(--papel)}
 .fb-folha.fb-esq{left:0;box-shadow:-2px 2px 0 var(--borda),-4px 4px 0 var(--papel2),-6px 6px 0 #000,0 30px 70px rgba(0,0,0,.9)}
 .fb-folha.fb-dir{left:var(--W);box-shadow:2px 2px 0 var(--borda),4px 4px 0 var(--papel2),6px 6px 0 #000,0 30px 70px rgba(0,0,0,.9)}
 /* lombada: dobra seca */
@@ -64,7 +64,7 @@
 .fb-janela{position:absolute;inset:0;overflow:hidden;z-index:1}
 .fb-fluxo{position:absolute;left:var(--P);top:calc(var(--P) + 6px);width:calc(var(--W) - 2*var(--P));height:var(--UT);
   column-width:calc(var(--W) - 2*var(--P));column-gap:calc(2*var(--P));column-fill:auto;
-  color:var(--ink);font:15px/1.58 var(--body);will-change:transform;hyphens:manual;text-align:left}
+  color:var(--ink);font:15.5px/1.62 var(--body);will-change:transform;hyphens:manual;text-align:left}
 
 /* capa: negra, xerox, o nome gótico torto sobre as sete manchas */
 .fb-capa{position:absolute;left:var(--W);top:0;width:var(--W);height:var(--H);z-index:3;cursor:pointer;overflow:hidden;isolation:isolate;
@@ -104,13 +104,13 @@
 .fb-cap:first-child{break-before:auto}
 .fb-fluxo h1{font-size:70px;margin:6px 0 12px}
 .fb-fluxo h2{font-size:38px;margin:0 0 14px;break-after:avoid}
-.fb-fluxo h3{font-size:22px;margin:26px 0 10px;break-after:avoid;break-inside:avoid}
+.fb-fluxo h3{font-size:21px;margin:26px 0 12px;break-after:avoid;break-inside:avoid}
 .fb-fluxo h4{font-size:13px;margin:16px 0 6px;break-after:avoid;border-bottom-width:2px}
 .fb-fluxo p,.fb-fluxo ul,.fb-fluxo ol{max-width:none;margin:0 0 10px;orphans:2;widows:2}
 .fb-fluxo ul,.fb-fluxo ol{padding-left:20px}
 .fb-fluxo li{margin-bottom:4px}
 .fb-fluxo .lede{font-size:17px;line-height:1.45}
-.fb-fluxo .tag{font-size:19px}
+.fb-fluxo .tag{font-size:18px}
 .fb-fluxo :is(.abre + p,.abre + h3 + p)::first-letter{font-size:3.6em}
 .fb-fluxo table{display:table;width:100%;min-width:0;font-size:12.5px;line-height:1.38;margin:10px 0 16px;break-inside:auto;table-layout:auto;border-bottom-width:2px}
 .fb-fluxo thead{display:table-header-group}
@@ -119,7 +119,7 @@
 .fb-fluxo th{font-size:11px;padding:5px 6px 4px;white-space:normal}
 .fb-fluxo td{padding:5px 6px}
 .fb-fluxo .box,.fb-fluxo .rev{padding:11px 14px;margin:14px 6px 18px 0;break-inside:avoid;font-size:14px}
-.fb-fluxo .box{box-shadow:5px 5px 0 var(--cor);border-width:2.5px}
+.fb-fluxo .box{box-shadow:5px 5px 0 var(--cor);border-width:3px;border-top-width:10px}
 .fb-fluxo [data-pecado="nenhum"] .box,.fb-fluxo [data-pecado="todos"] .box,.fb-cap[data-pecado="nenhum"] .box,.fb-cap[data-pecado="todos"] .box{box-shadow:5px 5px 0 var(--ink)}
 .fb-fluxo .rev>p:first-child::before{font-size:10.5px}
 .fb-fluxo blockquote{margin:16px 0;padding:2px 0 2px 16px;break-inside:avoid;border-left-width:5px}
@@ -189,7 +189,7 @@
 .fb-indice a[aria-current]::before{background:#000}
 .fb-indice a[aria-current] b{color:#000}
 .fb-body :focus-visible{outline:3px solid #fff;outline-offset:2px}
-@media (prefers-reduced-motion: reduce){.fb-livro{transition:none}}
+@media (prefers-reduced-motion: reduce){.fb-livro{transition:none}.fb-vira i::after{animation:none!important}}
 
 /* Origens no folhear: uma coluna de cartas compactas, nunca partidas */
 .fb-fluxo .origens{grid-template-columns:1fr;gap:6px;margin:10px 0 0}

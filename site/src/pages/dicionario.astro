@@ -1,0 +1,158 @@
+---
+import Livro from '../layouts/Livro.astro';
+import dados from '../data/dicionario.json';
+
+const termos = [...dados].sort((a, b) => a.termo.localeCompare(b.termo, 'pt'));
+const grupos = [
+  'Dados e testes', 'Pecados e Roda', 'Combate', 'Defesa', 'Vida e morte', 'Magia',
+  'Pactos e Dívida', 'Classes', 'Progressão', 'Mundo e lore', 'Ficha',
+].map((nome) => [nome, termos.filter((t) => t.grupo === nome).length]).filter(([, n]) => n > 0);
+const semDef = (t) => t.def.trim() === '?';
+const duvida = (t) => semDef(t) || t.duvida.trim() !== '';
+---
+<Livro title="Dicionário" chap="Apêndice B">
+  <h2>Dicionário</h2>
+  <p class="lede">Todas as palavras do livro, uma frase cada. Digite para buscar ou escolha um grupo.</p>
+
+  <div class="dic-barra">
+    <input type="search" id="dq" placeholder="Buscar: Firme, Peso, Roda..." aria-label="Buscar palavra" autocomplete="off" />
+    <div class="dic-chips" id="dg" role="group" aria-label="Filtrar por grupo">
+      <button type="button" data-g="" aria-pressed="true">Todos <small>{termos.length}</small></button>
+      {grupos.map(([nome, n]) => <button type="button" data-g={nome} aria-pressed="false">{nome} <small>{n}</small></button>)}
+    </div>
+    <div class="dic-chips" id="dm" role="group" aria-label="Filtros especiais">
+      <button type="button" data-m="prop" aria-pressed="false">Só propostas</button>
+      <button type="button" data-m="conf" aria-pressed="false">Só os que confundem</button>
+      <button type="button" data-m="duv" aria-pressed="false">Só as dúvidas</button>
+    </div>
+    <p class="dic-cont" id="dc" aria-live="polite">{termos.length} palavras</p>
+  </div>
+
+  <p class="dic-leg">
+    <span><i class="pt p"></i>Proposta: ainda não está no livro</span>
+    <span><i class="pt c"></i>Confunde com outra palavra</span>
+    <span><i class="pt d"></i>Dúvida: o livro não explica direito</span>
+  </p>
+
+  <div class="dic-lista" id="dl">
+    {termos.map((t) => (
+      <article
+        class="dic-ficha"
+        data-t={t.termo}
+        data-g={t.grupo}
+        data-prop={t.status === 'proposta' ? '1' : '0'}
+        data-conf={t.confunde ? '1' : '0'}
+        data-duv={duvida(t) ? '1' : '0'}
+        data-busca={`${t.termo} ${t.def} ${t.exemplo}`}
+      >
+        <h3>{t.termo}</h3>
+        <p class="dic-def">{semDef(t) ? 'O livro ainda não explica.' : t.def}</p>
+        {t.exemplo && <p class="dic-ex"><b>Exemplo:</b> {t.exemplo}</p>}
+        <p class="dic-meta">
+          <span class="dic-tag">{t.grupo}</span>
+          {t.status === 'proposta' && <span class="dic-tag tracejado"><i class="pt p"></i>Proposta</span>}
+          <span>Capítulo: {t.cap.replace('.md', '')}</span>
+        </p>
+        {t.confunde && (
+          <p class="dic-aviso"><i class="pt c"></i><b>Não confunda com:</b> {t.confunde} <button type="button" data-ir={t.confunde}>ver</button></p>
+        )}
+        {t.duvida.trim() && <p class="dic-aviso"><i class="pt d"></i><b>Dúvida:</b> {t.duvida}</p>}
+      </article>
+    ))}
+  </div>
+  <p class="dic-vazio" id="dv" hidden>Nada encontrado. Tire um filtro ou mude a busca.</p>
+</Livro>
+
+<style>
+  .dic-barra{position:sticky;top:0;z-index:5;background:var(--page);padding:10px 0;margin:0 0 14px;display:flex;flex-direction:column;gap:10px;border-bottom:3px solid var(--ink)}
+  .dic-barra input{font:400 22px var(--body);color:var(--ink);background:#fff;border:3px solid var(--ink);padding:10px 14px;min-height:56px;width:100%;box-sizing:border-box}
+  :global([data-theme="dark"]) .dic-barra input{background:var(--soft)}
+  .dic-chips{display:flex;flex-wrap:wrap;gap:8px}
+  .dic-chips button{font:400 15px var(--body);color:var(--ink);background:var(--page);border:2px solid var(--ink);padding:6px 12px;min-height:44px;cursor:pointer}
+  .dic-chips button[aria-pressed="true"]{background:var(--ink);color:var(--page)}
+  .dic-chips small{opacity:.75}
+  .dic-cont{margin:0;font-weight:700}
+  .dic-leg{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:16px;color:var(--muted);margin:0 0 14px}
+  .pt{width:14px;height:14px;border-radius:50%;border:2px solid var(--ink);display:inline-block;vertical-align:-1px;margin-right:4px}
+  .pt.p{background:#a855ff}.pt.d{background:#ff7a00}.pt.c{background:#ff2414}
+  .dic-lista{display:flex;flex-direction:column;gap:14px}
+  .dic-ficha{border:2px solid var(--ink);padding:14px 16px;box-shadow:5px 5px 0 var(--ink);display:flex;flex-direction:column;gap:6px;scroll-margin-top:260px}
+  .dic-ficha[hidden]{display:none}
+  .dic-ficha.pisca{outline:4px solid var(--ink)}
+  .dic-ficha h3{margin:0;font:400 28px/1.15 var(--body);font-weight:700}
+  .dic-ficha p{margin:0;line-height:1.45}
+  .dic-def{font-size:20px}
+  .dic-ex{color:var(--muted);font-style:italic}
+  .dic-ex b{font-style:normal}
+  .dic-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:15px}
+  .dic-tag{border:2px solid var(--ink);padding:0 8px;font-weight:700;background:var(--ink);color:var(--page)}
+  .dic-tag.tracejado{background:none;color:var(--ink);border-style:dashed}
+  .dic-aviso{border:2px dashed var(--ink);padding:8px 12px;font-size:17px}
+  .dic-aviso button{font:inherit;font-weight:700;color:var(--ink);background:none;border:0;border-bottom:2px solid var(--ink);padding:0;cursor:pointer}
+  .dic-vazio{border:2px dashed var(--ink);padding:20px;text-align:center}
+  .dic-vazio[hidden]{display:none}
+  .dic-barra button:focus-visible,.dic-barra input:focus-visible,.dic-aviso button:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+</style>
+
+<script>
+  const norm = (s: string) => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  const limpa = (s: string) => norm(s).replace(/[^a-z0-9 ]/g, '').trim();
+  const fichas = Array.from(document.querySelectorAll<HTMLElement>('.dic-ficha'));
+  const q = document.getElementById('dq') as HTMLInputElement;
+  const cont = document.getElementById('dc') as HTMLElement;
+  const vazio = document.getElementById('dv') as HTMLElement;
+  const estado = { grupo: '', prop: false, conf: false, duv: false };
+
+  function aplica() {
+    const busca = norm(q.value);
+    let n = 0;
+    for (const f of fichas) {
+      const ok =
+        (!estado.grupo || f.dataset.g === estado.grupo) &&
+        (!estado.prop || f.dataset.prop === '1') &&
+        (!estado.conf || f.dataset.conf === '1') &&
+        (!estado.duv || f.dataset.duv === '1') &&
+        (!busca || norm(f.dataset.busca || '').includes(busca));
+      f.hidden = !ok;
+      if (ok) n++;
+    }
+    cont.textContent = n + (n === 1 ? ' palavra' : ' palavras');
+    vazio.hidden = n > 0;
+  }
+
+  document.getElementById('dg')!.addEventListener('click', (e) => {
+    const b = (e.target as HTMLElement).closest('button');
+    if (!b) return;
+    estado.grupo = b.dataset.g || '';
+    document.querySelectorAll('#dg button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+    aplica();
+  });
+  document.getElementById('dm')!.addEventListener('click', (e) => {
+    const b = (e.target as HTMLElement).closest('button');
+    if (!b) return;
+    const k = b.dataset.m as 'prop' | 'conf' | 'duv';
+    estado[k] = !estado[k];
+    b.setAttribute('aria-pressed', String(estado[k]));
+    aplica();
+  });
+  q.addEventListener('input', aplica);
+
+  document.getElementById('dl')!.addEventListener('click', (e) => {
+    const b = (e.target as HTMLElement).closest<HTMLElement>('[data-ir]');
+    if (!b) return;
+    const bruto = b.dataset.ir || '';
+    const alvo = limpa(bruto.split(/[×,\/;]| x /)[0]);
+    let el = fichas.find((f) => limpa(f.dataset.t || '') === alvo)
+      || fichas.find((f) => alvo && limpa(f.dataset.t || '').startsWith(alvo));
+    if (!el) { q.value = bruto; aplica(); return; }
+    estado.grupo = ''; estado.prop = estado.conf = estado.duv = false;
+    q.value = '';
+    document.querySelectorAll('#dg button, #dm button').forEach((x) =>
+      x.setAttribute('aria-pressed', String((x as HTMLElement).dataset.g === '' ? true : false)));
+    aplica();
+    el.scrollIntoView({ block: 'start' });
+    el.classList.add('pisca');
+    const ref = el;
+    setTimeout(() => ref.classList.remove('pisca'), 1600);
+  });
+</script>

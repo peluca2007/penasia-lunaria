@@ -20,7 +20,7 @@ description: Penasia em duas páginas, para deixar aberto na mesa.
 |:--|:--|
 | Iniciativa | O líder inimigo rola Inveja. Você empata ou passa: **Bloco Rápido**. Fica abaixo: **Bloco Lento**. |
 | Ordem | Rápidos → Inimigos → Lentos. No bloco, os jogadores escolhem a ordem. |
-| Seu turno | **1 Movimento** + **1 Ação**. No fim, declare a **Guarda**. |
+| Seu turno | **1 Movimento** + **1 Ação**. Fora do turno: **1 Reação** por rodada. |
 | Sair do contato | O inimigo ganha um golpe livre, a não ser que você Corra ou dê uma Arrancada. |
 
 ### A rolagem
@@ -28,7 +28,7 @@ description: Penasia em duas páginas, para deixar aberto na mesa.
 | Regra | Número |
 |:--|:--|
 | Teste | Role o **Coração** (o dado do pecado). Maior ou igual vence. |
-| Em combate | Coração do atacante × dado da **Guarda** do alvo. |
+| Em combate | Coração do atacante × dado da **defesa** do alvo. Empate: quem ataca acerta. |
 | Fora de combate | Trivial 3 · Comum 4 · Difícil 5 · Heroica 6 · Lendária 7. |
 | Margem | 4 ou mais: sucesso forte. |
 | Degraus | A favor +1 (teto +2 por cima da escada). Contra −1 (até −3). Abaixo do d4: falha. |
@@ -44,33 +44,47 @@ description: Penasia em duas páginas, para deixar aberto na mesa.
 | <span class="dot gan"></span>Ganância | Inveja, Gula |
 | <span class="dot inv"></span>Inveja | Gula, Ira |
 | <span class="dot gul"></span>Gula | Ira, Luxúria |
-| <span class="dot org"></span>Orgulho | só quem desafiou ou foi desafiado |
+| <span class="dot org"></span>Orgulho | neutro: ninguém o domina e ele não domina ninguém |
 
 Quem é dominado não perde nada. Opostos são neutros: Ira e Ganância, Luxúria e Inveja, Preguiça e Gula.
 
-### A Guarda
+### A defesa
 
-| Guarda | Pecado | Regra |
-|:--|:--|:--|
-| Aparar | <span class="dot ira"></span>Ira | Arma ou escudo; contra tiro, só escudo. |
-| Esquivar | <span class="dot pre"></span>Preguiça | A armadura desce degraus. |
-| Aguentar | <span class="dot gul"></span>Gula | Mesmo defendendo, perde 1 Vida. |
-| Antecipar | <span class="dot inv"></span>Inveja | Classe. Ler o golpe. |
-| Desviar | <span class="dot lux"></span>Luxúria | Classe. Rodopiar para fora. |
-| Calcular | <span class="dot gan"></span>Ganância | Classe. Só em zona com etiqueta. |
-| Impor | <span class="dot org"></span>Orgulho | Classe. Contra quem foi desafiado. |
+Te atacaram? **Você fala primeiro.** Depois quem ataca escolhe o pecado. Os dois rolam.
 
-Aparar, Esquivar e Aguentar: todos. A classe dá uma extra, teto d10. Trocar fora do turno custa 1 de recurso.
+| Jeito | Regra |
+|:--|:--|
+| Reação | 1 por rodada. Defende **1 golpe**. |
+| Firmar | Gaste o **Movimento**. Um pecado: defende os **2 primeiros golpes** em você até o seu próximo turno. |
+| Até 3 | Firmar (2) + Reação (1). O 4º golpe vem **Aberto**. |
+| Aberto | Sem defesa. Quem ataca rola 1 degrau acima e acerta com 3+. Vale 1 golpe. |
+
+| Pecado | Defesa | Custo | Se vencer | Se perder |
+|:--|:--|:--|:--|:--|
+| <span class="dot pre"></span>Preguiça | Ceder | Reação ou Firmar | dano a ¼ · Caído | dano a ¾ · Caído |
+| <span class="dot gul"></span>Gula | Aguentar | Reação ou Firmar | dano −4 | dano −2 |
+| <span class="dot ira"></span>Ira | Aparar | Reação | sem dano · **Fere** (margem, máx. 5) | dano inteiro |
+| <span class="dot lux"></span>Luxúria | Dançar | Reação | sem dano · **Abre** (ele fica Aberto) | dano inteiro |
+| <span class="dot inv"></span>Inveja | Antecipar | Firmar | sem dano · **Pressente** (+1 degrau no seu ataque) | dano inteiro |
+| <span class="dot gan"></span>Ganância | Calcular | Firmar | sem dano · a coisa vira etiqueta | dano −1 |
+| <span class="dot org"></span>Orgulho | Impor | Reação | sem dano · **Desafia** | dano inteiro · Desafia mesmo assim |
+
+| Junto | Regra |
+|:--|:--|
+| Salto na frente | Todos. Gasta a Reação. Troca de lugar com um aliado na mesma zona; você não rola defesa. Quem ataca acerta com 3+. |
+| Proteger | Só por fonte. Igual ao Salto, mas você defende com o dado da Reação. |
+| Cobrir | Só por fonte. Ação. Ataques num aliado da zona podem vir para você. |
+| Fintar | Todos. Ação. Luxúria ou Inveja × Ganância ou Inveja. Vence: o alvo fica Aberto no próximo golpe de um aliado. |
 
 ### Ações
 
 | Ação | Efeito |
 |:--|:--|
-| Atacar | Coração × Guarda do alvo. |
+| Atacar | Coração × defesa do alvo. |
 | Manobra | A mesma disputa; aplica um efeito. |
 | Mirar | +1 degrau no próximo ataque nesse alvo. |
-| Fechar a Guarda | Guarda +1 degrau e +1 recurso. Não em turnos seguidos. |
-| Cobrir | Ataques num aliado da zona podem vir para você. |
+| Fintar | O alvo fica Aberto no próximo golpe de um aliado. |
+| Cobrir | Só por fonte. Ataques num aliado da zona podem vir para você. |
 | Respirar | Cura d6 de Vida, 1 vez por cena. |
 | Estancar | Para o sangramento ou segura quem está À Beira. |
 | Correr | Um segundo Movimento. |
@@ -83,9 +97,9 @@ Aparar, Esquivar e Aguentar: todos. A classe dá uma extra, teto d10. Trocar for
 | Derrubar | Ira, Gula, Luxúria | Caído · solta o que segura |
 | Desarmar | Inveja, Luxúria, Ira | a arma cai · fica com você |
 | Agarrar | Gula, Ira | Agarrado · Imobilizado |
-| **Fintar** | Inveja, Luxúria, Ganância | você escolhe a Guarda dele, travada · Exposto |
+| **Fintar** | Luxúria, Inveja | o alvo fica Aberto no próximo golpe de um aliado · não acumula |
 | Desafiar | Orgulho, Ira | −1 degrau se atacar outro · tem que atacar você |
-| Cegar | Inveja, Ganância | tiros e Inveja −1 · perde a reação |
+| Cegar | Inveja, Ganância | tiros e Inveja −1 · perde a Reação da rodada |
 | Intimidar | Ira, Orgulho | Rival −1, lacaios fogem · metade do bando foge |
 
 </div>
@@ -103,10 +117,9 @@ Aparar, Esquivar e Aguentar: todos. A classe dá uma extra, teto d10. Trocar for
 
 | Regra | Como funciona |
 |:--|:--|
-| Dado na mesa | Quem acerta deixa o dado ao lado do alvo. Aliados: +1 degrau por dado, até +2. Recolhe no fim da rodada. |
 | Armadura cede | Depois do 1º acerto da rodada no alvo, a armadura dele não conta para os aliados. |
 | Explosão ? | Dado no máximo: rola de novo e soma, uma vez. Em dados somados, só o que saiu no máximo. |
-| Tudo ou Nada | Aposte 1 (2 com arma pesada): −1 degrau e +2 de dano por aposta. Errou: Exposto. |
+| Tudo ou Nada | Aposte 1 (2 com arma pesada): −1 degrau e +2 de dano por aposta. Errou: Aberto. |
 | Trava do herói | Com a Vida cheia, nenhum golpe sozinho te leva abaixo de 1. |
 
 | Golpe (dano total) | Efeito |
@@ -128,8 +141,8 @@ Caixa cheia transborda para a de cima.
 
 | | Regra |
 |:--|:--|
-| Ganha 1 | Um ataque contra você falha, você leva Ferida ou Fecha a Guarda. Máximo 3; zera no fim da cena. |
-| Gasta 1 | Trocar a Guarda fora do turno, Proteger, Revidar (errou por 4+), manobra junto do golpe, Arrancada. |
+| Ganha 1 | Um ataque contra você falha ou você leva Ferida. Máximo 3; zera no fim da cena. |
+| Gasta 1 | Revidar (errou por 4+), manobra junto do golpe, Arrancada. |
 
 ### Vida e Essência
 
@@ -146,7 +159,7 @@ Caixa cheia transborda para a de cima.
 |:--|:--|
 | Vida 0 | **À Beira**: caído, sem agir, até alguém Estancar ou a cena acabar mal. |
 | Golpe de Misericórdia ? | Atacar quem está À Beira aproxima a morte; golpe de 12+ mata. |
-| Pesagem | Escolha o árbitro. **Pesador:** volta devendo um contrato. **Agouro:** morre limpo. **Rainha-Pena:** morre, e o próximo herda uma Cicatriz-Memória. |
+| Pesagem | **Pesador:** volta devendo um contrato. **Vazio:** morre limpo. **Pena da Rainha Corvo:** morre, e o próximo herda uma Cicatriz-Memória. |
 
 ### A Escada
 

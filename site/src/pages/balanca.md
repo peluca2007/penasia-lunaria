@@ -61,7 +61,7 @@ Cada degrau vale cerca de +1 na média. Quem sobe até onde, e quando, está em 
 
 Cada pecado domina os dois seguintes no sentido horário. **Quem domina ganha +1 degrau; quem é dominado não perde nada.** Os opostos são neutros: Ira e Ganância, Luxúria e Inveja, Preguiça e Gula.
 
-O **Orgulho** fica no centro e só ganha +1 contra quem ele desafiou ou quem o desafiou <span class="st consenso">consenso</span>. Ele nunca recebe ajuda e perde qualquer teste de ceder.
+O **Orgulho** fica no centro e é **neutro**: não tem desvantagem contra nenhum pecado e nenhum pecado tem vantagem sobre ele. Ele pode ser ajudado normalmente. Perde qualquer teste de ceder. (Quem *nunca* aceita ajuda é só o devoto da Bruxa do Orgulho, pelo Pacto.)
 
 Obstáculos podem ter etiqueta de pecado (um cofre de mercador é Ganância) ou ser neutros. Com etiqueta, a Roda vale.
 

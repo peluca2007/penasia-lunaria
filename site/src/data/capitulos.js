@@ -24,4 +24,6 @@ export const capitulos = [
   { href: '/ferramentas', label: 'Ferramentas da mesa', arquivo: null },
   { href: '/decisoes', label: 'A · Decisões em aberto', arquivo: 'decisoes' },
   { href: '/glossario', label: 'B · Glossário', arquivo: 'glossario' },
+  { href: '/dicionario', label: 'B · Dicionário', arquivo: null },
+  { href: '/raizes', label: 'C · Arquivo de nomes', arquivo: 'raizes' },
 ];

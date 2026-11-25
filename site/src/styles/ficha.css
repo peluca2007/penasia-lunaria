@@ -1,7 +1,7 @@
 @page { size: A4; margin: 10mm }
 :root{--bg:#0a0a0a;--page:#f5f2ec;--ink:#151413;--muted:#5d5852;--rule:#b9b4ab;--accent:#151413;
   --ira:#ff2414;--lux:#ff1f8f;--pre:#4a74ff;--gan:#ffd400;--inv:#00d85a;--gul:#ff7a00;--org:#a855ff;
-  --display:'Pirata One',Georgia,serif;--grito:'Anton',Impact,sans-serif;--body:'Spectral',Georgia,serif;--mono:var(--grito)}
+  --display:'Pirata One',Georgia,serif;--grito:'Anton',Impact,sans-serif;--body:'Atkinson Hyperlegible',Verdana,sans-serif;--mono:var(--grito)}
 *{box-sizing:border-box}
 html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:12px;line-height:1.3}
@@ -16,6 +16,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font
 .campo{display:block;margin:0 0 5px}
 .campo b{display:block;font:400 9px var(--grito);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
 .campo i{display:block;height:17px;border-bottom:1px solid var(--ink)}
+.origem-escolha{display:block;width:100%;height:17px;padding:0;border:0;border-bottom:1px solid var(--ink);border-radius:0;background:transparent;color:var(--ink);font:inherit}
 .id{display:grid;grid-template-columns:repeat(4,1fr);gap:0 10px}
 .id.dois{grid-template-columns:1fr 1fr}
 .meio{display:grid;grid-template-columns:.9fr 1.7fr .9fr;gap:8px;margin-top:6px}
@@ -42,7 +43,8 @@ h2 small{font:italic 400 9px var(--body);text-transform:none;letter-spacing:0;co
 .quebras{display:flex;flex-direction:column;font-size:10px}
 .escada{margin-top:4px}
 .guardas{list-style:none;margin:0;padding:0}
-.guardas li{display:flex;align-items:center;gap:4px;font-size:11px;padding:2px 0;border-bottom:1px dotted var(--rule)}
+.guardas li{display:flex;flex-wrap:wrap;align-items:center;gap:1px 4px;font-size:11px;padding:2px 0;border-bottom:1px dotted var(--rule)}
+.guardas .lemb{flex-basis:100%;font-size:8px;line-height:1.2;color:var(--muted);padding-left:26px}
 .guardas b{font-weight:600}
 .guardas em{font:400 9px var(--grito);color:var(--muted)}
 .dot{width:9px;height:9px;border-radius:50%;display:inline-block}
@@ -76,6 +78,8 @@ h2 small{font:italic 400 9px var(--body);text-transform:none;letter-spacing:0;co
 @media print{
   html,body{background:#fff}
   .barra{display:none}
+  .origem-escolha{appearance:none}
+  .origem-escolha:invalid{color:transparent}
   body{color:#000;font-size:11px}
   .folhas{padding:0;gap:0;display:block}
   .folha{width:190mm;max-width:none;height:276mm;min-height:0;margin:0;padding:5mm 6mm;border:1.5px solid #000;outline:1px solid #000;break-after:page;break-inside:avoid;overflow:hidden}

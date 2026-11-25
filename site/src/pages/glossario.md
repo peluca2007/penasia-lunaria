@@ -7,6 +7,8 @@ pecado: nenhum
 
 ## Glossário
 
+Quer todas as palavras do livro, com busca? Veja o [Dicionário](/dicionario).
+
 | Termo | O que é |
 |:--|:--|
 | Coração | o dado que você rola |
@@ -19,17 +21,18 @@ pecado: nenhum
 | Vício | o seu pecado de maior dado |
 | Jejum | o seu pecado d4 escolhido |
 | Contenção | resistir à tentação rolando abaixo |
-| Guarda | o pecado com que você se defende, à vista |
+| Defesa | como você reage a um golpe: Reação (1 golpe) ou Firmar (2 golpes) |
+| Firmar | gastar o Movimento para defender os 2 primeiros golpes com o mesmo pecado |
+| Aberto | sem defesa: quem ataca rola 1 degrau acima e acerta com 3+ |
 | Recurso | o que a sua classe ganha e gasta no turno |
 | Vida | 10 + o máximo do dado de Gula; a barra de combate |
 | Essência | o máximo do dado de Orgulho; a barra da magia |
-| Dado na mesa | o dado de quem acertou fica ao lado do alvo: +1 degrau para o próximo aliado |
 | Armadura cede | depois do primeiro acerto da rodada, a armadura do alvo não conta para os aliados |
 | Trava do herói | com a Vida cheia, nenhum golpe sozinho leva o herói abaixo de 1 |
 | Ferida | dano de verdade: Leve, Grave, Mortal |
 | Lesão | Ferida que vira Cicatriz |
 | À Beira | caído, perto da morte |
-| Pesagem | a cena da morte, com três árbitros |
+| Pesagem | a cena da morte, com três destinos |
 | Zona | uma área nomeada do campo de batalha |
 | Etiqueta | o pecado de uma zona, magia ou obstáculo |
 | Custo | o nível da magia, de 0 a 5; dá a força do feitiço |

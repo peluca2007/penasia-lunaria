@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Progressão por compras · Penasia</title>
+  <style>
+    :root { color-scheme: dark; --fundo:#151312; --painel:#231e1a; --borda:#524438; --texto:#f7ebdd; --suave:#d0bfaf; --ouro:#f3c887; --verde:#b9ddb9; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--fundo); color:var(--texto); font: 1.08rem/1.6 system-ui, sans-serif; }
+    main { width:min(70rem, 100% - 2rem); margin:auto; padding:1.4rem 0 4rem; }
+    header { padding:clamp(1.3rem,5vw,3.75rem); border:1px solid var(--borda); border-radius:1rem; background:linear-gradient(125deg,#2c231c,#201916 68%,#38271c); }
+    nav { display:flex; flex-wrap:wrap; gap:.5rem 1.4rem; margin-bottom:1rem; }
+    a { color:var(--ouro); text-underline-offset:.2em; }
+    :focus-visible { outline:3px solid var(--ouro); outline-offset:4px; }
+    .selo { display:inline-block; color:var(--ouro); border:1px solid #806642; border-radius:2rem; padding:.2rem .75rem; font-size:.9rem; }
+    h1,h2,h3,p { margin:0; }
+    h1 { font:700 clamp(2.4rem,7vw,4.7rem)/1.04 Georgia, serif; margin:.65rem 0 1rem; max-width:13ch; }
+    h2 { font:700 clamp(1.6rem,4vw,2.35rem)/1.2 Georgia, serif; margin-bottom:.9rem; }
+    h3 { font-size:1.18rem; line-height:1.35; margin-bottom:.3rem; }
+    p + p { margin-top:.7rem; }
+    header p { max-width:53ch; }
+    section { margin-top:2.4rem; }
+    .dupla,.fluxo { display:grid; gap:.85rem; }
+    .dupla { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .fluxo { grid-template-columns:repeat(4,minmax(0,1fr)); padding:0; list-style:none; }
+    .cartao,.fluxo li { background:var(--painel); border:1px solid var(--borda); border-radius:.8rem; padding:1rem 1.2rem; }
+    .proposta { border-color:#95754c; }
+    .fluxo strong { display:block; color:var(--ouro); }
+    .fluxo span,.suave { color:var(--suave); }
+    .metas { padding-left:1.7rem; display:grid; gap:.65rem; }
+    .metas li { padding:.75rem 1rem; border-bottom:1px solid var(--borda); }
+    .metas li::marker { color:var(--ouro); font-weight:bold; }
+    .metas strong { display:block; }
+    .primeira { color:var(--verde); }
+    details { margin-top:.85rem; background:var(--painel); padding:.8rem 1.15rem; border-radius:.8rem; border:1px solid var(--borda); }
+    summary { cursor:pointer; color:var(--ouro); font-weight:650; }
+    details p { margin-top:.65rem; max-width:68ch; }
+    @media (max-width:48rem) { .fluxo { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media (max-width:34rem) { .dupla,.fluxo { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<main>
+  <nav aria-label="Navegação"><a href="/central">← Central</a><a href="#metas">Ir para as metas</a></nav>
+  <header>
+    <span class="selo">Proposta em discussão</span>
+    <h1>Progressão por compras</h1>
+    <p><strong>Peso é o nível. Ao chegar a um Peso, você recebe o que sua classe dá naquele nível. Cada Compra pode ser usada agora ou guardada.</strong></p>
+  </header>
+
+  <section aria-labelledby="comparacao">
+    <h2 id="comparacao">Como está e como pode ficar</h2>
+    <div class="dupla">
+      <article class="cartao">
+        <h3>Hoje no livro</h3>
+        <p>Subir de Peso dá um degrau automático. A base aprovada dá um extra nos Pesos 3, 6 e 9, com exceções para Avatar, Andarilho e Veterano.</p>
+        <p>As compras da Progressão dão técnicas e talentos. Domínio está fora desse menu.</p>
+      </article>
+      <article class="cartao proposta">
+        <h3>Com o catálogo ampliado</h3>
+        <p>Use uma <strong>Compra</strong> para pegar uma habilidade ou técnica da classe, um talento geral, de Interlúdio ou de Origem.</p>
+        <p>Degraus, Domínios e Votos ficam em discussão. <strong>Aptidões</strong> é uma sugestão de nome para os talentos.</p>
+      </article>
+    </div>
+    <details>
+      <summary>O que a criação precisa resolver</summary>
+      <p>Hoje, o capítulo de Classes pede duas técnicas à escolha. O de Progressão fala em três compras livres. A nova regra precisa dizer o que vem fixo e o que você pode comprar no Peso 1.</p>
+    </details>
+  </section>
+
+  <section aria-labelledby="fluxo">
+    <h2 id="fluxo">O que acontece ao chegar a um Peso</h2>
+    <ol class="fluxo">
+      <li><strong>1. Chegue ao Peso</strong><span>Na criação você chega ao Peso 1. Nos marcos que exigem Prova, ela abre o próximo Peso.</span></li>
+      <li><strong>2. Receba da classe</strong><span>Pegue o que está na coluna Fixo daquele Peso.</span></li>
+      <li><strong>3. Anote as Compras</strong><span>A proposta dá 0 no Peso 1, 1 no Peso 2, 1 no Peso 3 e 2 no Peso 4.</span></li>
+      <li><strong>4. Gaste ou guarde</strong><span>Compre uma opção liberada ou leve o saldo para outro Peso.</span></li>
+    </ol>
+    <div class="cartao">
+      <h3>Um exemplo no Peso 1</h3>
+      <p>Seu Armador começa com Estacas, Marreta e Pino e as defesas da classe. Pela distribuição proposta, começa sem Compras. Se guardar as dos Pesos 2 e 3, chega ao Peso 4 com 4 Compras.</p>
+      <h3 style="margin-top:1rem">Como a compra aparece na rodada</h3>
+      <p>O Armador usa uma Compra para aprender <strong>Arpão</strong>. Na rodada, puxa um inimigo para a zona da Estaca, onde o Brigão pode alcançá-lo. Outra pessoa pode usar sua Compra para escolher uma opção de Origem.</p>
+    </div>
+  </section>
+
+  <section id="metas" aria-labelledby="roteiro">
+    <h2 id="roteiro">Metas em ordem</h2>
+    <ol class="metas">
+      <li><strong class="primeira">Fechar o que entra no menu</strong> Decidir o que vem fixo no Peso 1, quais degraus viram compras e se Domínio entra depois de uma Prova.</li>
+      <li><strong>Completar a distribuição de Compras</strong> A proposta cobre os Pesos 1 a 4. Faltam os Pesos 5 a 13 e os requisitos de compra.</li>
+      <li><strong>Encaixar as três exceções</strong> Rever a cartela do Avatar, o copo do Andarilho e as compras com cicatrizes do Veterano.</li>
+      <li><strong>Experimentar com a primeira mesa</strong> Montar Brigão, Armador e Vigia. Ver se dois personagens da mesma classe fazem escolhas distintas e se ambos sabem o que fazer na rodada.</li>
+      <li><strong>Rever a distribuição e atualizar o livro</strong> Ajustar quantas Compras cada Peso oferece. Atualizar Progressão, Classes, as fichas de classe e a Central após as decisões.</li>
+    </ol>
+    <details>
+      <summary>O que conferir no primeiro teste</summary>
+      <p>O Combeiro procura uma compra que domina todas as outras. O RP observa o que a escolha conta sobre o personagem. O Comprador de Mesa, perfil sugerido para o lugar do Simples, tenta montar a ficha e jogar com ela.</p>
+    </details>
+    <details>
+      <summary>Como a ideia aparece em Lunária</summary>
+      <p>A Casa de Contas pode tentar controlar o acesso ao poder. A Mão Aberta pode ensinar por outros caminhos. A escolha de ter um Credor continua opcional.</p>
+    </details>
+  </section>
+
+  <section aria-label="Leitura de apoio">
+    <p class="suave"><a href="/progressao">Progressão atual</a> · <a href="/classes">Classes atuais</a> · <a href="/central">Decisões na Central</a></p>
+  </section>
+</main>
+</body>
+</html>

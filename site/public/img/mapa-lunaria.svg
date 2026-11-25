@@ -1,0 +1,361 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="800" viewBox="0 0 1120 800" role="img" aria-labelledby="titulo descricao">
+  <title id="titulo">Lunária no Ano 10.000</title>
+  <desc id="descricao">Mapa proposto de Lunária. O Mar de Dentro separa Lastro dos canais de Quatro Diques. Ao redor de Vigília, baixios e recifes estreitam a passagem entre as ilhas. As cidades antigas de Preguicite e Putópia aparecem como ruínas. Trilhas ligam as cidades do interior às salinas, aos campos de Ribeira Alta e Três Eiras e à Ponte das Taxas. A rota oceânica parte de Lastro para os laboratórios da Gula, no Continente Sombrio.</desc>
+  <defs>
+    <linearGradient id="agua" x2="0" y2="1">
+      <stop stop-color="#b8cdb9"/>
+      <stop offset=".58" stop-color="#99b9ae"/>
+      <stop offset="1" stop-color="#80a7a5"/>
+    </linearGradient>
+    <linearGradient id="solo" x2=".25" y2="1">
+      <stop stop-color="#dad9b2"/>
+      <stop offset=".45" stop-color="#f0dbaf"/>
+      <stop offset="1" stop-color="#dac79f"/>
+    </linearGradient>
+    <linearGradient id="terra-sombria" x2="1" y2=".6">
+      <stop stop-color="#848374"/>
+      <stop offset="1" stop-color="#b0a991"/>
+    </linearGradient>
+    <pattern id="salinas" width="12" height="10" patternUnits="userSpaceOnUse">
+      <path d="M1 6h3m3-4h2m1 6h1" stroke="#896b4d" opacity=".45" stroke-width=".9"/>
+    </pattern>
+    <pattern id="baixio" width="14" height="7" patternUnits="userSpaceOnUse">
+      <path d="M1 4q2 2 5 0m3 0q2 2 4 0" fill="none" stroke="#416d67" stroke-width=".7" opacity=".58"/>
+    </pattern>
+    <pattern id="hachuras" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(34)">
+      <path d="M0 0v5" stroke="#322f2a" stroke-width="1" opacity=".22"/>
+    </pattern>
+    <pattern id="plantio" width="6" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(27)">
+      <path d="M0 2h6m-6 3h6" stroke="#7e7446" stroke-width=".75" opacity=".63"/>
+    </pattern>
+    <pattern id="brejo" width="19" height="13" patternUnits="userSpaceOnUse">
+      <path d="M2 8h6m4 3h3M5 6V2m0 3L3 3m2 2 2-2m7 6V6" fill="none" stroke="#5a775c" stroke-width=".8" opacity=".61"/>
+    </pattern>
+    <filter id="textura" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".5" numOctaves="3" seed="31" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+
+    <path id="massa-principal" d="M448 197q20-3 31-17l6-11 19 5 27-19 16 2 24-14 28 8 16-12 24 6 13 10 24-5 12 8 29-4 26 11 20-10 19 3 18-13 32 3 14-9 24 6 25-12 16 10 23-4 22 13 19 3 15 15 32 11 10 15 24 1 15 14-7 17 25 12-1 18-20 15-12 19 15 15-7 15 16 13 19-3 10 21-19 13-9 21 10 20-12 21 10 12-7 11 13 23-6 13 10 24-17 11 2 17-21 9-2 13-19 13-4 14 12 13-10 14 11 19-11 11-27-1-7 16-17 1-16 12-16-15-15 2-12-13-16 7-16-12-14 4-13-9-12-22-22-4-11-14-19-3-22-29-18-5-6-15-18-9-11-24
+      q5-15-11-27l-11-11 4-16-15-18 7-17-12-18 7-15-10-14 1-18
+      q-10-9-14-24l-9-6-13 6-7 17-14 8 5 16-10 12 5 18-16 17-2 18-8 7-4 19-20 5-7 17-16 8
+      q-11 24-19 26l-16 8-1 15-12 11-13-5-12 9-10-11-19 5-10-14-18-4 2-17-10-10 8-14-8-14 7-23-11-14 11-17-3-17 13-12-12-15 10-14-6-20 17-13-10-20 8-18-7-13 12-11-5-17-17-15-3-23-16-10 13-22-12-13 6-13-18-19 18-14Z"/>
+    <path id="oeste" d="M0 340q30 5 45 21l18 3 7 19 25 4 13 18 18 3 2 22 19 4 16 19-7 16 26 16-4 27 15 10-11 19 18 14-9 19 7 16-14 13-3 21-26 14-12 23-21 4-9 20-26 11-11 19-27 11H0Z"/>
+    <path id="arquipelago" d="M288 430l14-12 12 2 11-14 16 8 7 15 13 1 14 15-7 13 5 18-14 13-10 3-7 16-19-3-9-11-14 2-11-18-16-5 10-19-6-12Z
+      m72-69 14-8 14 7 3 10 11 3-7 12-19-1-6-10-11-1Z
+      m-70 1 10-12 16 2 12 10-4 10-16-2-12 5Z
+      M390 426l12-6 13 4-3 11-15 4Z
+      m27 53 15-8 11 8-2 10-14 4-10-6Z
+      m-47 38 13-10 15 9 2 12-14 7-12-6Z
+      M343 559l9-7 9 7-5 11-12-2Z
+      M290 538l12-13 13 5 6 14-12 11-14-6Z
+      M403 358l6-6 10 5-3 8-11-1Z
+      M590 637l11-10 15 5 1 12-14 7-11-3Z
+      m36 24 9-6 11 9-7 9-12-1Z
+      m141-37 12-9 12 5 3 10-12 5-10-3Z
+      m44 31 12-3 12 9-10 6-12-5Z"/>
+    <clipPath id="limites"><rect x="25" y="25" width="1070" height="750"/></clipPath>
+    <clipPath id="tierra"><use href="#massa-principal"/></clipPath>
+    <clipPath id="terra-oeste"><use href="#oeste"/></clipPath>
+    <path id="lavouras" d="M505 466l16-13 17 9-12 17-19 2Zm12 21 16-8 16 6-12 14-14 2Zm377 0 15-16 20 4-9 15-19 7Zm30 5 16-11 12 9-7 14-18 5Zm-17 31 14-16 19 6-11 18-13 6Z"/>
+
+    <g id="cume">
+      <path d="M-25 12-15 2-6-16 2-21 9-9 14-5 25 13l-11-4-7 6-10-6-10 5Z" fill="#baaa83" stroke="#5e5c4c" stroke-width="1.1" stroke-linejoin="round"/>
+      <path d="m2-21 2 13 7 6-1 5 15 10-11-4-7 6-9-8 4-4-2-9Z" fill="#746c56"/>
+      <path d="m-9-9 3-7 8-5 7 12-6-2-4 6-3-6Z" fill="#f2ecd7" stroke="#655d4e" stroke-width=".65"/>
+      <path d="m-18 8 7-8m-4 10 6-7m-2 8 4-5" fill="none" stroke="#6c634b" stroke-width=".8"/>
+    </g>
+    <g id="bosque" stroke="#455c4e" stroke-width="1" stroke-linejoin="round">
+      <path d="M-11 9V4m12 5V3m11 6V4" fill="none"/>
+      <path d="M-18 4l7-12 7 12ZM-8 4 1-12 9 4ZM6 5l6-12 7 12Z" fill="#7f946e"/>
+    </g>
+    <g id="mata">
+      <use href="#bosque" transform="translate(-15 2) scale(.53)"/>
+      <use href="#bosque" transform="translate(-2 -9) scale(.65)"/>
+      <use href="#bosque" transform="translate(16 -3) scale(.77)"/>
+      <use href="#bosque" transform="translate(1 7) scale(.72)"/>
+      <use href="#bosque" transform="translate(22 12) scale(.57)"/>
+    </g>
+    <g id="aldeia" fill="#78553f" stroke="#f1dfb8" stroke-width=".9" stroke-linejoin="round">
+      <path d="M-8 5v-6l4-4 4 4v6Zm9 1v-9l4-4 4 4v9Z"/>
+      <path d="M-4 1v3m9-5v5" fill="none" stroke-width=".7"/>
+    </g>
+    <g id="farol" stroke="#554138" stroke-width="1.1" stroke-linejoin="round">
+      <path d="M-6 7-3-6h6l3 13Z" fill="#f5dfaa"/>
+      <path d="M-4-6v-5h8v5Z" fill="#ddae59"/>
+      <path d="M-6-11 0-15l6 4ZM-7 7h14" fill="#8b5b43"/>
+      <path d="M-7-9h-4m19 0h4m-7-5 3-3m-13 3-3-3" fill="none" stroke="#956234" stroke-linecap="round"/>
+    </g>
+    <g id="recife" fill="#7c9181" stroke="#395c54" stroke-width=".9" stroke-linejoin="round">
+      <path d="m-12 3 4-6 4 6m1 0 5-9 5 9m2 0 3-5 4 5"/>
+      <path d="M-16 6q4 2 8 0t8 0 8 0 8 0" fill="none"/>
+    </g>
+    <g id="barco" stroke="#38615c" stroke-width="1.2" stroke-linejoin="round">
+      <path d="M-16 7q5 9 20 8l12-5 2-5-16 4Z" fill="#967455"/>
+      <path d="M0 8v-29l11 25L0 8Zm-2 0v-24L-12 5Z" fill="#f0e6c6"/>
+      <path d="M0-20 7-18l-7 2Zm-17 39q6-3 11 0t11 0 11 0" fill="none" stroke-linecap="round"/>
+    </g>
+    <g id="ponte" stroke="#664b38" stroke-width="1.1">
+      <path d="M-9-4H9v8H-9Z" fill="#ead8ab"/>
+      <path d="M-6-6v12m6-11v10m6-11v12" fill="none"/>
+    </g>
+    <g id="cais" stroke="#68523d" stroke-width="1.1">
+      <path d="M-8 0H7v3H-3v8h-4V3h-1Z" fill="#c19c66"/>
+      <path d="M-6 4h3m-3 3h3m4-6v2m4-2v2" fill="none" stroke-width=".65"/>
+    </g>
+    <path id="onda" d="M-21 0q10-5 21 0t21 0m-31 5q6-2 12 0" fill="none" stroke="#496f68" stroke-width="1" opacity=".54"/>
+    <g id="cidade">
+      <circle r="7" fill="#474034" stroke="#f6e8c7" stroke-width="2"/>
+      <circle r="2" fill="#f6e8c7"/>
+    </g>
+    <g id="porto">
+      <circle r="9" fill="#274f50" stroke="#f6e8c7" stroke-width="2"/>
+      <path d="M0-5v10m-3-7h6m-8 4q2 3 5 3t5-3" fill="none" stroke="#fff2d1" stroke-width="1.3" stroke-linecap="round"/>
+    </g>
+    <g id="ruina">
+      <path d="m0-9 9 9-9 9-9-9Z" fill="#9a4e3b" stroke="#f6e8c7" stroke-width="1.7"/>
+      <path d="m-3 2 3-4 3 4m-6 1h6" fill="none" stroke="#f9ecd0" stroke-width="1"/>
+    </g>
+    <g id="tunel">
+      <path d="M-7 5V0a7 7 0 0 1 14 0v5Z" fill="#65506c" stroke="#f4e6c8" stroke-width="1.5"/>
+      <path d="M0-2v6" stroke="#f4e6c8" stroke-width="1.3"/>
+    </g>
+    <style>
+      text { font-family: Georgia, serif; fill: #342f28; }
+      .selo { font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; letter-spacing: 2.5px; fill: #784c3d; }
+      .costa { stroke: #675c46; stroke-width: 1.1; stroke-linejoin: round; }
+      .batimetria { fill: none; stroke: #567e71; stroke-linejoin: round; }
+      .linhas { fill: none; stroke: #776e4f; stroke-width: 1; opacity: .5; }
+      .rio { fill: none; stroke: #407879; stroke-linecap: round; stroke-linejoin: round; }
+      .rota { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .caminho { stroke: #9b5539; stroke-width: 2.1; stroke-dasharray: 5 4; }
+      .trilha { stroke: #876545; stroke-width: 1.6; stroke-dasharray: 3 4; }
+      .maritima { stroke: #245964; stroke-width: 2.8; stroke-dasharray: 1 7; }
+      .subterranea { stroke: #60466b; stroke-width: 2.8; stroke-dasharray: 8 4 2 4; }
+      .topo, .regiao, .mar, .vestigio, .local { paint-order: stroke; stroke-linejoin: round; stroke-linecap: round; }
+      .topo { font-size: 22px; font-weight: bold; stroke: #efe1ba; stroke-width: 4; text-anchor: middle; }
+      .regiao { font-size: 17px; font-weight: bold; letter-spacing: 2px; stroke: #e5dfbc; stroke-width: 3; text-anchor: middle; }
+      .mar { font-size: 22px; font-style: italic; letter-spacing: 2.5px; fill: #274e4d; stroke: #a8c0b0; stroke-width: 3.4; text-anchor: middle; }
+      .vestigio { font-size: 16px; font-style: italic; fill: #793d30; stroke: #e6dab8; stroke-width: 3.4; }
+      .local { font-size: 15px; font-style: italic; stroke: #e8ddbd; stroke-width: 3; text-anchor: middle; }
+      .corrente { fill: none; stroke: #426f67; stroke-width: 1.25; stroke-linecap: round; opacity: .63; }
+      .legenda { font-size: 15px; }
+    </style>
+  </defs>
+
+  <rect width="1120" height="800" fill="#e6d5ae"/>
+  <g clip-path="url(#limites)">
+    <rect x="25" y="25" width="1070" height="750" fill="#f0e4c3"/>
+    <rect x="25" y="122" width="1070" height="596" fill="url(#agua)"/>
+    <g class="batimetria">
+      <g stroke-width="28" opacity=".19">
+        <use href="#massa-principal"/><use href="#oeste"/><use href="#arquipelago"/>
+      </g>
+      <g stroke="#d7ddbd" stroke-width="12" opacity=".58">
+        <use href="#massa-principal"/><use href="#oeste"/><use href="#arquipelago"/>
+      </g>
+      <path d="M228 466q25 64 16 109t-51 104m-3-237q15 7 30 41m224-238q-27 42-9 112m15-15q-27 51-12 93m104 175q25-4 51-34t37-61m-80 118q48-19 66-57t36-52m49 6q15 28 35 46t23 32m16 14q28 31 62 48m86 21q33 1 62-22" stroke-width="1" opacity=".72"/>
+      <path d="M32 268q46-20 84-9t77 4 72-5m-113 56q51-27 94-11t96-4m-184 46q49-26 83-13t59 3m-88 154q32 49 32 105t-43 109m22-9q49-64 33-130-7-27-24-43m-40 167q31-32 44-69m207-315q-26 20-20 48t-7 63m-9-17q-4 39-11 67m185 167q68-16 103 12 39 30 89 37m-64-25q40 25 98 22m69 20q42 6 73-3m17-8q55-6 70-37" stroke-width="1" opacity=".42"/>
+    </g>
+    <g class="corrente">
+      <path d="M173 343c10-15 27-22 48-20m-6-5 6 5-7 4m13 113c16-16 13-38 5-53m-2 9 2-9 7 5m-8 181c-14-10-18-24-19-38m-3 6 3-6 5 4"/>
+      <path d="M598 566c17-24 38-35 56-45m-10 0 10 0-5 7m35 68c20 15 39 21 60 22m-8-5 8 5-9 5m31 75c17 6 46 8 72 5m-9-4 9 4-8 6"/>
+    </g>
+    <g>
+      <use href="#onda" x="121" y="278"/><use href="#onda" x="329" y="289"/>
+      <use href="#onda" x="249" y="376"/><use href="#onda" x="224" y="288"/>
+      <use href="#onda" x="299" y="604"/><use href="#onda" x="373" y="655"/>
+      <use href="#onda" x="662" y="622"/><use href="#onda" x="731" y="680"/>
+      <use href="#onda" x="231" y="671"/><use href="#onda" x="1015" y="690"/>
+      <use href="#onda" x="665" y="492"/><use href="#onda" x="716" y="560"/>
+      <use href="#onda" x="261" y="503"/>
+      <use href="#onda" x="258" y="172"/><use href="#onda" x="275" y="187" opacity=".65"/>
+      <use href="#onda" x="161" y="387" opacity=".7"/><use href="#onda" x="167" y="398"/>
+      <use href="#onda" x="326" y="687" opacity=".7"/><use href="#onda" x="257" y="668" opacity=".65"/>
+      <use href="#onda" x="652" y="693" opacity=".64"/><use href="#onda" x="674" y="703"/>
+    </g>
+
+    <use href="#oeste" class="costa" fill="url(#terra-sombria)"/>
+    <g clip-path="url(#terra-oeste)">
+      <rect y="346" width="205" height="371" fill="url(#hachuras)"/>
+      <path class="linhas" d="M26 384q40 3 64 36m-56-3q38 13 46 32m-69 141q39-18 61-9m-36 52q40-29 71-25m-93 59q49-29 64-32m-22 55q34-20 74-20"/>
+      <use href="#cume" transform="translate(43 443) scale(.73)" opacity=".62"/>
+      <use href="#cume" transform="translate(65 432) scale(.86)" opacity=".62"/>
+      <use href="#cume" transform="translate(91 451) scale(.69)" opacity=".62"/>
+      <use href="#cume" transform="translate(43 608) scale(.67)" opacity=".47"/>
+      <use href="#cume" transform="translate(64 624) scale(.63)" opacity=".47"/>
+    </g>
+
+    <path d="M263 364q56-32 117-15t60 62q-8 23-58 10t-81-14q-31-5-38-43ZM546 620q56-34 93 14t-14 49q-19-17-44-28t-35-35ZM848 639q45-28 102 3t-4 46q-38-4-81-20Z" fill="url(#baixio)"/>
+    <path d="M248 480q31-6 74 44l33 56q-45 18-65-9t-42-64ZM403 447q47-10 61 20t10 36q-22-2-46-22t-25-34ZM762 615q49-10 71 20t51 32l-11 24q-55-15-68-44t-43-32Z" fill="url(#baixio)" opacity=".72"/>
+    <g fill="none" stroke="#72584a" stroke-width="1.1" stroke-dasharray="3 2" opacity=".57">
+      <path d="m566 631 7-7 15 12-7 8Zm18 18 9-8 10 10-7 6m-40-19 6-8 5 5"/>
+      <path d="m364 382 9 7-4 8-13-6Zm23 13 11-7 9 7-10 9m-69-29 13 4 9-6"/>
+    </g>
+    <use href="#arquipelago" class="costa" fill="#d7cb9d"/>
+    <path class="linhas" d="M294 445q20-19 43-12m-45 22q20-11 41-12m-34 33q13-13 31-14"/>
+    <use href="#bosque" transform="translate(318 446) scale(.58)"/>
+
+    <use href="#massa-principal" class="costa" fill="url(#solo)"/>
+    <g clip-path="url(#tierra)">
+      <path d="M434 180q115-78 275-38t221-10l103 44-3 41q-53-11-100 7t-87-4q-49-17-123-6t-133-9q-78-21-153 20Z" fill="#a5ae93" opacity=".7"/>
+      <path d="M472 200q39-25 64-19l26-20 36 4 25-11 23 22 21 14q-18 18-41 14t-50 3-56 2-48 4Zm267 2 23-25 29-6 31-22 28 19 36-11 30 10 22-8 38 23 24 27-42-5q-38 20-76 5t-62 5q-53-18-81-12Z" fill="url(#hachuras)" opacity=".68"/>
+      <path d="M458 254q33-16 72-1t73 21q-12 31-47 46t-77-3Z" fill="url(#salinas)"/>
+      <path d="M462 300q26-6 42 1t43-2q-4 13-19 20t-53 1Zm46-37q27-15 51-4 16 7 22 20-54 8-73-16Z" fill="#e9dfc4" stroke="#ad956c" stroke-width="1" opacity=".76"/>
+      <path d="M862 526q47-44 116-31t103 44l26 91-52 65H887q-47-49-41-92t16-77Z" fill="#a7b68b" opacity=".84"/>
+      <path d="M713 317q28-51 59-35t38 63q22 10 32 42t25 17q6 35 24 60l-40 59q-57-30-74-83t-42-83Z" fill="#9eac82" opacity=".69"/>
+      <path d="M908 291q21-31 55-30l25-15 28 17 21 2 3 23-16 20 15 22-9 22 6 25-21 21-25 3-14 16-29-1-12-21-29-4-19-23 13-25-13-26Z" fill="#92a77e" opacity=".77"/>
+      <path d="M473 392q50-20 84-2t36 39l-38 42-31-5-24 23-31-12-19-38Z" fill="#a8b48a" opacity=".55"/>
+      <path d="M853 555q33-42 66-27t68 0l40 31q-24 38-16 80l-9 35-119 4q-44-63-30-123Z" fill="url(#brejo)"/>
+      <use href="#lavouras" fill="#d4c384" stroke="#948758" stroke-width="1"/>
+      <use href="#lavouras" fill="url(#plantio)"/>
+      <path class="linhas" d="M475 232q55-25 107-10t112 11m-209 7q45-18 92-8m-40 116q51-14 87-45m-79 56q50-8 79-34m-105 79q52-17 76-39m-89 97q61-8 99-41m-83 54q50-9 70-31m293-135q56-39 122-24m-94 26q55-28 99-15m-98 88q43-32 103-25m-79 25q44-19 72-14m-78 93q44-24 76-15m-204 16q13 44 36 63m-16-66q12 34 24 47m84 33q49-35 90-27m-85 34q44-28 75-23m-76 87q37 19 70 11"/>
+      <g>
+        <use href="#cume" transform="translate(531 192) scale(.74)"/>
+        <use href="#cume" transform="translate(565 174) scale(.8)"/>
+        <use href="#cume" transform="translate(600 177) scale(1.04)"/>
+        <use href="#cume" transform="translate(631 184) scale(.81)"/>
+        <use href="#cume" transform="translate(655 185) scale(.63)"/>
+        <use href="#cume" transform="translate(762 191) scale(.75)"/>
+        <use href="#cume" transform="translate(790 180) scale(.93)"/>
+        <use href="#cume" transform="translate(820 166) scale(1.07)"/>
+        <use href="#cume" transform="translate(849 190) scale(.96)"/>
+        <use href="#cume" transform="translate(887 176) scale(1.18)"/>
+        <use href="#cume" transform="translate(922 188) scale(.87)"/>
+        <use href="#cume" transform="translate(946 186) scale(.74)"/>
+        <use href="#cume" transform="translate(971 206) scale(.84)"/>
+        <use href="#cume" transform="translate(1001 223) scale(.66)"/>
+        <use href="#cume" transform="translate(809 222) scale(.78)"/>
+        <use href="#cume" transform="translate(837 237) scale(.69)"/>
+        <use href="#cume" transform="translate(811 363) scale(.79)"/>
+        <use href="#cume" transform="translate(835 388) scale(.93)"/>
+        <use href="#cume" transform="translate(858 407) scale(.73)"/>
+        <use href="#bosque" transform="translate(580 375) scale(.7)"/>
+        <use href="#bosque" transform="translate(525 424) scale(.88)"/>
+        <use href="#bosque" transform="translate(548 437) scale(.69)"/>
+        <use href="#bosque" transform="translate(634 233) scale(.7)"/>
+        <use href="#bosque" transform="translate(973 291) scale(.82)"/>
+        <use href="#bosque" transform="translate(981 328) scale(.75)"/>
+        <use href="#bosque" transform="translate(958 353) scale(.88)"/>
+        <use href="#bosque" transform="translate(927 450)"/>
+        <use href="#bosque" transform="translate(951 461) scale(.65)"/>
+        <use href="#bosque" transform="translate(864 548) scale(.83)"/>
+        <use href="#bosque" transform="translate(1032 518) scale(.8)"/>
+        <use href="#bosque" transform="translate(991 581) scale(.72)"/>
+        <use href="#mata" transform="translate(915 319) scale(.72)"/>
+        <use href="#mata" transform="translate(951 289) scale(.74)"/>
+        <use href="#mata" transform="translate(1009 290) scale(.69)"/>
+        <use href="#mata" transform="translate(1012 373) scale(.75)"/>
+        <use href="#mata" transform="translate(962 384) scale(.69)"/>
+        <use href="#mata" transform="translate(504 406) scale(.82)"/>
+        <use href="#mata" transform="translate(569 419) scale(.74)"/>
+        <use href="#mata" transform="translate(772 361) scale(.68)"/>
+        <use href="#bosque" transform="translate(792 492) scale(.68)"/>
+        <use href="#bosque" transform="translate(815 512) scale(.55)"/>
+      </g>
+
+      <path d="M680 209q13 0 22-9l15 6 16-5 9 11-7 9 14 8-7 10-12-1-13 9-8-12-15-2-4-13Z" fill="#85ada7" stroke="#4b7770" stroke-width="1.1"/>
+      <g class="rio">
+        <path d="M727 193q2 14 0 19m-22 21q16 32 11 50c-8 20-29 32-37 49l-10 15" stroke-width="3.7"/>
+        <path d="M781 222q-8 18-25 27t-40 34m-92-60q-16 19-9 34t28 20 23 31l20 13" stroke-width="2.3"/>
+        <path d="M950 401c-36-13-65-2-83 9-28 16-43 8-59 17-19 12-50 18-68 34m136-55q-11-14-13-27M588 347c-22 16-16 38-29 57s-36 37-42 60q-18 27-51 22" stroke-width="2.1"/>
+        <path d="M969 373q-10 27-3 51c10 27 21 47 5 81-11 27-47 28-57 54s-1 48 3 65l17 20 7 29" stroke-width="4"/>
+        <path d="M897 465q22 22 11 47t18 31m-13 29c-23 0-21 27-39 31l-7 28m46-49c13 12 40 6 59 22s14 31 20 40m-69-30q-14 19-7 50m28-55 1 17 13 22m-77-49q12 10 9 21" stroke-width="2.1"/>
+        <path d="M929 595l-17 13m43-14-4 12 12 9m-66-21 8 11" stroke="#5b8b7c" stroke-width="1.4"/>
+      </g>
+      <path d="M897 570l-8 11 5 21-5 11m80-34 6 14-1 9m-23 30 6 11-2 15m30-42 12 5 4 17m-83-91 3 20-7 12" fill="none" stroke="#696c4e" stroke-width="1.4" stroke-linecap="square" stroke-dasharray="6 2"/>
+    </g>
+
+    <rect x="25" y="122" width="1070" height="596" filter="url(#textura)" opacity=".08"/>
+    <g aria-label="Rotas do presente">
+      <path class="rota maritima" d="M520 561c-12 32-26 53-58 60-79 14-183 15-230-16l-49-41
+        M520 561c-38 22-71 25-103-4-18-20-10-39-32-56-12-8-22-12-35-18
+        M520 561c4 64 110 24 149 48 23 14 31 40 60 50 31 11 53 36 98 35 47-2 104 6 114-21l-7-29-17-20"/>
+      <path class="rota caminho" d="M531 257c66-15 111 61 185 26m0 0c21 8 48 12 74 6s57-25 86-46
+        M716 283c-37 2-59 16-89 37-49 35-22 63-45 98-24 33-64 64-62 143
+        M716 283c74 8 68 128 104 164 56 70 95 48 97 177"/>
+      <path class="rota subterranea" d="M876 243c-9-25-37-40-63-22-19 12-18 37-41 53"/>
+      <path class="rota caminho" d="M183 564q-28-26-53-5"/>
+      <path class="rota trilha" d="M529 264q-28 17-33 43M555 455q-8 0-13 10t-17 22M835 465q21 0 39 17t40 25m0 0q-5 21 18 39t-2 41M779 356c35-21 78-26 119-12s45 27 39 48c-10 29-32 36-29 64l6 51"/>
+    </g>
+
+    <g aria-label="Povoados e sinais de navegação">
+      <use href="#farol" transform="translate(307 433) scale(.85)"/>
+      <use href="#cais" transform="translate(534 554) rotate(-23)"/>
+      <use href="#cais" transform="translate(361 478) rotate(-47) scale(.78)"/>
+      <use href="#cais" transform="translate(929 624) rotate(29) scale(.85)"/>
+      <use href="#aldeia" x="542" y="465"/><text class="local" x="565" y="489">Ribeira Alta</text>
+      <use href="#aldeia" x="914" y="507"/><text class="local" x="959" y="525">Três Eiras</text>
+      <use href="#ponte" transform="translate(808 427) rotate(59)"/>
+      <text class="local" x="846" y="454">Ponte das Taxas</text>
+      <use href="#recife" x="271" y="548"/><use href="#recife" transform="translate(265 563) scale(.66)"/>
+      <use href="#recife" transform="translate(315 584) scale(.75)"/>
+      <use href="#recife" transform="translate(627 667) scale(.65)"/>
+      <use href="#recife" transform="translate(783 619) scale(.6)"/>
+      <use href="#barco" transform="translate(296 644) rotate(-8) scale(.85)"/>
+      <use href="#barco" transform="translate(420 542) rotate(12) scale(.66)"/>
+      <use href="#barco" transform="translate(629 548) rotate(-12) scale(.67)"/>
+      <text class="local" x="287" y="581" style="fill:#36564e;stroke:#9fbaae">Agulhas do Sal</text>
+      <text class="local" x="991" y="349">Mata do Breu</text>
+      <text class="local" x="704" y="187">Lago do Degelo</text>
+    </g>
+
+    <g aria-label="Cidades, portos e ruínas">
+      <use href="#cidade" x="531" y="257"/><text class="topo" x="531" y="288">Poço Branco</text>
+      <use href="#cidade" x="716" y="283"/><text class="topo" x="729" y="312">Vau dos Sinos</text>
+      <use href="#cidade" x="876" y="243"/><text class="topo" x="932" y="250">Porta da Brasa</text>
+      <use href="#tunel" x="772" y="274"/>
+      <use href="#porto" x="350" y="483"/><text class="topo" x="322" y="467">Vigília</text>
+      <use href="#porto" x="520" y="561"/><text class="topo" x="520" y="546">Lastro</text>
+      <use href="#porto" x="917" y="624"/><text class="topo" x="957" y="607">Quatro Diques</text>
+      <use href="#ruina" x="130" y="559"/>
+      <text class="vestigio" x="52" y="585">Laboratórios<tspan x="52" dy="18">da Gula</tspan></text>
+      <use href="#ruina" x="380" y="390"/>
+      <path d="m385 384 17-16" fill="none" stroke="#86503f" stroke-width="1.1"/>
+      <text class="vestigio" x="373" y="343" text-anchor="middle">Ruínas de<tspan x="373" dy="19">Preguicite</tspan></text>
+      <use href="#ruina" x="582" y="626"/>
+      <path d="m577 633-15 15" fill="none" stroke="#86503f" stroke-width="1.1"/>
+      <text class="vestigio" x="558" y="669" text-anchor="middle">Ruínas de Putópia</text>
+      <circle cx="183" cy="564" r="3.7" fill="#274f50" stroke="#f6e8c7" stroke-width="1.2"/>
+    </g>
+
+    <text class="mar" x="217" y="238">Oceano Ocidental</text>
+    <text class="mar" x="685" y="458" transform="rotate(67 685 458)">Mar de Dentro</text>
+    <text class="regiao" x="106" y="496">CONTINENTE<tspan x="106" dy="21">SOMBRIO</tspan></text>
+    <text class="regiao" x="800" y="142">SERRA DO FERROLHO</text>
+    <text class="regiao" x="538" y="334" style="font-size:14px">SALINAS</text>
+
+    <g transform="translate(107 320)" fill="none" stroke="#4c6359">
+      <circle r="29" stroke-width="1"/>
+      <circle r="25" stroke-width=".5"/>
+      <path d="M0-30 6-6 24 0 6 5 0 22-6 5-24 0-6-6Z" fill="#e9e0b9" stroke-width=".9"/>
+      <path d="M0-30V0h24L6-6ZM0 22V0h-24l18 5Z" fill="#86684c" stroke="none"/>
+      <text text-anchor="middle" y="-39" class="selo" stroke="none">N</text>
+    </g>
+
+    <path d="M25 122h1070m-1070 596h1070" fill="none" stroke="#80684e" stroke-width="1"/>
+    <g transform="translate(55 50)">
+      <text y="43" font-size="52" font-weight="bold" letter-spacing="-1">Lunária</text>
+      <path d="M217 9v44" fill="none" stroke="#9a7859"/>
+      <text x="238" y="25" class="selo">ANO 10.000</text>
+      <text x="238" y="49" font-size="17" font-style="italic">Mar de Dentro e rotas do oeste</text>
+    </g>
+    <g transform="translate(1028 73)" fill="none" stroke="#976044">
+      <circle r="28" stroke-width=".8"/>
+      <path d="M-6 16a16 16 0 0 1 7-31L-5-5l5 4Zm11-30a16 16 0 0 1-7 31L6 1 1-3Z" fill="#d1ad7c"/>
+    </g>
+
+    <g transform="translate(53 744)">
+      <use href="#cidade"/><text class="legenda" x="15" y="5">Cidade</text>
+      <use href="#aldeia" x="104"/><text class="legenda" x="119" y="5">Vila</text>
+      <use href="#porto" x="188"/><text class="legenda" x="203" y="5">Porto</text>
+      <use href="#ruina" x="279"/><text class="legenda" x="294" y="5">Ruína</text>
+      <path class="rota caminho" d="M364 0h30"/><text class="legenda" x="406" y="5">Caminho</text>
+      <path class="rota maritima" d="M511 0h30"/><text class="legenda" x="554" y="5">Travessia por água</text>
+      <path class="rota subterranea" d="M724 0h33"/><text class="legenda" x="772" y="5">Túnel</text>
+      <use href="#recife" x="917"/><text class="legenda" x="938" y="5">Recife</text>
+    </g>
+  </g>
+  <rect x="17" y="17" width="1086" height="766" fill="none" stroke="#745b42" stroke-width="1.6"/>
+  <rect x="25" y="25" width="1070" height="750" fill="none" stroke="#967755" stroke-width="1"/>
+</svg>

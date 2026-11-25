@@ -1,0 +1,136 @@
+---
+import central from '../data/central.json';
+import { capitulos } from '../data/capitulos.js';
+
+const arquivos = import.meta.glob('./classes/*.md', { query: '?raw', import: 'default', eager: true });
+const excecoes = {
+  avatar: 'Cartela de pecados aprendidos. As caixas contam para compras.',
+  'andarilho-do-vazio': 'O copo transborda e dá um degrau grande. A troca envolve uma defesa a menos.',
+  veterano: 'Compras e cicatrizes nos Pesos 3 e 9. Mantém o degrau extra no Peso 6.',
+};
+const classes = capitulos.filter((capitulo) => capitulo.arquivo?.startsWith('classes/')).map((capitulo) => {
+  const slug = capitulo.arquivo.split('/').at(-1);
+  const texto = arquivos[`./${capitulo.arquivo}.md`];
+  const tabela = texto.match(/^\| Peso \| Fixo[^\r\n]*\r?\n(?:^\|[^\r\n]*\r?\n?)+/m)?.[0] ?? '';
+  const pesos = Object.fromEntries([...tabela.matchAll(/^\|\s*\*\*(\d+)\*\*\s*\|\s*([^|]+)\|\s*([^|]+)\|/gm)].map(([, peso, fixo, compras]) => [
+    peso, { fixo: fixo.replaceAll('**', '').trim(), compras: compras.replaceAll('**', '').trim() },
+  ]));
+  return {
+    slug, nome: texto.match(/^title:\s*(.+)$/m)?.[1] ?? capitulo.label, href: capitulo.href, pesos,
+    excecao: excecoes[slug],
+    revisar: !excecoes[slug] && [3, 6, 9].some((peso) => pesos[peso] && !pesos[peso].fixo.includes('+1 degrau extra')),
+  };
+});
+const grupos = [
+  { nome: 'Base comum', classes: classes.filter((classe) => !classe.excecao && !classe.revisar) },
+  { nome: 'Exceções aprovadas', classes: classes.filter((classe) => classe.excecao) },
+  { nome: 'Fichas a alinhar com a base', classes: classes.filter((classe) => classe.revisar) },
+];
+const niveis = Array.from({ length: 13 }, (_, i) => i + 1);
+const ordem = grupos.flatMap((grupo) => grupo.classes);
+const comprasComuns = Object.fromEntries(niveis.map((peso) => {
+  const compras = new Set(ordem.map((classe) => classe.pesos[peso]?.compras));
+  return [peso, compras.size === 1 ? [...compras][0] : undefined];
+}));
+const base = central.decidido.find((item) => item.titulo === 'Classes: base igual + 3 exceções');
+const provas = { 5: 'Prova do Reino', 8: 'Prova do Mundo', 11: 'Prova de Deus', 13: 'Prova do Mito' };
+const comprasPropostas = { 1: 0, 2: 1, 3: 1, 4: 2 };
+---
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Progressão das classes · Penasia</title>
+</head>
+<body>
+<main>
+  <nav aria-label="Navegação"><a href="/central">← Central</a><a href="/progressao-por-compras.html">Como funcionam as Compras</a></nav>
+  <header>
+    <h1>Progressão das classes</h1>
+    <p>11 classes × 13 Pesos</p>
+  </header>
+  <section aria-labelledby="quadro">
+    <h2 id="quadro">Todos os ganhos por Peso</h2>
+    <p class="nota">Leia o ganho comum e a coluna da classe. Os valores atuais são os das fichas. A <strong>nova distribuição de Compras</strong> está em discussão nos Pesos 1 a 4.</p>
+    <p class="nota"><strong>Base aprovada:</strong> degrau extra nos Pesos 3, 6 e 9. <strong>—</strong> indica que a ficha só registra o ganho comum naquele Peso.</p>
+    <div class="rolagem" role="region" aria-labelledby="quadro" tabindex="0">
+      <table>
+        <colgroup><col class="col-peso" /><col class="col-comum" /></colgroup>
+        {grupos.map((grupo) => <colgroup span={grupo.classes.length}></colgroup>)}
+        <thead>
+          <tr class="grupos">
+            <th scope="col" rowspan="2">Peso</th>
+            <th scope="col" rowspan="2">Todas ganham</th>
+            {grupos.map((grupo) => <th scope="colgroup" colspan={grupo.classes.length}>{grupo.nome}</th>)}
+          </tr>
+          <tr>{ordem.map((classe) => <th scope="col"><a href={classe.href}>{classe.nome}</a></th>)}</tr>
+        </thead>
+        <tbody>
+          {niveis.map((peso) => (
+            <tr>
+              <th scope="row">{peso}</th>
+              <td class="ganho-geral">
+                {peso === 1 ? 'Criação' : '+1 degrau à escolha'}
+                {comprasComuns[peso] && comprasComuns[peso] !== '—' && <small>{comprasComuns[peso]} {comprasComuns[peso] === '1' ? 'compra atual' : 'compras atuais'}</small>}
+                {comprasPropostas[peso] !== undefined && <small class="proposta">Proposta: {comprasPropostas[peso]} {comprasPropostas[peso] === 1 ? 'Compra' : 'Compras'}</small>}
+                {provas[peso] && <small>{provas[peso]}</small>}
+              </td>
+              {ordem.map((classe) => {
+                const ganho = classe.pesos[peso];
+                const compra = ganho && ganho.compras !== '—' && ganho.compras !== comprasComuns[peso];
+                return <td class:list={{ divergencia: classe.revisar && [3, 6, 9].includes(peso) && !ganho?.fixo.includes('+1 degrau extra') }}>
+                  {ganho?.fixo === '—' && compra ? '' : (ganho?.fixo ?? 'Sem linha na ficha')}
+                  {compra && <small>{ganho.compras} {ganho.compras === '1' ? 'compra' : 'compras'}</small>}
+                </td>;
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <ul class="excecoes">
+      {classes.filter((classe) => classe.excecao).map((classe) => <li><strong>{classe.nome}</strong><span>{classe.excecao}</span></li>)}
+    </ul>
+    {base && <p class="nota"><a href="/central">Confira a decisão “{base.titulo}” na Central.</a></p>}
+  </section>
+
+</main>
+</body>
+</html>
+
+<style>
+  :global(html) { color-scheme: dark; background: #171412; color: #faeee0; }
+  :global(body) { margin: 0; font: 1rem/1.55 system-ui, sans-serif; }
+  main { width: min(112rem, 100% - 1rem); margin: auto; padding: .8rem 0 2rem; }
+  nav { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; }
+  a { color: #f7d095; text-underline-offset: .2em; }
+  :focus-visible { outline: 3px solid #f7d095; outline-offset: 3px; }
+  header { background: linear-gradient(115deg,#332820,#211a16); padding: .7rem 1rem; border: 1px solid #65513e; border-radius: .65rem; }
+  h1, h2 { font-family: Georgia, serif; line-height: 1.12; }
+  h1 { margin: 0 0 .15rem; font-size: clamp(1.6rem, 4vw, 2.4rem); }
+  h2 { margin: 0 0 .4rem; font-size: 1.5rem; }
+  p { margin: 0; }
+  section { margin-top: .9rem; }
+  .nota { margin: .35rem 0; color: #decbbc; }
+  .excecoes { display: grid; grid-template-columns: repeat(auto-fit,minmax(11rem,1fr)); gap: .7rem; }
+  .excecoes li { background: #28211b; padding: .6rem .8rem; border: 1px solid #58493b; border-radius: .6rem; }
+  .excecoes strong, small { display: block; }
+  .excecoes { padding: 0; list-style: none; }
+  .rolagem { overflow-x: auto; border: 1px solid #65513e; border-radius: .65rem; }
+  table { width: 100%; min-width: 64rem; table-layout: fixed; border-spacing: 0; text-align: left; font-size: clamp(.75rem, .9vw, .9rem); line-height: 1.3; }
+  .col-peso { width: 3.1rem; }
+  .col-comum { width: 10%; }
+  th, td { padding: .32rem .38rem; border-bottom: 1px solid #524337; border-right: 1px solid #43362c; vertical-align: top; overflow-wrap: anywhere; }
+  thead th { background: #372b21; }
+  .grupos th { color: #f7d095; background: #443326; }
+  .grupos th:nth-child(4) { background: #26342a; color: #c5e8c6; }
+  thead th[rowspan]:first-child { width: 3.5rem; position: sticky; left: 0; z-index: 2; }
+  tbody tr:nth-child(odd) { background: #231d18; }
+  tbody tr:nth-child(even) { background: #1c1815; }
+  tbody th { position: sticky; left: 0; z-index: 1; background: #282019; }
+  .divergencia { background: #3b2a1b; }
+  .ganho-geral { background: #26342a; color: #d2ead2; }
+  small { margin-top: .3rem; color: #f7d095; font-weight: 650; }
+  .proposta { color: #c5e8c6; }
+</style>

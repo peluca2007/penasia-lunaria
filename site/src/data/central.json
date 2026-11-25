@@ -1,6 +1,30 @@
 {
   "falta": [
     {
+      "tema": "Mundo",
+      "pergunta": "Aprovar as datas aproximadas da cronologia, incluindo a derrota do Orgulho por volta do Ano 30, e os limites políticos locais dos reinos?",
+      "onde": "mundo",
+      "ver": "/a-divisao-das-realidades#cronologia"
+    },
+    {
+      "tema": "Mundo",
+      "pergunta": "No começo do Ano 10.000, Mara já encarnou a Ganância ou a autoridade continua sem corpo?",
+      "onde": "mundo",
+      "ver": "/a-divisao-das-realidades#ganancia"
+    },
+    {
+      "tema": "Mundo",
+      "pergunta": "Aprovar Tática Suja e Olho de Saída, os dois talentos da Origem Goblins? Conferir o custo da forma colossal dos Titãs quando virar regra.",
+      "onde": "personagem",
+      "ver": "/a-divisao-das-realidades#povos"
+    },
+    {
+      "tema": "Origens",
+      "pergunta": "Aprovar os talentos de Orcs e Golias, Minotauros e Kobolds?",
+      "onde": "personagem",
+      "ver": "/personagem#origens"
+    },
+    {
       "tema": "Classes",
       "pergunta": "Aprovar as 11 classes (cada uma com um verbo único com os dados na mesa)?",
       "onde": "classes"
@@ -46,18 +70,13 @@
       "onde": "mundo"
     },
     {
-      "tema": "Mapa",
-      "pergunta": "Aprovar o subtítulo \"ano 1020\" e o rótulo \"Gula, morta\"? O Ossário fica mais visível?",
-      "onde": "mundo"
-    },
-    {
       "tema": "Combate",
       "pergunta": "Conferir números que escolhi na reescrita: bênçãos curam o dobro em Vida (4 e 8), Queda tira 3× N, escudo corta um golpe pela metade 1×/cena, Tudo ou Nada dá +2 de dano por aposta.",
       "onde": "combate"
     },
     {
       "tema": "Classes",
-      "pergunta": "A Postura do Veterano passa a ter três faces com pecados (Ira, Gula, Inveja)? A Graça do Ungido vira fichas que os aliados seguram e gastam?",
+      "pergunta": "A Graça do Ungido vira fichas que os aliados seguram e gastam?",
       "onde": "classes"
     },
     {
@@ -127,7 +146,7 @@
     },
     {
       "tema": "Visual",
-      "pergunta": "Origens: revisar as frases de Humanos, Anões, Elfos, Miúdos, Gnomos e Animais Amaldiçoados (escritas agora). Anões, Miúdos e Gnomos ainda não têm imagem.",
+      "pergunta": "Origens: revisar as frases de Humanos, Anões, Elfos, Halflings e Animais Amaldiçoados. Anões e Halflings ainda não têm imagem.",
       "onde": "personagem"
     },
     {
@@ -137,32 +156,7 @@
     },
     {
       "tema": "Lore",
-      "pergunta": "O Reset e Altiva (o texto dizia que o plano dela dispara o Reset): A) o Reset da Morte é passado; Altiva ameaça um segundo Reset, e a Mancha é o sinal. B) Altiva não causa Reset; a Mancha é a cicatriz do Reset antigo voltando. C) Altiva quer imitar a Morte: matar as outras Bruxas e comer a autoridade delas.",
-      "onde": "mundo"
-    },
-    {
-      "tema": "Lore",
-      "pergunta": "O Anaviosi era pobre e de sucata; agora é avançado: A) avançado no auge, sucata no fim (o Protocolo da Eternidade mostra o fim). B) as duas coisas: cidades de máquina, e fora delas sucata. C) só avançado; a sucata passa a ser de Lunária, que acha as relíquias.",
-      "onde": "mundo"
-    },
-    {
-      "tema": "Lore",
-      "pergunta": "Se a Morte matou todas as Bruxas, de onde vêm as de Lunária? A) são novas: Lume e Torvo fizeram outras sete. B) são as almas das antigas, renascidas. C) a autoridade que a Morte comeu vazou quando ela morreu e virou Bruxas de novo.",
-      "onde": "mundo"
-    },
-    {
-      "tema": "Lore",
-      "pergunta": "Quem criou o mundo: Lume e Torvo (o mito) ou a Morte e o outro cavaleiro? A) Lume e Torvo SÃO os dois cavaleiros, lembrados errado. B) Lume e Torvo vieram depois e criaram só as coisas de Lunária. C) Luz e Sombra nasceram dos corpos dos dois cavaleiros.",
-      "onde": "mundo"
-    },
-    {
-      "tema": "Lore",
       "pergunta": "Genbu e o Observador (o Observador \"nasceu com o universo\", ensinou a tecnologia e tem um casco): A) são o mesmo; o \"nasceu com o universo\" é mentira ou fé. B) são dois: Genbu traz a técnica, o Observador ensina os Monges. C) Genbu ensinou tudo ao Observador e morreu.",
-      "onde": "mundo"
-    },
-    {
-      "tema": "Lore",
-      "pergunta": "Duas Mortes: o cavaleiro Morte e Agouro, \"a Própria Morte\" de Lunária. A) Agouro troca o título (\"o Fim de Cada Um\"). B) Agouro é o que sobrou da Morte. C) os dois ficam; o povo confunde, e isso vira gancho.",
       "onde": "mundo"
     },
     {
@@ -172,7 +166,7 @@
     },
     {
       "tema": "Lore",
-      "pergunta": "A palavra Pena agora é o mundo antigo. Ela também é a Rainha-Pena e talvez a ficha dourada. A) fica tudo, e o eco é de propósito. B) a ficha dourada troca de nome. C) o mundo antigo troca de nome.",
+      "pergunta": "Pena é o nome do mundo antigo, da ficha dourada ou dos dois?",
       "onde": "mundo"
     },
     {
@@ -199,37 +193,202 @@
       "tema": "Balanço das classes",
       "pergunta": "Vigia fraco em grupo (−30%). Ajuste: +1 de dano por alfinete no Tiro Paciente?",
       "onde": "classes"
+    },
+    {
+      "tema": "Lore",
+      "pergunta": "Quem é o tirano ou tirana do Anaviosi: Mestra Sulfa (Preguiça, recomendada), Cônsul Veyr (Ganância) ou a Voz do Coro (Orgulho)? Pode ser a primeira Bruxa a voltar?",
+      "onde": "mundo",
+      "ver": "https://claude.ai/artifact/Lbd4bD6epGDnQq45cu3seR"
+    },
+    {
+      "tema": "Lore",
+      "pergunta": "Reservar Pena para o mundo antigo, Pluma para os pactos e Ficha Dourada para a ficha?",
+      "onde": "mundo",
+      "ver": "https://claude.ai/artifact/Lbd4bD6epGDnQq45cu3seR"
+    },
+    {
+      "tema": "Lore",
+      "pergunta": "Como explicar a origem dos Animais Amaldiçoados ligados aos antigos laboratórios numa Lunária que perdeu boa parte da tecnologia?",
+      "onde": "personagem"
+    },
+    {
+      "tema": "Visual",
+      "pergunta": "Visual Xerox brutal em preto e branco já está no site. Ver no navegador: a gravura de abertura dos capítulos fica tingida na cor do pecado ou também em preto e branco? Quer a barra superior com a régua de capítulos numerados?",
+      "onde": "combate"
+    },
+    {
+      "tema": "Raízes",
+      "pergunta": "Genbu é inspirado na Tartaruga Negra e é o mesmo que o Observador? Os nomes alternativos do apêndice ficam em arquivo para a realidade do Reset.",
+      "onde": "raizes"
+    },
+    {
+      "tema": "Combate",
+      "pergunta": "Tabela \"o que o dado diz\" (frase de narração para margem 4+, empate, máximo e 1) e 3 momentos legais: Par (+2 de dano), Defesa perfeita (contra-ataque grátis) e Aposta máxima. Entram?",
+      "onde": "combate",
+      "ver": "https://claude.ai/artifact/3K5XMt3nFvgBMzALk4qdjH"
+    },
+    {
+      "tema": "Combate",
+      "pergunta": "Ferida só com dano 12+ e também margem 4+, porque arma pesada dá Ferida em 1 de cada 4 acertos? E a Tabela Brutal vira uma linha por tipo de dano, narrada pelo jogador?",
+      "onde": "combate",
+      "ver": "https://claude.ai/artifact/3K5XMt3nFvgBMzALk4qdjH"
+    },
+    {
+      "tema": "Nomes",
+      "pergunta": "Trocar \"Coração\" por \"dado do pecado\" e \"degrau\" por \"passo de dado\" (o Simples diz que são as palavras mais confusas)?",
+      "onde": "glossario"
+    },
+    {
+      "tema": "Batidas como regra avançada (Veterano Três Tempos, Domínio Compasso, Desafio de Três)",
+      "pergunta": "Cartinhas com gestos (Golpe, Passo, Pé firme). Leitura de 2 cartas para o Três Tempos valer o custo. Ficam como regra avançada, não na primeira mesa. Aprova? Notas em batidas_v1.md.",
+      "onde": "classes/veterano.md"
+    },
+    {
+      "tema": "Pacto do Orgulho e regra geral de Ajuda",
+      "pergunta": "Voto \"Ninguém me carrega\", Recusa sobe um dado, preço Duro, uma só marca ao quebrar. Mais uma linha de Ajuda na Balança (aliado gasta a Reação, 1 ajuda por golpe, teto 2 dados). Aprova? Correções de 15 linhas em orgulho_v1.md.",
+      "onde": "pacto.md"
+    },
+    {
+      "tema": "Magia de preparo: Rápida, Lenta, Ritual",
+      "pergunta": "Base no livro: magia demorada (+4 de força por Ação gasta; some se o mago for acertado por margem 4+; apagar a Concentração antiga de magia.md). Lenta só vale com zona (3+ alvos) ou com aliado protegendo. Lenta não ecoa. Avançado no apêndice: Ritual (+3 por passo), ponto de não retorno, 7 desanda, Soltar Errado, Grande Obra. Aprova? Notas em magia_lenta_v1.md.",
+      "onde": "magia.md"
+    },
+    {
+      "tema": "Defesa aplicada",
+      "pergunta": "A defesa v6 entrou no combate.md, na referência, na ficha e no glossário. Conferir o que eu escolhi: Ceder corta o dano a ¼ se vencer e a ¾ se perder (sempre Caído); Calcular perde −1; Orgulho (Impor) gasta a Reação. A sugestão do Combeiro de o Desafiado pegar também o aliado ficou de fora, porque não ficou claro. Aprova?",
+      "onde": "combate"
+    },
+    {
+      "tema": "Classes",
+      "pergunta": "Furos das defesas iniciais para resolver com habilidade de classe: o Mago (Antecipar+Calcular) não tem defesa de Reação; o Herdeiro (Impor+Dançar) não consegue Firmar; Navalha, Veterano, Armador, Confessor e Avatar não têm defesa segura (a terceira defesa vira um talento geral, qualquer classe pega).",
+      "onde": "classes"
+    },
+    {
+      "tema": "Progressão",
+      "pergunta": "Confirmar a distribuição de Compras por Peso. A proposta começa com 0, 1, 1 e 2. O que vem fixo no Peso 1? Degraus e Domínio também entram no catálogo?",
+      "onde": "progressao",
+      "ver": "/progressao-por-compras.html"
+    },
+    {
+      "tema": "Progressão",
+      "pergunta": "Base igual (+1 degrau extra nos Pesos 3, 6, 9) e 3 exceções: Avatar, Andarilho, Veterano. Falta reescrever as 11 páginas de classe sem os perfis Peso e Arte, e simular os números das exceções (Andarilho e Veterano). As habilidades de Arte já escritas viram talentos de classe?",
+      "onde": "progressao",
+      "ver": "/progressao-das-classes"
+    },
+    {
+      "tema": "Classes",
+      "pergunta": "As 11 classes estão reescritas no sistema novo (defesas iniciais, sem Guarda, progressão Fixo e Compras, habilidades fixas inventadas). Ler uma por vez: cada uma tem a nota Rascunhos/classe_<nome>_v1.md com o que mudou e 3 dúvidas. Depois chamar os três agentes para revisar cada classe.",
+      "onde": "classes"
+    },
+    {
+      "tema": "Classes",
+      "pergunta": "Estrutura das classes: aprova o esqueleto (5 peças no Peso 1, teto de ~15 itens, 1 final por sessão, mesma régua de poder)? Manter os perfis Peso e Arte e igualar o valor? Vocação pega 1 coisa só? Aprova as finais novas do Veterano, Mago e Andarilho, e o Juízo da Dívida do Brigão passar para 1 por sessão? O debate dos três está na página.",
+      "onde": "classes",
+      "ver": "https://claude.ai/artifact/KPB4Gmoi9aK6hh5g6vCoQp"
+    },
+    {
+      "tema": "Combate",
+      "pergunta": "Vida do chefe no Peso 13: com 80 a 120 de Vida o chefe cai em 2 a 3,5 rodadas com 3 a 4 jogadores. O Combeiro pede 150 a 200 (5 a 6 fases de 30) para a luta durar 5 a 6 rodadas. Aceita?",
+      "onde": "combate"
+    },
+    {
+      "tema": "Classes",
+      "pergunta": "Vigia: Ceder sem Caído, a Mira e a Marca (dependem da regra do dado na mesa, que foi cortada). Reescrever os três.",
+      "onde": "classes/vigia.md"
     }
   ],
   "regras": [
     "A Guarda extra da classe tem dado próprio?",
     "O Repertório cabe dentro das 5 opções do Cinto ou fica separado?",
     "Qual o teto de caixas de Dívida?",
-    "Ausa, o Vazio, não tem pecado associado.",
+    "O Vazio não tem pecado associado.",
     "Cicatriz, Condenação e Danação misturam nomes.",
     "As técnicas das classes têm nome, mas o efeito ainda não está escrito.",
     "A Saturação do Andarilho do Vazio não diz como contar."
   ],
   "decidido": [
     {
+      "titulo": "Progressão: Compras diretas",
+      "texto": "Cada Compra pode ser guardada ou usada para adquirir uma opção liberada: habilidade ou técnica de classe, talento geral, de Interlúdio ou de Origem.",
+      "ver": "/progressao-por-compras.html"
+    },
+    {
       "titulo": "Lunária",
       "texto": "O mundo se chama Lunária. Penasia é o nome do sistema e do livro."
     },
     {
+      "titulo": "O lugar dos deuses antigos",
+      "texto": "As Bruxas voltam ao centro de Lunária. As entidades da antiga Penasia mantêm seus nomes. Bonzão e Malzão estão vivos e há milênios não intervêm. Asmodeus permanece e seu Inferno mudou.",
+      "ver": "/a-divisao-das-realidades#panteao"
+    },
+    {
+      "titulo": "A magia de Lunária",
+      "texto": "Galdalf é uma anomalia que atrai a magia. Hécate tirou a própria vida ao perceber que ele a superou. Quando Galdalf se selou, grande parte da magia foi com ele e a Centelha dos Titãs perdeu força.",
+      "ver": "/a-divisao-das-realidades#magia-fraca"
+    },
+    {
+      "titulo": "O Vazio na Pesagem",
+      "texto": "Stolas e a Rainha Corvo morreram. O Vazio tomou o lugar de Stolas e oferece a morte limpa. A pena da Rainha Corvo ainda preserva as memórias.",
+      "ver": "/a-divisao-das-realidades#panteao"
+    },
+    {
+      "titulo": "Os Dez Andares do Inferno",
+      "texto": "Asmodeus reina num edifício de dez andares. O condenado leva o mesmo contrato de um andar ao outro, onde sucessivamente aparecem as perdas, as dívidas e a possibilidade de reparação.",
+      "ver": "/a-divisao-das-realidades#inferno"
+    },
+    {
+      "titulo": "A Bruxa do Orgulho",
+      "texto": "A Bruxa da Ilha é a atual Bruxa do Orgulho de Lunária.",
+      "ver": "/a-divisao-das-realidades#bruxas"
+    },
+    {
+      "titulo": "O mundo no Ano 10.000",
+      "texto": "O capítulo apresenta as travessias dos reinos, a magia que restou, as dívidas da colheita e a influência das Bruxas e dos antigos cultos.",
+      "ver": "/a-divisao-das-realidades#ano-10000"
+    },
+    {
+      "titulo": "Fundação de DROP",
+      "texto": "Na antiga Penasia, Punho Aberto tinha 30% de goblins, 10% de Titãs, 10% de humanos e 50% de outros povos. Goblins continuam na Fundação e Titãs vivem em muitos de seus postos.",
+      "ver": "/a-divisao-das-realidades#povos"
+    },
+    {
       "titulo": "Linha do tempo",
-      "texto": "Pena (Bruxas e cavaleiros) → a Morte reseta → Anaviosi → cerca de 20.000 anos → Lunária, onde o livro se passa."
+      "texto": "A antiga Penasia tem dois futuros. Anaviosi nasce quando a Morte completa o Reset. Lunária fica na realidade em que Galdalf impede o Reset. A nova escala começa na morte da Morte e chega ao presente por volta do Ano 10.000.",
+      "ver": "/a-divisao-das-realidades"
+    },
+    {
+      "titulo": "A queda das antigas Bruxas",
+      "texto": "O reino élfico foi arrasado na queda da Ganância, e Trover cuidou de quem sobreviveu. Os Espadas devastaram Punho Aberto. Depois de sair do primeiro selo, Galdalf matou a Preguiça, derrotou a Morte com cinco autoridades e contou com a Ira contra o Orgulho. O relato público termina o duelo da Ira com a morte dela.",
+      "ver": "/mundo"
+    },
+    {
+      "titulo": "Autoridades livres",
+      "texto": "Os pecados continuam necessários ao mundo. As autoridades podem influenciar mortais antes de tomar forma. O livro cita a fusão da Luxúria, a Bruxa da Ilha e dois destinos conhecidos dos três fragmentos do Orgulho.",
+      "ver": "/mundo"
     },
     {
       "titulo": "Anaviosi",
-      "texto": "Vem depois do Reset da Morte. Genbu trouxe a tecnologia de Pena: é bem avançado."
+      "texto": "Nasce na realidade em que a Morte completa o Reset. Genbu trouxe a tecnologia da antiga Penasia."
     },
     {
-      "titulo": "Nomes sérios",
-      "texto": "Nome oficial sério; o engraçado vira apelido do povo (Carmina, Carmesina)."
+      "titulo": "Nomes da antiga Penasia",
+      "texto": "Lunária continua a história de Penasia. Vecna, Putária e as outras entidades conservam seus nomes. As alternativas ficam arquivadas para a realidade do Reset.",
+      "ver": "/a-divisao-das-realidades#panteao"
     },
     {
-      "titulo": "Mapa",
-      "texto": "Anel na ordem da Roda, desenho irregular de fantasia."
+      "titulo": "Origens de Lunária",
+      "texto": "A ficha oferece dez Origens. Orcs e Golias compartilham uma Origem. Minotauros e Kobolds têm Origens próprias. Halflings são a opção jogável entre Gnomos e Halflings.",
+      "ver": "/a-divisao-das-realidades#povos"
+    },
+    {
+      "titulo": "O extermínio do Monte Cinza",
+      "texto": "Antes do Ano 0, o Cavaleiro da Destruição matou mais da metade da população de Penasia para preparar o Reset. Exterminou os Elfos das Cinzas na queda do Monte Cinza.",
+      "ver": "/a-divisao-das-realidades#cronologia"
+    },
+    {
+      "titulo": "Mapa do Ano 10.000",
+      "texto": "Putópia e Preguicite foram extintas. As cidades do Ano 10.000 têm outros nomes. A nova geografia, os topônimos atuais e as causas dos abandonos aparecem em proposta.",
+      "ver": "/a-divisao-das-realidades#mapa"
     },
     {
       "titulo": "Sangue na Mesa",
@@ -238,9 +397,90 @@
     {
       "titulo": "Escada do Poder",
       "texto": "Começa fraco, sobe por Peso, Quebras de Limite por Prova, dados somados no topo."
+    },
+    {
+      "titulo": "Em branco de propósito",
+      "texto": "O livro conta como as autoridades se manifestam e cita dois destinos dos fragmentos do Orgulho. O destino do terceiro e os bastidores do desaparecimento de Galdalf ficam fora do relato público.",
+      "ver": "https://claude.ai/artifact/Lbd4bD6epGDnQq45cu3seR"
+    },
+    {
+      "titulo": "Lunária sem tecnologia",
+      "texto": "Só relíquias raras do Anaviosi. Nada de tecnologia no dia a dia."
+    },
+    {
+      "titulo": "Fim do Anaviosi",
+      "texto": "Havia tecnologia. A magia foi descoberta e fazia o trabalho por eles, e a tecnologia morreu, principalmente por causa de um tirano ou tirana (ainda a escolher)."
+    },
+    {
+      "titulo": "Quem criou o mundo",
+      "texto": "Os Cavaleiros do Apocalipse, mas a história se perdeu. Genbu caminhou ao lado do mundo. Os Cavaleiros não existem mais."
+    },
+    {
+      "titulo": "Orgulho neutro",
+      "texto": "O Orgulho não tem desvantagem contra ninguém e ninguém tem vantagem sobre ele (sem o +1 do desafio). Pode ser ajudado; só o devoto da Bruxa do Orgulho nunca aceita ajuda."
+    },
+    {
+      "titulo": "Ações de grupo vêm de uma fonte",
+      "texto": "Proteger e Cobrir só existem por classe, talento, domínio, raça ou outra fonte. Salto na frente é para todos (pode ganhar talento melhor no futuro). Fintar é base para todos (gasta a Ação, exige a fala): quem finta rola Luxúria ou Inveja, o alvo resiste com Ganância ou Inveja; o mestre pode aceitar outro pecado por boa interpretação. Se vencer, o alvo fica Aberto no próximo golpe de um aliado. a fonte (classe, talento etc.) melhora."
+    },
+    {
+      "titulo": "Defesa: Firme + Reação, Salto, Ceder",
+      "texto": "Firme (2 golpes) e Reação (1) somam: até 3 golpes defendidos, o 4º vem Aberto. Firmar só com o Movimento (sem Firmar com a Ação). Salto na frente custa a Reação: troca de lugar com o aliado adjacente; o atacante rola e acerta com 3+. Proteger (só por fonte) é o Salto que defende. Duas famílias: Preguiça e Gula são seguras (ajudam sempre, nunca anulam); as outras anulam se vencem e custam o dano se perdem. Toda defesa tem efeito ao vencer e ao perder. Fere = margem, teto 5. Firmar com dois pecados é opcional."
+    },
+    {
+      "titulo": "Números só no fim",
+      "texto": "Vida do chefe, golpe de 20+, Ferida 12+ e outros números ficam para o final. Primeiro se fecha como as regras funcionam."
+    },
+    {
+      "titulo": "Defesa aplicada no livro",
+      "texto": "A defesa nova (Reação, Firmar, Aberto, as 7 defesas com Se vencer e Se perder, Salto, Proteger e Cobrir por fonte, Fintar para todos) está no combate.md, na referência rápida, na ficha e no glossário. As classes ainda faltam."
+    },
+    {
+      "titulo": "Começa com 2 defesas",
+      "texto": "Cada classe começa com 2 defesas (uma para Firmar, outra para a Reação): Brigão Aguentar+Aparar · Veterano Aparar+Antecipar · Navalha Dançar+Antecipar · Vigia Ceder+Antecipar · Armador Calcular+Aparar · Confessor Dançar+Calcular · Mago Antecipar+Calcular · Herdeiro Impor+Dançar · Ungido Aguentar+Impor · Andarilho Ceder+Dançar · Avatar Antecipar+Impor. As outras vêm por talento ou habilidade. Pares do RP; o Pedro confia no RP e resolve os furos com talentos."
+    },
+    {
+      "titulo": "Veterano: Muralha e Postura Aprendida",
+      "texto": "A face Firme do Veterano virou Muralha (Firme é só da defesa). As faces não usam mais o dado na mesa: viraram efeitos diretos. Novo talento Postura Aprendida: depois de uma cena com alguém de outro pecado, troca uma ponta da ficha (sempre 3 faces); a face só ataca com o pecado novo e empresta a defesa dele."
+    },
+    {
+      "titulo": "Veterano: sete faces e Virada simples",
+      "texto": "Uma face por pecado: Ofensiva (Ira), Muralha (Gula), Ruptura (Inveja) desde o início; Passo do Penitente (Luxúria), Mão de Ferrugem (Ganância) e Cabeça Erguida (Orgulho) aprendidas; Vazia (Preguiça) só pelo Punho Aberto. A ficha tem sempre 3 pontas. Virar muda a face; a Virada (ao ser atacado) é a Reação; leitura certa (face que domina o pecado do atacante) não gasta a Reação. Entortar é só o recurso."
+    },
+    {
+      "titulo": "Vocação guardada",
+      "texto": "A Vocação (multiclasse do Peso 4) e os talentos de Sinergia ficam guardados por enquanto. O Peso 4 fica só com o degrau. As regras continuam salvas."
+    },
+    {
+      "titulo": "Veterano: ficha de 3 faces",
+      "texto": "A ficha de 3 faces fica. Passo do Penitente move 1 zona sem golpe livre (o Enfeitiçado pode virar talento). Lição Dura mantida. A regra \"dado fica na mesa\" saiu do livro. A terceira defesa vira talento geral.",
+      "ver": "https://claude.ai/artifact/MAUKQ3jpetXWyiKzAUy1g4"
+    },
+    {
+      "titulo": "Brigão: habilidade final",
+      "texto": "Juízo da Dívida (Peso 13): 1 vez por cena, Ação, sem rolar. Todo Rancor cobra ao mesmo tempo no inimigo onde está. Ao cair a 0, é de graça e fica com 1 Vida. Substitui a Conta Fechada.",
+      "ver": "https://claude.ai/artifact/EdhPL9FjYvYp2n8vwvdFMK"
+    },
+    {
+      "titulo": "Classes: base igual + 3 exceções",
+      "texto": "Todas as classes têm a mesma base (+1 degrau extra nos Pesos 3, 6, 9; final no Peso 13). Exceções com selo na ficha: Avatar (cartela = compras), Andarilho (copo transborda = degrau grande, paga uma defesa) e Veterano (mais talentos, menos dado, cicatriz escrita). Moeda de troca: 1 degrau = 2 compras. Fim dos perfis Peso e Arte. Mago e Ungido ficam na base. Primeira mesa: Brigão, Armador, Vigia."
+    },
+    {
+      "titulo": "Brigão e Caído fechados",
+      "texto": "Brigão: o Troco gasta só 1 Rancor (o de maior número), que volta sem número; vale o maior número, +2 por Rancor extra; só cobra Rancor com número. Juízo da Dívida: Rancor da mão vale 8 e cada número conta no máximo 10 (dano 30 a 36). Caído: quem ataca de perto rola 1 degrau acima, de longe 1 abaixo; levantar gasta o Movimento; dura até levantar.",
+      "ver": "https://claude.ai/artifact/EdhPL9FjYvYp2n8vwvdFMK"
+    },
+    {
+      "titulo": "Veterano fechado",
+      "texto": "Exceção: +1 compra nos Pesos 3 e 9, degrau mantido no Peso 6 (perde um pouco de Vida e Inveja; a Ira não muda; cicatriz é só história). Final Eu Já Vi Esse Golpe: teto de 40 fixo, vale também ao Proteger. A final acontece em 55% a 75% das lutas com 3 a 4 jogadores.",
+      "ver": "https://claude.ai/artifact/MAUKQ3jpetXWyiKzAUy1g4"
     }
   ],
   "ideias": [
+    {
+      "titulo": "Nome dos talentos e Votos",
+      "texto": "Aptidões é um nome possível para os talentos. Explorar se cumprir um Voto pode abrir acesso a alguma opção de Compra."
+    },
     {
       "titulo": "Capítulo de playtest",
       "texto": "Uma one-shot de 2 horas para 3 jogadores, e uma página para anotar o que quebrou na mesa. Os números do livro só vêm de simulação até agora."
@@ -314,9 +554,256 @@
     {
       "em": "2026-11-19",
       "texto": "Página de balanço das 11 classes (Peso 1 e Peso 6) e 5 ajustes sugeridos na Central. Central ganhou o bloco Páginas visuais."
+    },
+    {
+      "em": "2026-11-19",
+      "texto": "Nasceram os três agentes (Combeiro, RP, Simples). Primeira geral no sistema: 4 rodadas de debate, resultado na página Debate dos Três. Nada aplicado nos capítulos ainda."
+    },
+    {
+      "em": "2026-11-19",
+      "texto": "Segunda geral: os três criaram mecânicas para 6 áreas, um pesquisador trouxe 12 ideias de outros RPGs e outro montou 3 direções visuais. Páginas Mecânicas Novas e Aparência do Livro. Nada aplicado nos capítulos ainda."
+    },
+    {
+      "em": "2026-11-20",
+      "texto": "Lore: o Pedro deixou em branco como as Bruxas e a Morte voltaram (decide na mesa). Lunária sem tecnologia; o Anaviosi perde a tecnologia pela magia e por um tirano. Os três propuseram tiranos, o sentido de Pena e as verdades das Bruxas. Capítulo do mundo ainda não reescrito."
+    },
+    {
+      "em": "2026-11-20",
+      "texto": "O Pedro escolheu o visual Xerox brutal em preto e branco (cor só no pecado): aplicado no site. Nasceu a página Raízes e referências (apêndice C). Debate das Guardas: Preguiça vira Ceder, Luxúria vira Dançar. Capítulos ainda não reescritos."
+    },
+    {
+      "em": "2026-11-20",
+      "texto": "Página Luta com Dados: 4 passos, a Roda, 7 lutas de exemplo (uma por Guarda nova) e um rolador. Os três apontaram o que não faz sentido (empate, Ferida com arma pesada, Tabela Brutal) e propuseram momentos legais. Erro de texto da Roda corrigido: a Guarda também sobe se domina o atacante."
+    },
+    {
+      "em": "2026-11-21",
+      "texto": "Pedro propôs defender com qualquer pecado, defesa como ação e magias que demoram turnos (3 ações, estilo Moshoku Tensei). Os três agentes debateram; aguardando decisão."
+    },
+    {
+      "em": "2026-11-21",
+      "texto": "Pedro propôs 3 batidas por turno com ordem secreta (atacar, esquivar, defender) e defesa com qualquer pecado sem custo. Combeiro 7,5, RP 8,5, Simples 4. Aguardando decisão."
+    },
+    {
+      "em": "2026-11-21",
+      "texto": "Pedro decidiu: Orgulho neutro na Roda e pode ser ajudado. 3 Batidas deixam de ser a base: viram ideia de classe/Domínio. Base de defesa (reação vs ação) a repensar."
+    },
+    {
+      "em": "2026-11-21",
+      "texto": "Noite de trabalho: 4 rodadas de debate (Combeiro 8,5 · RP 7,5 · Simples 5) levaram a defesa à v5. Página Defesa Nova publicada. Notas em Penasia Vault/Rascunhos (defesa_v1 a v5, pesquisas). Nada aplicado nos capítulos ainda."
+    },
+    {
+      "em": "2026-11-21",
+      "texto": "Mais três rascunhos na Vault: batidas_v1 (Batidas como regra avançada), orgulho_v1 (Pacto da Altiva + 15 correções do Orgulho antigo), magia_lenta_v1 (3 níveis de magia). Críticos: Batidas 6,5/7,5/4 · Orgulho 7,5/8,5/5. Magia lenta em crítica."
+    },
+    {
+      "em": "2026-11-21",
+      "texto": "Magia lenta criticada: Combeiro 6,5 · RP 8 · Simples 2. Decisão do mediador: base simples no livro, o resto em regras avançadas."
+    },
+    {
+      "em": "2026-11-22",
+      "texto": "Pedro decidiu: Proteger e Cobrir só por habilidade (classe, talento, domínio, raça); Salto para todos; Fintar com teste. Os três agentes deram 7 · 8 · 7 antes. Defesa v5 anotada; capítulos ainda não mexidos."
+    },
+    {
+      "em": "2026-11-22",
+      "texto": "Nasceu o Dicionário (285 termos, com busca). Defesa Nova atualizada: Fintar fechado, Proteger e Cobrir só por fonte."
+    },
+    {
+      "em": "2026-11-22",
+      "texto": "Pedro decidiu a v5: Firme 2 + Reação 1 somam; Salto troca de lugar e custa a Reação; Ceder sempre deixa Caído (metade se vencer, inteiro se perder). Em análise: custo de cada defesa (Ação, Movimento, Reação, Firmar) e Firmar com dois pecados."
+    },
+    {
+      "em": "2026-11-22",
+      "texto": "Defesa v6 escrita na Vault. Ceder: vencer = 0 de dano e Caído. Fere pela margem, teto 5. Notas: Combeiro 7,5 · RP 8 · Simples 2 (a regra ainda pesa na leitura)."
+    },
+    {
+      "em": "2026-11-22",
+      "texto": "Nasceu a página Combate (placar, rodada, 7 defesas e calculadora). Cada defesa passa a ter custo, o que dá se vencer e se perder; defesas fortes e fracas, e a fraca pode ser a certa se for o seu maior dado."
+    },
+    {
+      "em": "2026-11-22",
+      "texto": "Pedro: defesas em duas famílias. Preguiça e Gula sempre ajudam, mas nunca anulam o dano (para ninguém focar um pecado só). As outras anulam se vencem e dão um efeito, mas custam dano se perdem. Todas precisam de efeito claro ao vencer e ao perder. Orgulho e Calcular a melhorar. Números ficam para o fim."
+    },
+    {
+      "em": "2026-11-22",
+      "texto": "Pedro tirou o Firmar com a Ação. Impor passa a gastar a Reação. Preguiça e Gula viram defesas seguras (nunca anulam). Calcular: o jogador diz a coisa da cena. Defesa v6 reescrita e página Combate atualizada."
+    },
+    {
+      "em": "2026-11-22",
+      "texto": "Pedro aceitou Aguentar fixo (−4 / −2) para começar; escalar no futuro por talento. Firmar sempre escrito como \"gasta o Movimento\"."
+    },
+    {
+      "em": "2026-11-22",
+      "texto": "Defesa v6 aplicada no livro (combate, referência, ficha com a caixa Minhas defesas, glossário, magia). Ceder ¼/¾, Calcular −1. Próximo: classes, uma por vez."
+    },
+    {
+      "em": "2026-11-22",
+      "texto": "Pedro: cada classe começa com 2 defesas e confia no RP nos pares. Os furos (Mago sem Reação, Herdeiro sem Firmar) viram habilidades de classe. Próximo: Veterano."
+    },
+    {
+      "em": "2026-11-22",
+      "texto": "Veterano reescrito com a defesa nova: defesas iniciais Aparar + Antecipar, a face Firme empresta Aguentar, Proteger e Cobrir são dele, Lição Dura e Segunda Fileira ajustadas."
+    },
+    {
+      "em": "2026-11-23",
+      "texto": "Veterano arrumado: face Muralha, efeitos sem o dado na mesa, talentos explicados em palavras simples e talento Postura Aprendida (Combeiro 6 · RP 8 · Simples 4, ajustado). Página do Veterano atualizada."
+    },
+    {
+      "em": "2026-11-23",
+      "texto": "Veterano reescrito: sete faces (uma por pecado), Virada = Reação, leitura certa, palavras explicadas e falas. Notas: Combeiro 7 · RP 7,5 · Simples 4. Ajustes de equilíbrio aplicados; página atualizada com ficha para montar."
+    },
+    {
+      "em": "2026-11-23",
+      "texto": "Tabela de Pesos (1 a 13) adicionada à Progressão: Prova, teto dos dados, Escada, classe e subclasse. Peso máximo é 13."
+    },
+    {
+      "em": "2026-11-23",
+      "texto": "Progressão reescrita: o que se ganha em cada Peso, cena por Peso, perfis Peso e Arte, talento por habilidade de classe, tipos de talento em 2 grupos e talento de Cadeia. Notas: Combeiro 6,5 · RP 7 · Simples 4."
+    },
+    {
+      "em": "2026-11-23",
+      "texto": "Progressão sem as cenas: limites das Provas claros, Fixo e Compras (técnica ou talento juntos), Vocação explicada. Tabela de progressão do Veterano criada."
+    },
+    {
+      "em": "2026-11-23",
+      "texto": "Vocação guardada. Habilidade fixa explicada como a coluna Características do D&D. Dez agentes reescrevem as outras classes no sistema novo durante a noite; notas em Rascunhos."
+    },
+    {
+      "em": "2026-11-23",
+      "texto": "As 11 classes foram reescritas no sistema novo (defesas iniciais, sem Guarda, Fixo e Compras). Falta o Pedro ler cada uma, a regra de Caído e a revisão dos três agentes."
+    },
+    {
+      "em": "2026-11-23",
+      "texto": "Veterano fechado: ficha de 3 faces, Passo do Penitente move, Lição Dura mantida. Cortado o \"dado fica na mesa\". Terceira defesa vira talento geral."
+    },
+    {
+      "em": "2026-11-23",
+      "texto": "Páginas visuais das 10 classes (como a do Veterano) para o Pedro analisar uma a uma."
+    },
+    {
+      "em": "2026-11-23",
+      "texto": "Brigão: a Conta Fechada saiu e entrou o Juízo da Dívida no Peso 13. Pedro: habilidades finais têm que ser de semideus."
+    },
+    {
+      "em": "2026-11-23",
+      "texto": "Os três agentes debateram a estrutura das classes em 3 rodadas. Nada foi aplicado no livro: espera a aprovação do Pedro."
+    },
+    {
+      "em": "2026-11-23",
+      "texto": "Pedro aprovou base igual para as classes e 3 exceções (Avatar, Andarilho, Veterano). Perfis Peso e Arte acabaram. Progressão atualizada; as 11 páginas de classe ainda usam os perfis antigos."
+    },
+    {
+      "em": "2026-11-23",
+      "texto": "Brigão: Pedro escolheu A nos furos 3, 4, 5 e 7 e o 6 caiu com o fim dos perfis. Aplicado em brigao.md. Furos 1 e 2: Pedro escolheu B (o Troco gasta o Rancor, volta sem número) e A (vale o maior número, +2 por Rancor extra). Aplicado."
+    },
+    {
+      "em": "2026-11-23",
+      "texto": "Brigão fechado (Troco gasta 1, Juízo vale 8 com teto 10). Caído escrito no Combate. Veterano virou exceção: +1 compra com cicatriz nos Pesos 3, 6 e 9."
+    },
+    {
+      "em": "2026-11-23",
+      "texto": "Veterano: final Eu Já Vi Esse Golpe criada (Combeiro 8 · RP prefere Sete Escolas 9 · Simples 6). Exceção corrigida: o degrau volta no Peso 6."
+    },
+    {
+      "em": "2026-11-23",
+      "texto": "Veterano testado e fechado (Combeiro 7,5): final ok, teto 40; exceção ok. Alerta: chefe de Peso 13 precisa de mais Vida."
+    },
+    {
+      "em": "2026-11-24",
+      "texto": "Progressão passou a usar Compras diretas. O catálogo inclui opções de classe e talentos gerais, de Interlúdio e de Origem."
+    },
+    {
+      "em": "2026-11-24",
+      "texto": "O capítulo do mundo passou a mostrar as duas realidades, os dez mil anos de Lunária, as autoridades livres e a regressão das técnicas. A cronologia do Mestre ficou no Obsidian."
+    },
+    {
+      "em": "2026-11-24",
+      "texto": "Ajustada a ordem da queda das antigas Bruxas, a tragédia de Punho Aberto e o confronto de Galdalf com a Morte. O relato público do duelo da Ira e sua continuação de Mestre estão em notas distintas."
+    },
+    {
+      "em": "2026-11-24",
+      "texto": "A página De Penasia a Lunária reúne dez milênios, a queda dos deuses, as Bruxas, os reinos e os povos da antiga edição. Punho Aberto mantém os goblins e os Titãs. A consulta editorial de lore passa a ser opcional e exclusiva do RP."
+    },
+    {
+      "em": "2026-11-24",
+      "texto": "Mantidos os nomes antigos em Lunária. A linha do tempo foi refeita, o mapa do Ano 10.000 foi desenhado a partir do original, e a ficha passou a oferecer dez Origens."
+    },
+    {
+      "em": "2026-11-24",
+      "texto": "A ficha passou a oferecer sete Origens. O extermínio do Monte Cinza foi registrado na história pública."
+    },
+    {
+      "em": "2026-11-24",
+      "texto": "Orcs e Golias, Minotauros e Kobolds entraram na ficha. Seus talentos foram adaptados do livro antigo e estão em proposta."
+    },
+    {
+      "em": "2026-11-24",
+      "texto": "Pedro definiu que Putópia e Preguicite acabaram e que as cidades do Ano 10.000 têm outros nomes. O mapa do presente foi refeito, com os lugares e as travessias novas em proposta."
+    },
+    {
+      "em": "2026-11-25",
+      "texto": "Fechados o elo entre Galdalf e a perda da magia, a morte da Rainha Corvo na Pesagem e a devastação antes do Ano 0. Escritos os Dez Andares de Asmodeus e a história da fundadora da Casa de Contas."
+    },
+    {
+      "em": "2026-11-25",
+      "texto": "Ampliados o mundo do Ano 10.000 e os perfis das sete Bruxas e das catorze divindades da antiga Penasia."
     }
   ],
   "paginas": [
+    {
+      "titulo": "De Penasia a Lunária",
+      "texto": "A árvore das realidades, o mapa de Lunária no Ano 10.000 e as Origens da ficha.",
+      "ver": "/a-divisao-das-realidades"
+    },
+    {
+      "titulo": "Veterano",
+      "texto": "A classe em uma página: ficha de 3 faces (toque para ver), leitura certa pela Roda, defesas, técnicas, subclasses e como difere das outras 10.",
+      "ver": "https://claude.ai/artifact/MAUKQ3jpetXWyiKzAUy1g4"
+    },
+    {
+      "titulo": "Combate: placar e defesas",
+      "texto": "O que está decidido, a rodada desenhada, as 7 defesas (custo, vence, perde) e uma calculadora de qual defesa vale mais.",
+      "ver": "https://claude.ai/artifact/KQZQo3X88ZGb7MPpyTUsEY"
+    },
+    {
+      "titulo": "Dicionário",
+      "texto": "285 palavras do livro, uma frase cada, com busca. Marca o que confunde, o que é só proposta e o que o livro não explica.",
+      "ver": "https://claude.ai/artifact/XvDmkXyQaXhv9GMP8WyfLW"
+    },
+    {
+      "titulo": "Defesa Nova",
+      "texto": "Reação, Firmar e Aberto: 3 caminhos quando te atacam, 4 lutas com dados, rolador e cartão de bolso.",
+      "ver": "https://claude.ai/artifact/UmUn8rkPj8EqvdS78URYoE"
+    },
+    {
+      "titulo": "Luta com Dados",
+      "texto": "A conta do combate em 4 passos, a Roda, 7 lutas com dados desenhados e um rolador.",
+      "ver": "https://claude.ai/artifact/3K5XMt3nFvgBMzALk4qdjH"
+    },
+    {
+      "titulo": "As 7 Guardas",
+      "texto": "Cada Guarda com bônus, mudança e o porquê do pecado. Preguiça não esquiva.",
+      "ver": "https://claude.ai/artifact/NHjQsKXHMkTfAbi1T2vvdi"
+    },
+    {
+      "titulo": "Lore em Branco",
+      "texto": "O que fica decidido e o que fica em branco; tirano do Anaviosi, Pena e origem das Bruxas.",
+      "ver": "https://claude.ai/artifact/Lbd4bD6epGDnQq45cu3seR"
+    },
+    {
+      "titulo": "Aparência do Livro",
+      "texto": "Três direções visuais para o site, cada uma na mesma página de Combate.",
+      "ver": "https://claude.ai/artifact/K1yzPKFdxvKXFs2kDqutCy"
+    },
+    {
+      "titulo": "Mecânicas Novas",
+      "texto": "Exploração, magia, Mestre, pactos, chefes e morte, e o veredito sobre 12 ideias de outros RPGs.",
+      "ver": "https://claude.ai/artifact/89qB995YNHyoJvdmEg5rwF"
+    },
+    {
+      "titulo": "Debate dos Três",
+      "texto": "Combeiro, RP e Simples: consensos, impasses julgados, lore e ideias novas.",
+      "ver": "https://claude.ai/artifact/TYSj31wWPZQ9RGX6tTfdVu"
+    },
     {
       "titulo": "Linha do tempo",
       "texto": "Pena, o Reset, Anaviosi, 20 mil anos, Lunária. E as perguntas de lore."
@@ -348,6 +835,61 @@
     {
       "titulo": "Mecânicas e Domínio",
       "texto": "O que fica, o que sai, e o Domínio simplificado."
+    },
+    {
+      "titulo": "Classe: Brigão",
+      "texto": "Verbo plantar. Como se joga, técnicas e o que falta decidir.",
+      "ver": "https://claude.ai/artifact/EdhPL9FjYvYp2n8vwvdFMK"
+    },
+    {
+      "titulo": "Classe: Navalha",
+      "texto": "Verbo colher. Como se joga, técnicas e o que falta decidir.",
+      "ver": "https://claude.ai/artifact/A1Kj5QPp6xNVuVXFe6mRWL"
+    },
+    {
+      "titulo": "Classe: Vigia",
+      "texto": "Verbo fixar. Como se joga, técnicas e o que falta decidir.",
+      "ver": "https://claude.ai/artifact/M5qAm11369P8B6r2hsBBQ2"
+    },
+    {
+      "titulo": "Classe: Armador",
+      "texto": "Verbo fincar. Como se joga, técnicas e o que falta decidir.",
+      "ver": "https://claude.ai/artifact/HZZLbAtGEY49Q2V8U3smvZ"
+    },
+    {
+      "titulo": "Classe: Confessor",
+      "texto": "Verbo adiar. Como se joga, técnicas e o que falta decidir.",
+      "ver": "https://claude.ai/artifact/PRiPUVQJfFWjPWBSxc1RSr"
+    },
+    {
+      "titulo": "Classe: Mago",
+      "texto": "Verbo ecoar. Como se joga, técnicas e o que falta decidir.",
+      "ver": "https://claude.ai/artifact/4HPHFrcBJKsyy6ktzhHpFV"
+    },
+    {
+      "titulo": "Classe: Herdeiro",
+      "texto": "Verbo sangrar. Como se joga, técnicas e o que falta decidir.",
+      "ver": "https://claude.ai/artifact/3mCEJb8xK1uPrhWmtAVbwj"
+    },
+    {
+      "titulo": "Classe: Ungido",
+      "texto": "Verbo consagrar. Como se joga, técnicas e o que falta decidir.",
+      "ver": "https://claude.ai/artifact/3LN8etpgPq8uKdZ13tULKs"
+    },
+    {
+      "titulo": "Classe: Andarilho do Vazio",
+      "texto": "Verbo derramar. Como se joga, técnicas e o que falta decidir.",
+      "ver": "https://claude.ai/artifact/ND7GwM7Kj6Kai6tLHbHaT7"
+    },
+    {
+      "titulo": "Classe: Avatar",
+      "texto": "Verbo aprender. Como se joga, técnicas e o que falta decidir.",
+      "ver": "https://claude.ai/artifact/1X21bUTjyiEGoDYXh8uEjD"
+    },
+    {
+      "titulo": "Estrutura das classes",
+      "texto": "O esqueleto das 11 classes, o debate dos três agentes e as finais do Peso 13.",
+      "ver": "https://claude.ai/artifact/KPB4Gmoi9aK6hh5g6vCoQp"
     }
   ]
 }

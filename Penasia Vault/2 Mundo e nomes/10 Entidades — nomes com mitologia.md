@@ -1,5 +1,7 @@
 # 10 · Entidades: nomes com mitologia
 
+> **Arquivo da hipótese do Reset.** A cronologia de Lunária conserva os nomes do livro antigo. Veja [[Panteão de Penasia e Lunária]] para os destinos dessas entidades.
+
 > Pedido do Pedro: "acho interessante elas terem ligação com mitologias do mundo, religiões, figuras históricas, então passa uma lista mais detalhada".
 > Fonte do que cada entidade é hoje: `site/src/pages/mundo.md`, `pacto.md`, `magia.md` e `Rascunhos/r2_mundo.md` (tabela de renomeação).
 
@@ -55,6 +57,8 @@
 
 ### Sorvedouro, o Guardião das Marés
 **No livro hoje:** o mar, redemoinho que engole, nascido do "esgoto divino"; odeia a terra firme. É árbitro, não banco. Antes era Leviatã. · **Nome atual:** Sorvedouro
+
+**Na cronologia de Lunária:** Leviatã e Sorvedouro são nomes do mesmo deus. Ele recusou o pedido de chuva de Trover e seus dois companheiros. Os três o mataram, e choveu por trinta anos no mundo inteiro. Astora prosperou com a pesca. Em outras regiões, as cheias devastaram as plantações e a fome deu origem à nova Gula. Veja [[Mestre — Os dez mil anos depois de Galdalf#A morte do Leviatã|A morte do Leviatã]].
 
 | Proposta | Origem | Tipo | Por que combina |
 |:--|:--|:--|:--|

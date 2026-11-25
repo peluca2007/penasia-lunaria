@@ -24,6 +24,9 @@ const total = ST.reduce((s, k) => s + soma[k], 0);
 const firmes = total ? Math.round(((soma.fechado + soma.consenso) / total) * 100) : 0;
 const cap = (arq) => capitulos.find((c) => c.arquivo === arq);
 const temas = [...new Set(db.falta.map((f) => f.tema))];
+const ehClasse = (p) => p.ver && (p.titulo.startsWith('Classe:') || ['Veterano', 'Estrutura das classes'].includes(p.titulo));
+const paginasClasses = (db.paginas ?? []).filter(ehClasse);
+const outrasPaginas = (db.paginas ?? []).filter((p) => !ehClasse(p));
 const data = (iso) => iso.slice(0, 10).split('-').reverse().join('/');
 ---
 <Livro title="Central" chap="Central">
@@ -37,10 +40,18 @@ const data = (iso) => iso.slice(0, 10).split('-').reverse().join('/');
     <div><b>{firmes}%</b><span>das regras firmes</span></div>
   </div>
 
-  <h3>Páginas visuais</h3>
+  <h3>Classes</h3>
+  <p class="ct-meta">Uma página por classe. Abre numa aba nova.</p>
+  <div class="ct-pags">
+    {paginasClasses.map((p) => (
+      <a href={p.ver} target="_blank" rel="noopener"><b>{p.titulo.replace('Classe: ', '')} ↗</b><span>{p.texto}</span></a>
+    ))}
+  </div>
+
+  <h3>Outras páginas visuais</h3>
   <p class="ct-meta">Tudo que eu desenhei para explicar. Abre numa aba nova.</p>
   <div class="ct-pags">
-    {(db.paginas ?? []).map((p) => (
+    {outrasPaginas.map((p) => (
       <a href={p.ver} target="_blank" rel="noopener"><b>{p.titulo} ↗</b><span>{p.texto}</span></a>
     ))}
   </div>

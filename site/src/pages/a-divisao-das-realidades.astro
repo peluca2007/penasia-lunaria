@@ -1,0 +1,521 @@
+---
+import Livro from '../layouts/Livro.astro';
+import { origens } from '../data/origens.js';
+
+const eras = [
+  {
+    titulo: 'As primeiras cheias',
+    anos: 'Anos 0–1.000',
+    marcos: [
+      ['Trinta anos de chuva', 'Trover e dois companheiros matam Leviatã. Astora passa a viver da pesca. Nas aldeias alagadas, a fome dá corpo à nova Gula.'],
+      ['O Orgulho se divide', 'Por volta do Ano 30, Galdalf e a Ira derrotam a antiga Bruxa. A Ira morre no duelo que vem depois.'],
+      ['O fim dos grandes feitiços', 'Hécate vê a magia convergir para Galdalf e tira a própria vida ao perceber que ele a superou. Quando Galdalf se sela na biblioteca, grande parte da magia segue com ele.'],
+    ],
+  },
+  {
+    titulo: 'O mar abre caminho',
+    anos: 'Anos 1.000–3.000',
+    marcos: [
+      ['A estrada sob a serra', 'Os anões abrem os túneis aos desabrigados. Excalibur conserva as terras altas. O Punho Rubro toma as passagens do norte.'],
+      ['A costa partida', 'O oceano invade uma das fissuras de Arthur. Surgem ilhas. Uma pessoa guerreira morre defendendo um desembarque e se levanta como a Bruxa da Ilha.'],
+    ],
+  },
+  {
+    titulo: 'Os reinos mudam de margem',
+    anos: 'Anos 3.000–6.000',
+    marcos: [
+      ['A última travessia de Auril', 'A passagem no gelo cede depois da última caravana. As Terras Geladas passam a depender de acordos entre povoados.'],
+      ['A guerra dos reis', 'Putária se funde à mulher que acendeu a guerra. A nova Luxúria faz de Putópia um porto onde inimigos mandam emissários.'],
+      ['O inverno do pão', 'Punho Aberto leva grão às casas. Goblins limpam os canais e Titãs retiram os escombros. Em Preguicite, as vilas se revezam para cuidar dos doentes.'],
+    ],
+  },
+  {
+    titulo: 'A era dos contratos',
+    anos: 'Anos 6.000–9.000',
+    marcos: [
+      ['A Casa de Contas e o Jubileu', 'A Casa de Contas compra safras futuras. Punho Aberto compra dívidas de travessia para rasgar os recibos.'],
+    ],
+  },
+  {
+    titulo: 'O mundo de hoje',
+    anos: 'Ano 10.000',
+    marcos: [
+      ['O fim de Putópia e Preguicite', 'As duas cidades acabaram antes do presente. Na proposta para o mapa, o canal de Putópia assoreou. Em Preguicite, as nascentes salobras esvaziaram as vilas aos poucos.'],
+      ['O retorno ao Continente Sombrio', 'Navegadores reencontram os antigos desembarques e os laboratórios da Gula. No interior, tripulações inteiras esquecem o nome de quem as comandava.'],
+    ],
+  },
+];
+
+const mortos = [
+  [
+    'Leviatã',
+    'Trover e dois companheiros pediram chuva para a terra arrasada na queda da Ganância. Leviatã recusou. Os três o mataram, e choveu por trinta anos. Astora prosperou com a pesca. Nas terras alagadas, a fome deu corpo à nova Gula.',
+    'Nasceu do que a criação deixou escorrer para as profundezas. Tomou o oceano para si e guardou as fossas. Marinheiros conheciam seu temperamento e preferiam pedir licença antes de lançar redes em certas águas. Sua morte deixou sem senhor as fronteiras entre a superfície e os abismos.',
+  ],
+  [
+    'Lolth',
+    'Cobrava anos de vida de pessoas que jamais haviam assinado seus contratos. Quando os Caçadores de Deuses exibiram as assinaturas forjadas, Lolth se fechou no cartório com os selos originais. Morreu no cerco. Seus escrivães fugiram com as cópias.',
+    'A antiga Ganância fez de Lolth sua filha e lhe confiou a parte das negociações que o ouro sozinho não garantia. Na Guerra dos Anos Roubados, a rede que sustentava os contratos sobreviveu ao cartório. Boa parte das cobranças levadas a julgamento começou com documentos que os escrivães salvaram.',
+  ],
+  [
+    'Tiamat',
+    'Reconheceu nos depoimentos dos devedores gente cujo corpo também tinha sido vendido. Retirou dos contratos o selo que permitia aos templos repassar cobranças e morreu defendendo o arquivo enquanto as testemunhas fugiam.',
+    'As antigas Bruxas da Ganância e da Ira fizeram dela uma quimera de carne de dragão. Para uma, Tiamat era um investimento. Para a outra, uma arma. A ruptura do selo foi a primeira derrota pública do sistema que permitia a um templo vender a outro os anos de vida de uma família.',
+  ],
+  [
+    'Morpheus',
+    'Bairros inteiros dormiam quando a água chegou às janelas. Morpheus gastou o próprio sonho para acordá-los. Os sobreviventes despertaram com gosto de rio na boca. O deus morreu, e os sonhos continuaram nos vivos.',
+    'Filho da Preguiça, nasceu do primeiro sonho. Enquanto dormia, tecia os sonhos dos outros. Seu último gesto virou uma história sobre o direito de acordar alguém que escolheu descansar. Sobreviventes das cheias transmitiram essa história a quem cuidava dos doentes em Preguicite.',
+  ],
+  [
+    'Hécate',
+    'A antiga Inveja a partiu em três. Séculos depois, Hécate viu a magia convergir para Galdalf. Quando percebeu que ele a superara, tirou a própria vida.',
+    'Desde que foi despedaçada, sua magia falava com três vozes. A Jovem lidava com a magia selvagem. A Mãe protegia. A Anciã cuidava dos feitiços que chamam os mortos. Os magos ainda dão o nome de Hécate a um Rasgo da Trama. O desaparecimento de Galdalf levou consigo grande parte da força que passava por esses fios.',
+  ],
+  [
+    'Vecna',
+    'Morreu no cerco ao arquivo onde guardava os contratos com que chantageava as cortes. A Mão Esquerda fugiu com parte dos registros.',
+    'Malzão quis criar um herdeiro que soubesse o que fazer com um segredo. Vecna aprendeu a governar pela dependência de quem precisava escondê-lo. Os papéis que a Mão Esquerda salvou ainda podem comprometer casas que herdaram terras, títulos ou dívidas sem conhecer o trato original.',
+  ],
+  [
+    'Auril',
+    'Morreu sustentando uma passagem no gelo. A ponte caiu quando a última família pisou em terra. A primavera chegou àquele vale pela primeira vez.',
+    'Auril era uma coruja quando a antiga Bruxa do Orgulho lhe deu consciência e a submeteu à sua crueldade. O frio que emanava dela entrou na história das Terras Geladas. Depois que sua passagem caiu, as comunidades dependeram umas das outras para guardar lenha e manter fogos acesos ao longo da rota.',
+  ],
+  [
+    'Stolas',
+    'Durante a Guerra dos Anos Roubados, morreu rompendo a corrente que prendia os mortos às prestações de seus contratos. O Vazio assumiu seu lugar na Pesagem.',
+    'Stolas nasceu quando a antiga Gula tentou consumir a própria essência. Tomou a forma de uma coruja e, na Pesagem, acolhia quem escolhia encerrar a vida sem deixar dívida. A morte limpa ainda existe entre os três destinos de quem chega ao salão.',
+  ],
+  [
+    'Rainha Corvo',
+    'Guardava as memórias que a morte levava. O Vazio a matou. Uma pena que ela deixou na Pesagem ainda pode passar uma lembrança adiante.',
+    'Seu culto nasceu da história do primeiro luto. Durante a Pesagem, a Rainha preservava o que alguém tinha vivido para que o fim da vida não levasse tudo. A pena pode entregar uma dessas lembranças a outra pessoa, na forma de uma Cicatriz-Memória.',
+  ],
+];
+
+const sobreviventes = [
+  [
+    'Bonzão',
+    'Criador da vida e das primeiras terras. Há milênios se recolheu.',
+    'O mito diz que da lágrima, do cabelo, do sangue e do sopro de Bonzão vieram os elementos. Na última intervenção que lhe atribuem, abriu com Malzão uma travessia para os perseguidos da Guerra dos Anos Roubados. Uma margem credita a ele a força que sustentou a ponte.',
+  ],
+  [
+    'Malzão',
+    'Nasceu da sombra da primeira luz. Criou goblins e feras na antiga Penasia. Há milênios se recolheu.',
+    'Malzão desafiava a ordem de Bonzão criando gente e criaturas que obrigavam o mundo a mudar. Da margem oposta da travessia dos Anos Roubados, conta-se que foi ele quem segurou a ponte. O povo de DROP construiu sua própria história depois que os Criadores silenciaram.',
+  ],
+  [
+    'Asmodeus',
+    'Reina no Inferno dos Dez Andares. Quem sobe precisa acertar as contas com quem pagou pelos seus atos.',
+    'Filho de Malzão e irmão de Vecna, fez da lei uma forma de exercer poder. Nos Dez Andares, apresenta-se como a pessoa capaz de financiar a saída. O devedor que aceita um adiantamento pode recuperar a liberdade enquanto alguém da superfície recebe uma conta que jamais viu.',
+  ],
+  [
+    'Anúbis, o Pesador',
+    'Preside a Pesagem e oferece aos moribundos a volta mediante contrato.',
+    'Nasceu de um acordo entre Ganância e Orgulho, que queriam alguém capaz de fazer valer tanto o contrato quanto a lei. A balança de Anúbis só aparece na hora da escolha. Diante dela, a pessoa que quer voltar precisa aceitar o preço escrito.',
+  ],
+  [
+    'O Vazio',
+    'Shar existia antes da primeira luz. Na Pesagem, o Vazio aceita quem prefere morrer sem deixar dívidas.',
+    'Os primeiros relatos falavam de apagamento. As histórias recentes atribuem ao Vazio uma voz humana. A morte de Stolas e da Rainha Corvo deixou o Vazio com um lugar próprio no salão, ao lado da balança de Anúbis e da pena que guarda as lembranças.',
+  ],
+];
+
+const andares = [
+  ['A Entrada', 'O condenado ouve o nome com que assumiu a dívida. Títulos e nomes falsos ficam no balcão.'],
+  ['O Inventário', 'Os escrivães anotam tudo o que ele recebeu graças ao ato que o trouxe até ali.'],
+  ['As Testemunhas', 'Cada pessoa que arcou com o custo conta sua parte. As escadas se calam enquanto ela fala.'],
+  ['A Medida', 'O Inferno registra o que cada pessoa perdeu. Terras, anos de vida e promessas quebradas cabem no mesmo livro.'],
+  ['Os Juros', 'Entram na conta os danos que continuaram depois da primeira perda.'],
+  ['A Cessão', 'Asmodeus oferece um contrato. Quem aceitar a dívida pode carregar parte dela em troca do que pedir ao condenado.'],
+  ['A Herança', 'Chegam as contas que os mortos do andar anterior conseguiram deixar aos vivos. Algumas famílias negociam aqui há séculos.'],
+  ['A Reparação', 'O condenado executa o que prometeu devolver. Se o credor vive, um portador leva a restituição até ele.'],
+  ['A Quitação', 'Quem sofreu a perda pode assinar o recibo, recusar o que recebeu ou exigir que conste ali o que se tornou impossível devolver.'],
+  ['A Porta', 'Asmodeus confere a quitação. Quem ainda deve pode descer para reparar o resto ou assinar outro contrato para sair.'],
+];
+
+const bruxas = [
+  {
+    pecado: 'Luxúria',
+    cor: 'lux',
+    antiga: 'Mercenários enviados pelos deuses mataram Putária. A Morte recolheu sua autoridade.',
+    hoje: 'Putária e a mulher que pôs dois reis em guerra vivem na mesma pessoa. A nova Luxúria recebeu emissários rivais em Putópia enquanto o porto existia. Ela lembra pelo nome os mortos da guerra que começou.',
+    alcance: 'Putária trouxe o desejo e a fertilidade para Penasia. Em Lunária, a Bruxa conhece o desejo de ter alguém e o de ser recebida em lugares onde sempre ficou de fora. Uma audiência com ela pode reunir amantes separados ou emissários que seus reinos proíbem de se encontrar. Cada pessoa pela qual ela abre uma porta passa a dever algo a quem ficou do lado de dentro.',
+  },
+  {
+    pecado: 'Ira',
+    cor: 'ira',
+    antiga: 'A Bruxa da Ira ajudou Galdalf a derrotar o Orgulho. Depois o desafiou e morreu no duelo.',
+    hoje: 'O Punho Rubro guarda a forja acesa. Há anos seus oficiais recebem cartas com o antigo selo da Ira e evitam dizer quem as traz.',
+    alcance: 'Bonzão criou a Ira para refrear os excessos da Luxúria. A Bruxa encontrou na guerra e na forja um lugar para sua força. O Punho Rubro guarda passagens e vende escolta. Em dia de cerco, famílias que conhecem as canções de sua forja podem estar dos dois lados da ponte.',
+  },
+  {
+    pecado: 'Inveja',
+    cor: 'inv',
+    antiga: 'A Bruxa da Inveja despedaçou Hécate ao tentar tomar a magia. A Morte a matou pessoalmente.',
+    hoje: 'A autoridade segue sem corpo. Há cultos que ainda tentam obter poder em nome dela.',
+    alcance: 'A Inveja nasceu do desejo de ter o que se vê na vida alheia. No passado, aprender um segredo podia valer mais a seus olhos que possuir uma cidade. Foi assim que ela foi atrás da magia de Hécate. A história dessa ferida ainda serve de aviso a quem imagina que toda conquista pode ser arrancada do dono e usada do mesmo jeito.',
+  },
+  {
+    pecado: 'Gula',
+    cor: 'gul',
+    antiga: 'Galdalf, DROP e seus aliados mataram a Bruxa da Gula no Ano 1017 da antiga Penasia. A Morte tomou a autoridade.',
+    hoje: 'A fome das cheias fez a nova Gula tomar corpo por si. Ela abre celeiros quando alguém passa fome. Depois da partilha, costuma pedir uma cadeira à mesa de quem tentou esconder comida.',
+    alcance: 'A antiga Gula ensinou a plantar e transformou a fome de saber em experimentos no Continente Sombrio. A nova conhece a espera diante de um celeiro trancado. Quem a recebe num tempo de escassez pode ter comida naquela noite e, na manhã seguinte, ter de explicar quanto grão guardou para a próxima enchente.',
+  },
+  {
+    pecado: 'Preguiça',
+    cor: 'pre',
+    antiga: 'Galdalf matou a Bruxa da Preguiça depois que seus Espadas devastaram Punho Aberto. Chorou ao matar quem havia sido como mãe para ele.',
+    hoje: 'A autoridade segue sem corpo. Os ritos de descanso sobreviveram nas famílias que deixaram Preguicite.',
+    alcance: 'A antiga Bruxa deu força ao repouso quando o trabalho tomava a vida inteira. Em Preguicite, as vilas dividiam as vigílias para que toda casa pudesse dormir. Depois da queda da cidade, famílias levaram esse costume consigo. Cada vez que alguém precisa abandonar a própria vigília, outra pessoa precisa aceitar a tarefa.',
+  },
+  {
+    pecado: 'Ganância',
+    cor: 'gan',
+    antiga: 'A Bruxa da Ganância morreu no confronto que deixou o reino élfico em ruínas. A Morte ficou com sua autoridade.',
+    hoje: 'A escrivã Mara ergueu a Casa de Contas comprando safras que ainda nem tinham sido plantadas. Hoje a Casa guarda grãos suficientes para sustentar reinos e escrituras suficientes para tomá-los.',
+    alcance: 'A antiga Bruxa fez do desejo de ter mais uma força capaz de erguer reinos. A Casa de Contas acredita que uma coisa vale também pelo que alguém promete fazer para conservá-la. Assim, uma saca entregue hoje pode determinar quem terá direito de tirar água de um poço décadas depois.',
+  },
+  {
+    pecado: 'Orgulho',
+    cor: 'org',
+    antiga: 'Galdalf e a Ira derrotaram a Bruxa do Orgulho. Ferida de morte, ela partiu sua autoridade em três.',
+    hoje: 'A Bruxa da Ilha é a atual Bruxa do Orgulho. Um fragmento se uniu a uma pessoa guerreira de gênero fluido que continuou a defender seu desembarque depois de cair. Galdalf recebeu outro fragmento. O paradeiro do terceiro é desconhecido.',
+    alcance: 'A antiga Bruxa levou a disputa por soberania até partir a lua na guerra contra Arthur. Na ilha, o pecado tomou forma em quem reivindicou o direito de defender o próprio chão. Quem negocia com a Bruxa da Ilha negocia também o direito de pousar, atracar e pedir abrigo numa costa onde cada desembarque conta.',
+  },
+];
+
+const povoacoes = [
+  ['Lastro', 'Um porto de águas fundas na boca do Mar de Dentro. As expedições para o Continente Sombrio compram provisões e trocam de piloto aqui.'],
+  ['Vigília', 'Ilha alta de onde se avistam os recifes. As famílias mantêm fogos em turnos para guiar barcos. As ruínas de Preguicite ficam em baixios mais ao norte.'],
+  ['Vau dos Sinos', 'Sede de travessias da Fundação Punho Aberto. Cresceu rio acima, em terreno que aguenta as cheias. Quando a corrente sobe, os sinos avisam as balsas.'],
+  ['Quatro Diques', 'As casas ocupam os taludes dos canais de pesca. Ainda se encontram pedras talhadas nos canais abertos no tempo de Trover e Astora.'],
+  ['Porta da Brasa', 'O Punho Rubro guarda a passagem entre as serras. Um túnel dos anões liga a fortaleza ao vale pelo lado de dentro da montanha.'],
+  ['Poço Branco', 'As caravanas contornam as salinas para encher os odres. Cal nas paredes indica até onde subiu a água na última cheia.'],
+];
+
+const censo = [
+  { nome: 'Goblins', valor: 30, cor: '#bb8f45' },
+  { nome: 'Titãs', valor: 10, cor: '#ae6564' },
+  { nome: 'Humanos', valor: 10, cor: '#668a99' },
+  { nome: 'Outros povos', valor: 50, cor: '#7b8a6d' },
+];
+---
+<Livro title="De Penasia a Lunária" chap="História de Lunária">
+  <header class="abertura-lore">
+    <h2>De Penasia<br />a Lunária</h2>
+    <p class="lede">Dez mil anos depois da morte da Morte, os barqueiros ainda amarram suas canoas à torre de um templo afogado. À noite, uma bruxa acende a luz no cais.</p>
+  </header>
+
+  <nav class="atalhos-lore" aria-label="Nesta página">
+    <a href="#cronologia">Linha do tempo</a>
+    <a href="#ano-10000">O Ano 10.000</a>
+    <a href="#mapa">Mapa e cidades</a>
+    <a href="#panteao">Deuses e magia</a>
+    <a href="#bruxas">As Sete Bruxas</a>
+    <a href="#povos">Origens e Titãs</a>
+  </nav>
+
+  <section aria-labelledby="cronologia">
+    <h3 id="cronologia">A linha dos dez mil anos</h3>
+    <p>O calendário antigo começa no nascimento de Putária. <strong>O Ano 0 de Lunária</strong> começa na morte do cavaleiro da Morte.</p>
+    <div class="arvore" aria-label="A divisão das realidades">
+      <section class="ramo passado">
+        <span class="periodo">Penasia antiga</span>
+        <h4>A guerra parte a lua</h4>
+        <p>A guerra com o Orgulho rasga o continente. No Ano 1017 do calendário antigo, cai a Bruxa da Gula.</p>
+      </section>
+      <section class="ramo marco">
+        <span class="periodo">A bifurcação</span>
+        <h4>A caçada da Morte</h4>
+        <p>O Cavaleiro da Destruição mata mais da metade da população de Penasia para preparar o Reset. A Morte toma cinco autoridades. Ainda precisa da Ira e do Orgulho.</p>
+      </section>
+      <section class="ramo lunaria">
+        <span class="periodo">Lunária · Ano 0</span>
+        <h4>Galdalf mata a Morte</h4>
+        <p>Ele liberta as cinco autoridades. Os mesmos povos, reinos e deuses seguem sua história em Lunária.</p>
+      </section>
+      <aside class="ramo anaviosi">
+        <span class="periodo">Outra realidade</span>
+        <h4>Anaviosi · O Reset acontece</h4>
+        <p>A Morte completa o Reset. Genbu leva a tecnologia da antiga Penasia ao mundo novo.</p>
+      </aside>
+    </div>
+    <ol class="linha" aria-label="Eras de Lunária">
+      {eras.map(({ anos, titulo, marcos }) => (
+        <li class="era">
+          <header><span class="periodo">{anos}</span><h4>{titulo}</h4></header>
+          <ul>{marcos.map(([evento, efeito]) => <li><strong>{evento}</strong><p>{efeito}</p></li>)}</ul>
+        </li>
+      ))}
+    </ol>
+    <p class="nota-lore">As datas aproximadas entre as eras seguem em revisão.</p>
+  </section>
+
+  <section aria-labelledby="ano-10000">
+    <h3 id="ano-10000">O mundo no Ano 10.000</h3>
+    <p>Em Lunária, um porto pode crescer sobre a torre de uma aldeia que a água levou. Por séculos, o mar avançou pelas rachaduras de Arthur. As cidades que prosperaram encontraram água doce, terra firme para guardar grão ou uma passagem que os vizinhos precisavam cruzar.</p>
+    <div class="cartas">
+      <article class="carta">
+        <h4>Quem manda nas travessias</h4>
+        <p>Lastro recebe os navios do oceano. No Vau dos Sinos, as balsas da Fundação de DROP ligam margens que as cheias separam. O Punho Rubro vigia a serra, e os anões mantêm uma rota por dentro dela. Uma ponte fechada pode tirar de uma cidade seu único caminho até os celeiros.</p>
+      </article>
+      <article class="carta">
+        <h4>Os ofícios e a magia</h4>
+        <p>O selo de Galdalf enfraqueceu a Trama. As cheias separaram oficinas das minas, dos artesãos e das escolas que lhes ensinavam. Ainda há quem mantenha uma comporta antiga funcionando. Quando ela quebra, a vila depende de gente que conheça o rio e de conjuradores que saibam trabalhar com os fios de magia que restaram.</p>
+      </article>
+      <article class="carta">
+        <h4>O preço do próximo inverno</h4>
+        <p>A Casa de Contas adiantava sementes a quem prometesse uma parte da colheita. Punho Aberto passou a comprar dívidas de travessia para perdoá-las. Os dois acordos salvaram famílias. Hoje, quando o grão acaba, cada aldeia precisa decidir quem chama primeiro e o que pode oferecer.</p>
+      </article>
+      <article class="carta">
+        <h4>A fé depois dos templos</h4>
+        <p>Bonzão e Malzão se recolheram. Outros deuses morreram, e parte de seus cultos sobreviveu em ritos de passagem, canções e maneiras de registrar acordos. Uma Bruxa ainda pode entrar numa vila e exigir que abram o celeiro. É uma das razões pelas quais tanta gente aprendeu a tratar com elas.</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="panteao">
+    <h3 id="panteao">Os deuses de Penasia e Lunária</h3>
+    <p>O livro antigo listava <strong>14 divindades e entidades, além das sete Bruxas</strong>. Nove delas morreram. As que restaram se recolheram, mantiveram ofícios na Pesagem ou passaram a existir de outro modo. Nas cidades, as Bruxas voltaram a decidir o destino de colheitas, tratados e travessias.</p>
+    <h4>A Guerra dos Anos Roubados</h4>
+    <p>O reino élfico pagava aos templos em anos de vida. Depois da queda da Ganância, cobradores reapareceram nas aldeias exigindo dos filhos os anos que os pais haviam empenhado. Quando as testemunhas compararam seus recibos, encontraram os mesmos nomes em contratos de reinos diferentes. O que começou nas praças terminou com cartórios sitiados, templos fechados e famílias cruzando rios na calada da noite.</p>
+    <div class="cartas">
+      {mortos.map(([nome, destino, legado]) => (
+        <article class="carta">
+          <h4>{nome}</h4>
+          <p>{destino}</p>
+          <details class="perfil-extra">
+            <summary>Origem e legado</summary>
+            <p>{legado}</p>
+          </details>
+        </article>
+      ))}
+    </div>
+    <h4>Quem atravessou os milênios</h4>
+    <div class="cartas">
+      {sobreviventes.map(([nome, destino, legado]) => (
+        <article class="carta">
+          <h4>{nome}</h4>
+          <p>{destino}</p>
+          <details class="perfil-extra">
+            <summary>Origem e legado</summary>
+            <p>{legado}</p>
+          </details>
+        </article>
+      ))}
+    </div>
+    <aside class="lore-box" aria-labelledby="magia-fraca">
+      <h4 id="magia-fraca">A magia atrás da porta</h4>
+      <p><strong>Galdalf era uma anomalia.</strong> A magia que atravessava Penasia mudava de curso para segui-lo. Hécate percebeu que o cão a havia superado e tirou a própria vida. O mundo ficou sem deusa da magia.</p>
+      <p>Quando Galdalf se selou na biblioteca pela segunda vez, grande parte da magia foi com ele. Ainda se conjura pelos fios que ficaram, pelo sangue, pela Graça ou pela Dívida. As grandes forjas perderam a força que as mantinha, e até a Centelha dos Titãs ficou mais fraca.</p>
+    </aside>
+  </section>
+
+  <section aria-labelledby="inferno">
+    <h3 id="inferno">Os Dez Andares do Inferno</h3>
+    <p>O Inferno de Asmodeus ocupa um único edifício, com dez andares em volta de um poço cheio de escrituras. Cada condenado sobe com o mesmo contrato nas mãos. A cada lance de escada, o contrato ganha as consequências que tinham ficado fora dele.</p>
+    <ol class="andares">
+      {andares.map(([nome, descricao]) => <li><strong>{nome}</strong><p>{descricao}</p></li>)}
+    </ol>
+    <p>Asmodeus faz fortuna adiantando o preço da reparação a quem quer alcançar a porta. Há quem leve gerações para subir os dez andares. O rei que compra uma saída pode voltar à superfície com o mesmo brasão e a dívida registrada em nome da pessoa que o libertou.</p>
+  </section>
+
+  <section aria-labelledby="bruxas">
+    <h3 id="bruxas">As Sete Bruxas</h3>
+    <dl class="conceitos-bruxas">
+      <div><dt>Pecado</dt><dd>Qualquer mortal pode sentir desejo, fome, raiva e os outros Pecados. Cada um deles continua depois da morte de sua Bruxa.</dd></div>
+      <div><dt>Autoridade</dt><dd>A força daquele Pecado. Pode agir sem corpo, tomar forma por si ou se fundir a uma pessoa.</dd></div>
+      <div><dt>Bruxa</dt><dd>Quem encarna uma autoridade. Uma nova Bruxa pode ter afetos e objetivos diferentes dos de quem veio antes.</dd></div>
+    </dl>
+    <div class="cartas">
+      {bruxas.map(({ pecado, cor, antiga, hoje, alcance }) => (
+        <article class="carta bruxa">
+          <h4><span class={`dot ${cor}`} aria-hidden="true"></span>{pecado}</h4>
+          <p><strong>A antiga</strong> {antiga}</p>
+          <p><strong>Em Lunária</strong> {hoje}</p>
+          <details class="perfil-extra">
+            <summary>Na vida dos mortais</summary>
+            <p>{alcance}</p>
+          </details>
+        </article>
+      ))}
+    </div>
+    <h4 id="ganancia">O inverno que Mara comprou</h4>
+    <p>A enchente estragou a semente de três aldeias. Quando os cobradores vieram buscar as terras, <strong>Mara</strong> comprou as dívidas e abriu os armazéns. Para pagar o grão, as famílias prometeram a ela parte das safras que ainda iam plantar. Passado o inverno, ninguém precisou deixar a própria casa.</p>
+    <p>Na colheita seguinte, os aldeões levaram sacas à porta de Mara. Ela já tinha comida para o resto do ano. Ainda assim, estendeu sobre a mesa um mapa dos poços e pediu o direito de cobrar pela água. As famílias assinaram. O mesmo contrato que as salvou passou a cobrar por cada balde.</p>
+    <p class="nota-lore"><span class="st proposta">proposta</span> Quando recebeu o primeiro pagamento pelos poços, Mara se fundiu à autoridade da Ganância. O momento em que a Bruxa volta ainda está em aberto.</p>
+  </section>
+
+  <section aria-labelledby="mapa">
+    <h3 id="mapa">Mapa de Lunária</h3>
+    <p>Putópia e Preguicite pertencem à história. No Ano 10.000, as cidades têm outros nomes e cresceram ao redor de outras travessias.</p>
+    <p><span class="st proposta">proposta</span> A antiga rachadura de Arthur alargou-se até virar o <strong>Mar de Dentro</strong>. O canal de Putópia encheu de sedimentos. Em Preguicite, o sal chegou às nascentes, e as últimas famílias deixaram as ilhas. Os portos do presente se formaram onde ainda há água doce ou fundo para ancorar.</p>
+    <figure class="mapa-lore">
+      <a href="/img/mapa-lunaria.svg">
+        <img src="/img/mapa-lunaria.svg" alt="Lunária no Ano 10.000. Lastro liga por mar a ilha de Vigília, Quatro Diques e o Continente Sombrio. As ruínas de Putópia e Preguicite ficam nos baixios. No interior, caminhos passam pelas lavouras de Ribeira Alta e Três Eiras e cruzam a Ponte das Taxas." width="1120" height="800" loading="lazy" />
+      </a>
+      <figcaption>
+        <a href="/img/mapa-lunaria.svg">Ampliar mapa</a>
+        <ul aria-label="Legenda do mapa">
+          <li class="rota rota-terra">Caminho</li>
+          <li class="rota rota-mar">Travessia por água</li>
+          <li class="rota rota-tunel">Túnel dos Anões</li>
+        </ul>
+      </figcaption>
+    </figure>
+    <h4 id="reinos">Cidades do Ano 10.000 <span class="st proposta">proposta</span></h4>
+    <div class="cartas">
+      {povoacoes.map(([nome, descricao]) => (
+        <article class="carta"><h4>{nome}</h4><p>{descricao}</p></article>
+      ))}
+    </div>
+    <details class="lore-box">
+      <summary>Travessias para a mesa <span class="st proposta">proposta</span></summary>
+      <p><strong>O sino de Preguicite.</strong> Uma ilha emite um toque na maré baixa. Um barqueiro oferece passagem, mas quer a primeira coisa que o grupo tirar da água.</p>
+      <p><strong>A última maré de Lastro.</strong> A tempestade deixa tempo para uma saída. Um barco pode socorrer os náufragos que voltam do Continente Sombrio ou entregar comida nas ilhas antes que o mar feche o canal.</p>
+      <p><strong>A Ponte das Taxas.</strong> Os guardas aceitam um saco de grão por carroça. A carga que sobrar precisa alimentar Ribeira Alta até a próxima colheita. O desvio pela Mata do Breu leva a noite inteira.</p>
+      <p><strong>As Agulhas do Sal.</strong> Na vazante, um piloto consegue encostar nas fundações de Preguicite. Se a corrente virar antes da partida, o caminho de volta pelos recifes fecha e o barco precisa esperar do lado de fora dos baixios.</p>
+    </details>
+  </section>
+
+  <section aria-labelledby="povos">
+    <h3 id="povos">Os povos e a Fundação</h3>
+    <p>Antes do Ano 0 de Lunária, os goblins eram quase um terço da população da Fundação Punho Aberto. DROP era um deles. A carta que deixou ainda é lida nas assembleias. A primeira instrução diz a quem chega com as mãos vazias onde encontrar água.</p>
+    <figure class="censo">
+      <figcaption>População da Fundação Punho Aberto na antiga Penasia</figcaption>
+      <div class="censo-barra" aria-hidden="true">
+        {censo.map(({ valor, cor }) => <span style={`flex: ${valor}; background: ${cor}`}></span>)}
+      </div>
+      <ul>
+        {censo.map(({ nome, valor, cor }) => <li><span aria-hidden="true" style={`background: ${cor}`}></span><strong>{valor}%</strong> {nome}</li>)}
+      </ul>
+    </figure>
+    <h4>Os Titãs de Punho Aberto</h4>
+    <p>Dos Titânicos da primeira leva da Gula, dois saíram vivos do massacre. A Fundação já abrigava Titãs em sua era antiga. Nos milênios seguintes, casas titânicas criaram famílias, e Punho Aberto acolheu outras pessoas de Centelha. Hoje, Titãs cuidam de crianças, trabalham nas comportas e escolhem se querem atender ao chamado para uma travessia.</p>
+    <p>Quando a magia seguiu Galdalf para dentro do selo, a Centelha que sustentava as metamorfoses perdeu força. A força e a carapaça sobreviveram. As formas colossais quase desapareceram. Uma Titã pode crescer o bastante para sustentar a ponte enquanto passa uma caravana e precisar que os últimos a cruzar a levem para casa.</p>
+    <h4>Origens jogáveis</h4>
+    <p>Estes são os povos e as linhagens que entram na criação. Veja os talentos em <a href="/personagem#origens">O personagem</a> e selecione a Origem na <a href="/ficha#origem">ficha</a>.</p>
+    <ul class="povos-jogaveis">
+      {origens.map(origem => <li>{origem}</li>)}
+    </ul>
+    <p>As caravanas de sal reuniram famílias de <strong>Orcs e Golias</strong>. Os <strong>Minotauros</strong> voltaram à superfície por uma cisterna que dava acesso aos bairros soterrados da antiga Excalibur. Nos túneis dos anões, as casas dos <strong>Kobolds</strong> mantêm as passagens secundárias.</p>
+    <div class="cartas">
+      <article class="carta">
+        <h4>Linhagens nas Origens</h4>
+        <p>Drows, altos elfos, elfos da floresta e do mar usam <strong>Elfos</strong>. Duergar usam <strong>Anões</strong>. As casas hobgoblins e bugursas que se juntaram à Fundação usam <strong>Goblins</strong>. As famílias continuam usando seus próprios nomes.</p>
+      </article>
+      <article class="carta">
+        <h4>Povos extintos</h4>
+        <p>Expulsos do reino élfico, os <strong>Elfos das Cinzas</strong> ergueram seu lar no Monte Cinza. Ali o fogo era sagrado. O <strong>Cavaleiro da Destruição</strong> exterminou o povo durante a devastação que preparou o Reset, antes do Ano 0. Nas ruínas do monte, sobraram as pedras das lareiras.</p>
+        <p>A última colônia de <strong>aarakocras</strong> morreu quando cedeu o paredão de seus ninhos. Os últimos <strong>centauros</strong> morreram sem descendentes após perderem as rotas das planícies. A última linhagem dos <strong>genasi</strong> morreu sem filhos depois que o veio arcano secou. A morte do Leviatã desfez os recifes que abrigavam os últimos <strong>tritões</strong>.</p>
+      </article>
+      <article class="carta">
+        <h4>Casas dissolvidas</h4>
+        <p><strong>Meio-orcs, meio-elfos, tortugas e reptantes</strong> perderam seus assentamentos nas cheias e se espalharam como famílias. Para criar alguém com essa ascendência, use uma das Origens da ficha de acordo com a criação e a vida da personagem.</p>
+      </article>
+      <article class="carta">
+        <h4>Povos desaparecidos</h4>
+        <p><strong>Githyanki, githzerai, eladrin, shadar-kai e fadas</strong> deixaram de chegar a Lunária com o fechamento das rotas planares. De <strong>aasimar, tieflings, draconatos, duplicantes, firbolgs, tabaxi, sátiros, kenku, povo-coelho, morfos e yuan-ti</strong> restam relatos e ruínas, sem comunidades conhecidas.</p>
+      </article>
+    </div>
+  </section>
+
+  <p class="nota-lore fontes-lore"><strong>Fontes da comparação</strong> Livro da antiga Penasia, nas seções <em>Tabela Deuses e Bruxas</em>, <em>Política no Mundo de Penasia</em>, <em>Características Raciais</em> e <em>Raças novas</em>. O <a href="https://i.imgur.com/jKhMQTH.png">mapa da edição antiga</a> retrata a geografia de Penasia.</p>
+  <p><a href="/mundo">Voltar a O mundo</a> · <a href="/central">Ver a Central</a></p>
+</Livro>
+
+<style>
+  .abertura-lore {
+    padding: clamp(1.5rem, 5vw, 3rem);
+    background: #191718;
+    color: #f5eee3;
+    border-bottom: 6px solid #bb8f45;
+  }
+  .abertura-lore h2 { font-size: clamp(3.2rem, 9vw, 6.3rem); }
+  .abertura-lore p { margin: 0; max-width: 45ch; }
+  .atalhos-lore { display: flex; flex-wrap: wrap; gap: .4rem 1rem; margin: 1rem 0; font-size: .9rem; }
+  .nota-lore { color: var(--muted); }
+  .nota-lore { font-size: .9rem; }
+  .fontes-lore { border-top: 1px solid var(--rule); padding-top: 1rem; margin-top: 2rem; }
+  .arvore {
+    --ouro: #bb8f45;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas: 'passado marco lunaria' '. anaviosi anaviosi';
+    gap: .75rem 1.35rem;
+    margin: 1.4rem 0 2rem;
+  }
+  .ramo { position: relative; border: 1px solid var(--rule); border-top: 4px solid var(--ink); background: var(--soft); padding: .65rem .8rem; }
+  .ramo h4 { border: 0; margin: .3rem 0 .5rem; padding: 0; }
+  .ramo p, .linha p, .carta p:last-child, .lore-box p:last-child { margin-bottom: 0; }
+  .ramo p, .era p { font-size: .93rem; line-height: 1.52; }
+  .passado { grid-area: passado; }
+  .marco { grid-area: marco; }
+  .passado::after, .marco::after {
+    content: ''; position: absolute; top: 50%; left: calc(100% + 3px); width: .88rem; height: .6rem;
+    background: var(--ouro); clip-path: polygon(0 37%, 65% 37%, 65% 0, 100% 50%, 65% 100%, 65% 63%, 0 63%);
+  }
+  .lunaria { grid-area: lunaria; border-top-color: var(--ouro); }
+  .anaviosi { grid-area: anaviosi; border: 1px dashed #9c78b5; }
+  .anaviosi::before { content: ''; position: absolute; bottom: 100%; left: calc(25% - .28rem); height: .8rem; border-left: 2px dashed #9c78b5; }
+  .periodo { display: block; color: var(--muted); font-size: .85rem; font-weight: 700; }
+  .linha { list-style: none; padding: 0 0 0 1rem; margin: 0 0 1.2rem .25rem; border-left: 2px solid #bb8f45; max-width: none; }
+  .era { position: relative; display: grid; grid-template-columns: minmax(9rem, .34fr) 1fr; gap: .65rem 1.2rem; margin: 0; padding: .8rem 0; border-bottom: 1px solid var(--rule); }
+  .era:first-child { padding-top: 0; }
+  .era::before { content: ''; position: absolute; width: .67rem; height: .67rem; background: #bb8f45; border: 2px solid var(--page); border-radius: 50%; left: -1.42rem; top: .98rem; }
+  .era:first-child::before { top: .17rem; }
+  .era ul { padding-left: 0; list-style: none; }
+  .era li { margin: 0 0 .5rem; }
+  .era li:last-child { margin-bottom: 0; }
+  .era h4 { border: 0; margin: .3rem 0 0; padding: 0; }
+  .cartas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: .75rem; margin: 1rem 0 1.5rem; }
+  .andares { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: .4rem 1.75rem; max-width: none; padding-inline-start: 1.6rem; }
+  .andares li { padding: .55rem .2rem .65rem; margin: 0; border-bottom: 1px solid var(--rule); }
+  .andares p { margin: 0; font-size: .93rem; line-height: 1.5; }
+  .carta, .lore-box { border: 1px solid var(--rule); padding: .9rem 1rem; }
+  .carta h4, .lore-box h4 { margin-top: 0; }
+  .carta p, .lore-box p { font-size: .95rem; line-height: 1.55; }
+  .perfil-extra { border-top: 1px solid var(--rule); padding-top: .5rem; }
+  .perfil-extra summary { cursor: pointer; font-size: .9rem; font-weight: 700; }
+  .perfil-extra p { color: var(--muted); margin-top: .5rem; }
+  .conceitos-bruxas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); gap: .55rem; margin: 0; }
+  .conceitos-bruxas div { background: var(--soft); padding: .7rem .85rem; }
+  .conceitos-bruxas dt { font-weight: 700; }
+  .conceitos-bruxas dd { margin: .2rem 0 0; font-size: .9rem; line-height: 1.5; }
+  .bruxa h4 .dot { margin-right: .35rem; }
+  .lore-box { background: var(--soft); border-left: 5px solid #bb8f45; }
+  .lore-box summary { cursor: pointer; font-weight: 700; }
+  .lore-box[open] summary { margin-bottom: .6rem; }
+  .mapa-lore { margin: 1rem 0 1.5rem; }
+  .mapa-lore img { display: block; width: 100%; height: auto; }
+  .mapa-lore > a { display: block; }
+  .mapa-lore figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .55rem 1rem; margin: 0; padding: .65rem .8rem; background: var(--soft); font-size: .86rem; }
+  .mapa-lore ul { display: flex; gap: .5rem .8rem; flex-wrap: wrap; padding: 0; margin: 0; list-style: none; }
+  .rota { display: flex; align-items: center; gap: .3rem; margin: 0; }
+  .rota::before { content: ''; width: 1.1rem; border-top: 2px dashed var(--ink); }
+  .rota-terra::before { border-color: #85442e; }
+  .rota-mar::before { border-color: #245964; border-top-style: dotted; }
+  .rota-tunel::before { border: 0; height: 2px; background: linear-gradient(to right, #725875 0 48%, transparent 48% 63%, #725875 63% 76%, transparent 76%); }
+  .povos-jogaveis { display: flex; gap: .4rem; flex-wrap: wrap; padding: 0; margin: 1rem 0; list-style: none; }
+  .povos-jogaveis li { border: 1px solid var(--rule); padding: .14rem .6rem; margin: 0; background: var(--soft); font-weight: 700; font-size: .9rem; }
+  .censo { margin: 1.2rem 0; border: 1px solid var(--rule); padding: .9rem 1rem; }
+  .censo figcaption { color: var(--ink); font-weight: 700; }
+  .censo-barra { display: flex; gap: 2px; height: 1.1rem; margin: .55rem 0; }
+  .censo ul { list-style: none; display: flex; flex-wrap: wrap; gap: .2rem .9rem; padding: 0; margin: 0; }
+  .censo li { margin: 0; font-size: .9rem; }
+  .censo li span { display: inline-block; width: .65rem; height: .65rem; margin-right: .3rem; }
+  @media (max-width: 670px) {
+    .arvore { grid-template-columns: minmax(0, 1fr); grid-template-areas: 'passado' 'marco' 'anaviosi' 'lunaria'; gap: .9rem; padding-left: .85rem; }
+    .passado::after { top: auto; bottom: -.74rem; left: calc(50% - .44rem); transform: rotate(90deg); }
+    .marco::after, .lunaria::before { content: ''; position: absolute; left: -.61rem; width: .61rem; height: 0; border-top: 2px solid var(--ouro); clip-path: none; }
+    .marco::after { top: auto; bottom: -1px; }
+    .lunaria::before { top: -.25rem; }
+    .anaviosi { margin-inline-start: .9rem; }
+    .anaviosi::before { left: 1.2rem; bottom: 100%; height: 1rem; }
+    .anaviosi::after { content: ''; position: absolute; left: -1.51rem; top: -.98rem; bottom: -.98rem; border-left: 2px solid var(--ouro); }
+    .era { grid-template-columns: 1fr; }
+  }
+</style>

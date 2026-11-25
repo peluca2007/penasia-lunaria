@@ -1,0 +1,2842 @@
+[
+ {
+  "termo": "Pecado",
+  "def": "Cada um dos sete jeitos de ser do personagem. Cada um tem um dado.",
+  "exemplo": "Ira serve para bater.",
+  "cap": "personagem.md",
+  "grupo": "Pecados e Roda",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Ira",
+  "def": "Pecado de bater, quebrar e ameaçar com o corpo.",
+  "exemplo": "",
+  "cap": "personagem.md",
+  "grupo": "Pecados e Roda",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Luxúria",
+  "def": "Pecado de encantar, seduzir, ter graça e tocar.",
+  "exemplo": "",
+  "cap": "personagem.md",
+  "grupo": "Pecados e Roda",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Gula",
+  "def": "Pecado de aguentar dor, veneno e fome. Também dá a sua Vida.",
+  "exemplo": "",
+  "cap": "personagem.md",
+  "grupo": "Pecados e Roda",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Preguiça",
+  "def": "Pecado de esquivar, manter a calma e atirar de longe.",
+  "exemplo": "",
+  "cap": "personagem.md",
+  "grupo": "Pecados e Roda",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Inveja",
+  "def": "Pecado de enxergar, mirar, furtar e imitar. Também define a iniciativa.",
+  "exemplo": "",
+  "cap": "personagem.md",
+  "grupo": "Pecados e Roda",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Ganância",
+  "def": "Pecado de pensar, fabricar, avaliar e barganhar.",
+  "exemplo": "",
+  "cap": "personagem.md",
+  "grupo": "Pecados e Roda",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Orgulho",
+  "def": "Pecado de vontade, liderar e não ceder. Fica no centro da Roda.",
+  "exemplo": "",
+  "cap": "personagem.md",
+  "grupo": "Pecados e Roda",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Coração",
+  "def": "O dado do pecado que você rola no teste.",
+  "exemplo": "Ira d8: seu Coração é um d8.",
+  "cap": "balanca.md",
+  "grupo": "Dados e testes",
+  "status": "livro",
+  "confunde": "dado do pecado",
+  "duvida": "Coração e dado do pecado são o mesmo? O livro só usa Coração no teste; falta dizer se vale para dano e Guarda."
+ },
+ {
+  "termo": "Teste",
+  "def": "Rolar o Coração contra um número ou contra o dado do outro.",
+  "exemplo": "",
+  "cap": "balanca.md",
+  "grupo": "Dados e testes",
+  "status": "livro",
+  "confunde": "Prova",
+  "duvida": ""
+ },
+ {
+  "termo": "Dificuldade",
+  "def": "O número fixo que o teste precisa alcançar fora de combate.",
+  "exemplo": "Difícil é 5.",
+  "cap": "balanca.md",
+  "grupo": "Dados e testes",
+  "status": "livro",
+  "confunde": "Marca",
+  "duvida": ""
+ },
+ {
+  "termo": "Marca (dificuldade)",
+  "def": "Nome proposto para a dificuldade fixa. Hoje o glossário o lista como proposta.",
+  "exemplo": "",
+  "cap": "glossario.md",
+  "grupo": "Dados e testes",
+  "status": "proposta",
+  "confunde": "Marca (Vigia)",
+  "duvida": "Marca tem vários usos: dificuldade, Marca do Vigia, Marca da Maldição, Marca Rubra, Marca do Vazio. Decidir um só."
+ },
+ {
+  "termo": "Margem",
+  "def": "A diferença entre o seu Coração e o número a vencer.",
+  "exemplo": "Margem 4 ou mais é sucesso forte.",
+  "cap": "balanca.md",
+  "grupo": "Dados e testes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Sucesso forte",
+  "def": "Vencer por 4 ou mais. Muitas manobras ganham um efeito extra.",
+  "exemplo": "",
+  "cap": "balanca.md",
+  "grupo": "Dados e testes",
+  "status": "livro",
+  "confunde": "Margem",
+  "duvida": ""
+ },
+ {
+  "termo": "Empate",
+  "def": "Coração igual ao número: vence. Na defesa v5, o ataque acerta.",
+  "exemplo": "",
+  "cap": "balanca.md",
+  "grupo": "Dados e testes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "A v5 diz que empate é do ataque; o livro diz que maior ou igual vence. Conferir se é o mesmo lado."
+ },
+ {
+  "termo": "Degrau",
+  "def": "Um passo na fila de dados. Subir um degrau troca d6 por d8.",
+  "exemplo": "d6 sobe para d8.",
+  "cap": "balanca.md",
+  "grupo": "Dados e testes",
+  "status": "livro",
+  "confunde": "um dado acima",
+  "duvida": "A v5 troca degrau por um dado acima. Mesma coisa com outro nome?"
+ },
+ {
+  "termo": "Escada",
+  "def": "A fila de dados do menor ao maior: d4, d6, d8, d10, d12 e os somados.",
+  "exemplo": "",
+  "cap": "balanca.md",
+  "grupo": "Dados e testes",
+  "status": "livro",
+  "confunde": "Escada do Poder",
+  "duvida": ""
+ },
+ {
+  "termo": "Escada do Poder",
+  "def": "A Escada inteira, passando do d12 com dados somados.",
+  "exemplo": "2d12+d4",
+  "cap": "balanca.md",
+  "grupo": "Progressão",
+  "status": "livro",
+  "confunde": "Escada",
+  "duvida": ""
+ },
+ {
+  "termo": "Dados somados",
+  "def": "Dois dados rolados juntos, em que o Coração é a soma.",
+  "exemplo": "d6+d8",
+  "cap": "balanca.md",
+  "grupo": "Dados e testes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Teto de +2",
+  "def": "O máximo de degraus a favor por cima da sua Escada.",
+  "exemplo": "Roda, dado na mesa e Mirar juntos param em +2.",
+  "cap": "balanca.md",
+  "grupo": "Dados e testes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Roda",
+  "def": "O círculo que diz qual pecado ganha vantagem sobre qual.",
+  "exemplo": "Ira domina Luxúria.",
+  "cap": "balanca.md",
+  "grupo": "Pecados e Roda",
+  "status": "livro",
+  "confunde": "Roda dos Pecados",
+  "duvida": ""
+ },
+ {
+  "termo": "Dominar",
+  "def": "Quem domina ganha um degrau. Quem é dominado não perde nada.",
+  "exemplo": "",
+  "cap": "balanca.md",
+  "grupo": "Pecados e Roda",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Opostos",
+  "def": "Pares de pecados que não dominam um ao outro.",
+  "exemplo": "Ira e Ganância.",
+  "cap": "balanca.md",
+  "grupo": "Pecados e Roda",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Neutro (Orgulho)",
+  "def": "Orgulho não domina nem é dominado por nenhum pecado.",
+  "exemplo": "",
+  "cap": "balanca.md",
+  "grupo": "Pecados e Roda",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Ficha e classes dizem Orgulho fora da Roda; a Balança diz neutro e que ele pode ser ajudado. Conferir se é igual."
+ },
+ {
+  "termo": "Contenção",
+  "def": "Resistir a uma tentação rolando abaixo do número.",
+  "exemplo": "Tentação Comum: tirar menos de 4.",
+  "cap": "balanca.md",
+  "grupo": "Dados e testes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Contenção é rolar abaixo; o teste normal é rolar igual ou acima. Confunde quem lê rápido."
+ },
+ {
+  "termo": "Tentação",
+  "def": "Uma cena que chama o seu Vício. Você faz Contenção.",
+  "exemplo": "",
+  "cap": "balanca.md",
+  "grupo": "Pecados e Roda",
+  "status": "livro",
+  "confunde": "Tentação (Voto)",
+  "duvida": "Tentação também nomeia as 3 caixas do Voto. Mesma palavra, dois usos."
+ },
+ {
+  "termo": "Vício",
+  "def": "O seu pecado de maior dado. É onde você mais cai em tentação.",
+  "exemplo": "",
+  "cap": "personagem.md",
+  "grupo": "Pecados e Roda",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Jejum",
+  "def": "O pecado d4 que você escolhe. Quase nunca cai na tentação dele.",
+  "exemplo": "",
+  "cap": "personagem.md",
+  "grupo": "Pecados e Roda",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Cair (na Contenção)",
+  "def": "Falhar na Contenção. Cair rende progressão.",
+  "exemplo": "",
+  "cap": "balanca.md",
+  "grupo": "Progressão",
+  "status": "livro",
+  "confunde": "Tombar",
+  "duvida": ""
+ },
+ {
+  "termo": "Criação",
+  "def": "Distribuir d10, d8, d8, d6, d6, d4 e d4 pelos sete pecados.",
+  "exemplo": "",
+  "cap": "personagem.md",
+  "grupo": "Ficha",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Maior dado da criação: d10 ou d8 ainda é decisão em aberto."
+ },
+ {
+  "termo": "Vida",
+  "def": "A barra de combate: 10 mais o maior valor do dado de Gula.",
+  "exemplo": "Gula d8: Vida 18.",
+  "cap": "personagem.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Vida máxima",
+  "def": "O teto da sua Vida. A Ferida Leve a reduz em 2.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Essência",
+  "def": "A barra de magia: o maior valor do dado de Orgulho.",
+  "exemplo": "Orgulho d10: Essência 10.",
+  "cap": "personagem.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "Frasco (Armador)",
+  "duvida": ""
+ },
+ {
+  "termo": "Origem",
+  "def": "A raça e a Herança do personagem.",
+  "exemplo": "",
+  "cap": "personagem.md",
+  "grupo": "Ficha",
+  "status": "livro",
+  "confunde": "Herança",
+  "duvida": ""
+ },
+ {
+  "termo": "Herança",
+  "def": "?",
+  "exemplo": "",
+  "cap": "personagem.md",
+  "grupo": "Ficha",
+  "status": "livro",
+  "confunde": "Origem",
+  "duvida": "Dito que a Origem entra como Herança no lugar de uma técnica. Também aparece Herança da Gula (lore). Falta definição de regra."
+ },
+ {
+  "termo": "Classe",
+  "def": "O papel do personagem e o seu recurso de combate.",
+  "exemplo": "",
+  "cap": "classes.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Subclasse",
+  "def": "Uma especialização da classe, escolhida no Marco 2.",
+  "exemplo": "",
+  "cap": "classes.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "Culto",
+  "duvida": ""
+ },
+ {
+  "termo": "Repertório",
+  "def": "As técnicas da classe: 1 fixa e 2 escolhidas entre 6.",
+  "exemplo": "",
+  "cap": "personagem.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Técnica",
+  "def": "Uma habilidade da classe, usada em combate.",
+  "exemplo": "",
+  "cap": "classes.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Técnica-assinatura",
+  "def": "A técnica fixa que cada classe ganha no Peso 1.",
+  "exemplo": "Troco, do Brigão.",
+  "cap": "classes.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Talento",
+  "def": "Um traço de personagem, a maioria passivo. Nenhum dá +1 em atributo.",
+  "exemplo": "",
+  "cap": "personagem.md",
+  "grupo": "Ficha",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Talento de classe",
+  "def": "Um talento que só aquela classe pode escolher.",
+  "exemplo": "Cicatriz Falante.",
+  "cap": "classes/brigao.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "Talento",
+  "duvida": ""
+ },
+ {
+  "termo": "Talento ◇",
+  "def": "?",
+  "exemplo": "",
+  "cap": "classes/brigao.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "O losango ◇ aparece em alguns talentos de classe sem legenda. Parece ser talento que serve à Vocação, mas não está escrito."
+ },
+ {
+  "termo": "Treino de Interlúdio",
+  "def": "Treino de 3 etapas feito entre aventuras. Completo, dá um Talento.",
+  "exemplo": "",
+  "cap": "progressao.md",
+  "grupo": "Progressão",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Interlúdio",
+  "def": "O tempo entre aventuras, em que se treina e cura Lesões.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Progressão",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Não há definição própria no livro."
+ },
+ {
+  "termo": "Missão de Desafio",
+  "def": "Tarefa ligada a um treino. Completar o treino dá um Talento.",
+  "exemplo": "",
+  "cap": "progressao.md",
+  "grupo": "Progressão",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Falta dizer como funciona uma Missão."
+ },
+ {
+  "termo": "Cinto",
+  "def": "As no máximo 5 opções ativas que você leva ao combate.",
+  "exemplo": "Humanos levam 6.",
+  "cap": "personagem.md",
+  "grupo": "Ficha",
+  "status": "livro",
+  "confunde": "Cinto (cartas do Mago)",
+  "duvida": "O Mago usa Cinto para suas cartas (4, depois 5). Mesmo conceito ou outro?"
+ },
+ {
+  "termo": "Opção ativa",
+  "def": "Uma coisa que você pode escolher fazer no turno, como técnica ou magia.",
+  "exemplo": "",
+  "cap": "personagem.md",
+  "grupo": "Ficha",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "O que conta como opção ativa não é listado."
+ },
+ {
+  "termo": "Peso",
+  "def": "O nível do personagem, de 1 a 13.",
+  "exemplo": "",
+  "cap": "progressao.md",
+  "grupo": "Progressão",
+  "status": "livro",
+  "confunde": "Marco",
+  "duvida": ""
+ },
+ {
+  "termo": "Marco",
+  "def": "?",
+  "exemplo": "Marco 2: escolher a subclasse.",
+  "cap": "personagem.md",
+  "grupo": "Progressão",
+  "status": "livro",
+  "confunde": "Peso",
+  "duvida": "Marcos aparecem (Marco 2, mais técnicas nos Marcos) mas não é dito em quais Pesos eles caem."
+ },
+ {
+  "termo": "Prova",
+  "def": "Um feito da história que libera os Pesos seguintes.",
+  "exemplo": "Prova do Reino libera o Peso 5.",
+  "cap": "progressao.md",
+  "grupo": "Progressão",
+  "status": "livro",
+  "confunde": "Teste",
+  "duvida": "Prova também aparece como Prova de Redenção (Voto). Dois usos."
+ },
+ {
+  "termo": "Quebra de Limite",
+  "def": "A Prova da história que libera um teto de dado mais alto.",
+  "exemplo": "1ª Quebra libera até 2d8.",
+  "cap": "progressao.md",
+  "grupo": "Progressão",
+  "status": "livro",
+  "confunde": "Quebrado (chefe)",
+  "duvida": "Cada subclasse também tem uma Quebra no Peso 11, com nome próprio. Mesmo termo, outro efeito."
+ },
+ {
+  "termo": "Teto de dados",
+  "def": "O maior dado que você pode ter no momento.",
+  "exemplo": "d12 nos Pesos 1 a 4.",
+  "cap": "progressao.md",
+  "grupo": "Progressão",
+  "status": "livro",
+  "confunde": "Teto de +2",
+  "duvida": ""
+ },
+ {
+  "termo": "Prova do Reino / Mundo / Deus / Mito",
+  "def": "Os feitos que abrem os Pesos 5, 8, 11 e 13.",
+  "exemplo": "",
+  "cap": "progressao.md",
+  "grupo": "Progressão",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Passiva de classe",
+  "def": "Mais 1 degrau no pecado-assinatura, nos Pesos 3, 6 e 9.",
+  "exemplo": "",
+  "cap": "progressao.md",
+  "grupo": "Progressão",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Pecado-assinatura",
+  "def": "O pecado em que a classe ganha o degrau extra.",
+  "exemplo": "Ira, para o Veterano.",
+  "cap": "classes/brigao.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Tinta",
+  "def": "Nome proposto para a progressão (escrever a sua história).",
+  "exemplo": "",
+  "cap": "progressao.md",
+  "grupo": "Progressão",
+  "status": "proposta",
+  "confunde": "Pena",
+  "duvida": "Ainda é decisão em aberto na lista do autor."
+ },
+ {
+  "termo": "Pena",
+  "def": "?",
+  "exemplo": "",
+  "cap": "progressao.md",
+  "grupo": "Mundo e lore",
+  "status": "livro",
+  "confunde": "Pena (mundo)",
+  "duvida": "Tem três usos: o mundo antigo, a ficha dourada e a dificuldade ou progressão. Falta decidir."
+ },
+ {
+  "termo": "Vocação",
+  "def": "A multiclasse: no Peso 4 você toma algo de outra classe.",
+  "exemplo": "",
+  "cap": "classes.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Um sorteio da Vocação é citado na lista de decisões, sem regra."
+ },
+ {
+  "termo": "Dote",
+  "def": "O benefício fixo que a Vocação dá.",
+  "exemplo": "Com o Mago, magias extras.",
+  "cap": "classes.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Só o exemplo do Mago é explicado."
+ },
+ {
+  "termo": "Sinergia",
+  "def": "Um talento que só existe ao misturar duas classes.",
+  "exemplo": "Holy Diver.",
+  "cap": "classes.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "Combo",
+  "duvida": ""
+ },
+ {
+  "termo": "Combo",
+  "def": "Duas classes juntas fazendo algo maior que cada uma.",
+  "exemplo": "Brigão e Ungido.",
+  "cap": "classes/brigao.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "Sinergia",
+  "duvida": "Combo parece exemplo de jogo, Sinergia é talento. Confirmar."
+ },
+ {
+  "termo": "Culto",
+  "def": "Subclasse de uma Bruxa que qualquer um pode seguir, sem pacto.",
+  "exemplo": "",
+  "cap": "classes.md",
+  "grupo": "Pactos e Dívida",
+  "status": "livro",
+  "confunde": "Pacto",
+  "duvida": ""
+ },
+ {
+  "termo": "Fervor",
+  "def": "O traço a mais de quem segue um Culto e deve àquela Bruxa.",
+  "exemplo": "",
+  "cap": "classes.md",
+  "grupo": "Pactos e Dívida",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Falta dizer o que o Fervor faz."
+ },
+ {
+  "termo": "Ofício",
+  "def": "Os dois pecados de ataque da classe.",
+  "exemplo": "Brigão: Ira e Orgulho.",
+  "cap": "classes/brigao.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Recurso",
+  "def": "Um objeto que a classe põe na mesa, ganha e gasta no turno.",
+  "exemplo": "Rancor, Mira, Gume.",
+  "cap": "combate.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Verbo da classe",
+  "def": "A palavra que resume o jeito da classe agir.",
+  "exemplo": "Brigão: plantar.",
+  "cap": "classes.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Marco 2 / Peso 2 (subclasse)",
+  "def": "A subclasse muda as regras no Peso 2, 6 e 11.",
+  "exemplo": "",
+  "cap": "classes.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "Marco",
+  "duvida": "O livro diz Marco 2 e também Peso 2. Mesma coisa?"
+ },
+ {
+  "termo": "Toque de classe",
+  "def": "O extra que a Guarda de classe ganha em cada classe.",
+  "exemplo": "Toque do Brigão.",
+  "cap": "classes/brigao.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "Guarda extra",
+  "duvida": "A v5 renomeia Guarda extra para Toque de classe, mas as classes já usam Toque do X."
+ },
+ {
+  "termo": "Guarda extra",
+  "def": "A Guarda de classe, ganha além das três de todos. Vai até d10.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "Toque de classe",
+  "duvida": ""
+ },
+ {
+  "termo": "Rodada",
+  "def": "O tempo em que todos agem uma vez.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Iniciativa",
+  "def": "Quem rola Inveja contra o líder inimigo decide Rápido ou Lento.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Bloco Rápido",
+  "def": "Quem empatou ou passou o líder inimigo. Joga primeiro.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Bloco Lento",
+  "def": "Quem ficou abaixo do líder inimigo. Joga depois dos inimigos.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Seu turno",
+  "def": "1 Movimento e 1 Ação. No livro, no fim vem a Guarda.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Movimento",
+  "def": "Andar para outra zona no seu turno.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "Ação",
+  "duvida": ""
+ },
+ {
+  "termo": "Ação",
+  "def": "O que você faz no turno além de se mover.",
+  "exemplo": "Atacar.",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "Movimento",
+  "duvida": ""
+ },
+ {
+  "termo": "[A] (Ação)",
+  "def": "Marca um traço que gasta a sua Ação.",
+  "exemplo": "Teimosia [A].",
+  "cap": "personagem.md",
+  "grupo": "Ficha",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Atacar",
+  "def": "Rolar o Coração contra a defesa do alvo.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Manobra",
+  "def": "Um ataque que aplica um efeito em vez de só dano.",
+  "exemplo": "Empurrar.",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Mirar",
+  "def": "Dá mais 1 degrau no próximo ataque contra aquele alvo.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "Mira (Vigia)",
+  "duvida": ""
+ },
+ {
+  "termo": "Respirar",
+  "def": "Cura d6 de Vida, uma vez por cena.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Estancar",
+  "def": "Para o sangramento ou segura quem está À Beira.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Correr",
+  "def": "Um segundo Movimento, no lugar da Ação.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "Arrancada",
+  "duvida": ""
+ },
+ {
+  "termo": "Arrancada",
+  "def": "?",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "Correr",
+  "duvida": "Só aparece como saída sem golpe livre e como gasto de recurso. Falta dizer o que é e como funciona."
+ },
+ {
+  "termo": "Objeto de cena",
+  "def": "Usar algo do cenário: teste contra um número; os atingidos defendem.",
+  "exemplo": "Cortar a corda do lustre.",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "cenário que ataca (v5)",
+  "duvida": ""
+ },
+ {
+  "termo": "Golpe livre",
+  "def": "Um ataque grátis contra quem sai do contato com um inimigo.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Contato",
+  "def": "?",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Usado em golpe livre, Estreito e Haste, mas não definido. Falta dizer se é mesma zona ou perto."
+ },
+ {
+  "termo": "Revidar",
+  "def": "Atacar de volta um golpe que errou por 4 ou mais, gastando recurso.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "Revide",
+  "duvida": "Pouco explicado. A v5 usa também Revide."
+ },
+ {
+  "termo": "Guarda",
+  "def": "O pecado com que você se defende, declarado no fim do turno.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Defesa",
+  "status": "livro",
+  "confunde": "defesa",
+  "duvida": "A v5 troca a Guarda por Reação e Firme. Guarda é o termo do livro; defesa é o termo novo."
+ },
+ {
+  "termo": "Aparar",
+  "def": "Guarda de Ira: bloquear com arma ou escudo.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Defesa",
+  "status": "livro",
+  "confunde": "Fere (v5)",
+  "duvida": ""
+ },
+ {
+  "termo": "Esquivar",
+  "def": "Guarda de Preguiça: sair do golpe. A armadura desce degraus.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Defesa",
+  "status": "livro",
+  "confunde": "Ceder (v5)",
+  "duvida": "A v5 renomeia para Ceder e muda o efeito."
+ },
+ {
+  "termo": "Aguentar",
+  "def": "Guarda de Gula: levar o golpe, mas perde 1 Vida mesmo defendendo.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Defesa",
+  "status": "livro",
+  "confunde": "Aguenta (v5)",
+  "duvida": "Livro: perde 1 Vida. v5: o dano cai em 2. Efeitos diferentes com o mesmo nome."
+ },
+ {
+  "termo": "Antecipar",
+  "def": "Guarda de Inveja: ler o golpe. Só quem tem na classe.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Defesa",
+  "status": "livro",
+  "confunde": "Pressente (v5)",
+  "duvida": ""
+ },
+ {
+  "termo": "Desviar",
+  "def": "Guarda de Luxúria: rodopiar para fora do alcance.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Defesa",
+  "status": "livro",
+  "confunde": "Dançar (v5)",
+  "duvida": "A v5 renomeia para Dançar."
+ },
+ {
+  "termo": "Calcular",
+  "def": "Guarda de Ganância: só funciona em zona com etiqueta.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Defesa",
+  "status": "livro",
+  "confunde": "Aproveita (v5)",
+  "duvida": ""
+ },
+ {
+  "termo": "Impor",
+  "def": "Guarda de Orgulho: só contra quem foi desafiado.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Defesa",
+  "status": "livro",
+  "confunde": "Desafia (v5)",
+  "duvida": ""
+ },
+ {
+  "termo": "Trocar a Guarda",
+  "def": "Mudar a Guarda fora do seu turno. Custa 1 de recurso.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Defesa",
+  "status": "livro",
+  "confunde": "Reação",
+  "duvida": "A v5 remove isso."
+ },
+ {
+  "termo": "Fechar a Guarda",
+  "def": "Uma Ação que sobe a Guarda 1 degrau e dá recurso.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Defesa",
+  "status": "livro",
+  "confunde": "Firmar (v5)",
+  "duvida": "A v5 troca por Firmar, com regras diferentes."
+ },
+ {
+  "termo": "Proteger",
+  "def": "Pegar para você um ataque dirigido a um aliado.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Defesa",
+  "status": "livro",
+  "confunde": "Cobrir",
+  "duvida": "Livro: gasta 1 de recurso. v5: gasta a Reação e vem de uma fonte (classe, talento...). Não é de todos."
+ },
+ {
+  "termo": "Cobrir",
+  "def": "Ação: ataques contra aliados da zona podem vir para você.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Defesa",
+  "status": "livro",
+  "confunde": "Proteger",
+  "duvida": "Proteger e Cobrir se parecem. Diferença: Proteger é um golpe só, Cobrir dura até o próximo turno."
+ },
+ {
+  "termo": "Reação",
+  "def": "Uma defesa ou resposta fora do seu turno. Uma por rodada.",
+  "exemplo": "Reação: Danço!",
+  "cap": "defesa_v5.md",
+  "grupo": "Defesa",
+  "status": "proposta",
+  "confunde": "Guarda",
+  "duvida": "O livro cita reação paga (Trocar a Guarda, Cegar). A v5 faz dela regra central."
+ },
+ {
+  "termo": "Firmar",
+  "def": "Gastar o Movimento para escolher um pecado de defesa até o próximo turno.",
+  "exemplo": "Firmo: Antecipo.",
+  "cap": "defesa_v5.md",
+  "grupo": "Defesa",
+  "status": "proposta",
+  "confunde": "Fechar a Guarda",
+  "duvida": ""
+ },
+ {
+  "termo": "Firme",
+  "def": "Estado de quem Firmou. Defende os 2 primeiros golpes da rodada.",
+  "exemplo": "",
+  "cap": "defesa_v5.md",
+  "grupo": "Defesa",
+  "status": "proposta",
+  "confunde": "Firme (face do Veterano)",
+  "duvida": "A v5 manda mudar a face Firme do Veterano para Muralha."
+ },
+ {
+  "termo": "Dado firme",
+  "def": "O dado do pecado que você escolheu ao Firmar.",
+  "exemplo": "",
+  "cap": "defesa_v5.md",
+  "grupo": "Defesa",
+  "status": "proposta",
+  "confunde": "Coração",
+  "duvida": ""
+ },
+ {
+  "termo": "Aberto",
+  "def": "Sem defesa. Quem ataca rola um dado acima e acerta com 3 ou mais.",
+  "exemplo": "d8 vira d10.",
+  "cap": "defesa_v5.md",
+  "grupo": "Defesa",
+  "status": "proposta",
+  "confunde": "Exposto",
+  "duvida": "Aberto e Exposto parecem o mesmo. A v5 troca Exposto por Aberto no Tudo ou Nada."
+ },
+ {
+  "termo": "Exposto",
+  "def": "Estado de quem fica fraco depois de errar ou ser fintado.",
+  "exemplo": "Tudo ou Nada errado deixa Exposto.",
+  "cap": "combate.md",
+  "grupo": "Defesa",
+  "status": "livro",
+  "confunde": "Aberto",
+  "duvida": "Falta o efeito exato de Exposto no livro."
+ },
+ {
+  "termo": "Salto na frente",
+  "def": "Sem gastar Reação, tomar um golpe dado em um aliado.",
+  "exemplo": "",
+  "cap": "defesa_v5.md",
+  "grupo": "Defesa",
+  "status": "proposta",
+  "confunde": "Proteger",
+  "duvida": "Depois do Salto, você fica Aberto no próximo golpe."
+ },
+ {
+  "termo": "Um dado acima",
+  "def": "Subir um dado na fila. Teto de 2 acima.",
+  "exemplo": "d6 vira d8.",
+  "cap": "defesa_v5.md",
+  "grupo": "Defesa",
+  "status": "proposta",
+  "confunde": "Degrau",
+  "duvida": ""
+ },
+ {
+  "termo": "Ceder",
+  "def": "Defesa de Preguiça: o golpe passa por cima, mas você cai.",
+  "exemplo": "",
+  "cap": "defesa_v5.md",
+  "grupo": "Defesa",
+  "status": "proposta",
+  "confunde": "Esquivar",
+  "duvida": ""
+ },
+ {
+  "termo": "Dançar",
+  "def": "Defesa de Luxúria, só em Reação: se vencer, o atacante fica Aberto.",
+  "exemplo": "",
+  "cap": "defesa_v5.md",
+  "grupo": "Defesa",
+  "status": "proposta",
+  "confunde": "Desviar",
+  "duvida": ""
+ },
+ {
+  "termo": "Fere",
+  "def": "Efeito do Aparar: quem bateu perde 2 Vida, uma vez por rodada.",
+  "exemplo": "",
+  "cap": "defesa_v5.md",
+  "grupo": "Defesa",
+  "status": "proposta",
+  "confunde": "Ferida",
+  "duvida": "Fere e Ferida parecem iguais. Podem confundir."
+ },
+ {
+  "termo": "Abre",
+  "def": "Efeito do Dançar: quem bateu fica Aberto no próximo golpe.",
+  "exemplo": "",
+  "cap": "defesa_v5.md",
+  "grupo": "Defesa",
+  "status": "proposta",
+  "confunde": "Aberto",
+  "duvida": "Abre e Aberto parecem iguais."
+ },
+ {
+  "termo": "Tomba",
+  "def": "Efeito do Ceder: você sofre metade do dano e fica Caído.",
+  "exemplo": "",
+  "cap": "defesa_v5.md",
+  "grupo": "Defesa",
+  "status": "proposta",
+  "confunde": "Caído",
+  "duvida": ""
+ },
+ {
+  "termo": "Aguenta",
+  "def": "Efeito do Aguentar na v5: o dano cai 2.",
+  "exemplo": "",
+  "cap": "defesa_v5.md",
+  "grupo": "Defesa",
+  "status": "proposta",
+  "confunde": "Aguentar",
+  "duvida": "Aguenta e Aguentar são quase a mesma palavra com efeitos diferentes."
+ },
+ {
+  "termo": "Pressente",
+  "def": "Efeito do Antecipar: seu próximo ataque nele sobe um dado.",
+  "exemplo": "",
+  "cap": "defesa_v5.md",
+  "grupo": "Defesa",
+  "status": "proposta",
+  "confunde": "Antecipar",
+  "duvida": ""
+ },
+ {
+  "termo": "Aproveita",
+  "def": "Efeito do Calcular: ganha 2 de armadura usando algo da cena.",
+  "exemplo": "A coluna paga o preço.",
+  "cap": "defesa_v5.md",
+  "grupo": "Defesa",
+  "status": "proposta",
+  "confunde": "Calcular",
+  "duvida": ""
+ },
+ {
+  "termo": "Desafia",
+  "def": "Efeito do Impor: quem bateu fica Desafiado.",
+  "exemplo": "",
+  "cap": "defesa_v5.md",
+  "grupo": "Defesa",
+  "status": "proposta",
+  "confunde": "Desafiar (manobra)",
+  "duvida": "Desafia (defesa) e Desafiar (manobra) são nomes quase iguais."
+ },
+ {
+  "termo": "Desafiado",
+  "def": "Atacar outro que não quem desafiou fica um degrau pior.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "Desafiar",
+  "duvida": ""
+ },
+ {
+  "termo": "Caído",
+  "def": "Derrubado no chão. Na v5 fica Aberto e perde o dado firme.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "À Beira",
+  "duvida": ""
+ },
+ {
+  "termo": "Agarrado",
+  "def": "Preso por alguém. Margem 4 ou mais deixa Imobilizado.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Imobilizado",
+  "def": "?",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "Agarrado",
+  "duvida": "Só citado na tabela de Agarrar. Falta o que impede."
+ },
+ {
+  "termo": "Sangrando",
+  "def": "Perde Vida a cada turno. O número é quanto.",
+  "exemplo": "Sangrando 2.",
+  "cap": "combate.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Não diz quando se perde a Vida (começo ou fim do turno)."
+ },
+ {
+  "termo": "Cego",
+  "def": "Tiros e Inveja ficam um degrau pior.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Intimidar",
+  "def": "Manobra que afasta o rival ou faz o bando fugir.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Intimidado",
+  "def": "?",
+  "exemplo": "",
+  "cap": "classes/vigia.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Citado como menos 1 degrau na cena. Não está no capítulo de combate."
+ },
+ {
+  "termo": "Empurrar",
+  "def": "Manobra que manda o alvo para uma zona vizinha.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Derrubar",
+  "def": "Manobra que deixa o alvo Caído.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Desarmar",
+  "def": "Manobra que faz a arma do alvo cair.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Agarrar",
+  "def": "Manobra que prende o alvo.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Fintar",
+  "def": "Manobra que escolhe e tranca a Guarda do alvo. Na v5, deixa o alvo Aberto.",
+  "exemplo": "Mostrei o ombro, ataquei o joelho.",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "Finta",
+  "duvida": "A v5 muda o efeito de Fintar e diz que Pedro decidiu que ela serve a todos."
+ },
+ {
+  "termo": "Desafiar",
+  "def": "Manobra que faz o alvo preferir atacar você.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "Desafia (defesa)",
+  "duvida": ""
+ },
+ {
+  "termo": "Cegar",
+  "def": "Manobra que dá −1 degrau em tiros e Inveja.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Tudo ou Nada",
+  "def": "Apostar 1 ou 2: dado desce, dano sobe. Errou: Exposto.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Dano",
+  "def": "Número do dado + arma − armadura do alvo.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Arma leve / padrão / pesada",
+  "def": "Bônus de dano de +1, +3 e +5.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Armadura",
+  "def": "Desconto no dano: couro 1, malha 2, placas 3.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Explosão",
+  "def": "Dado no máximo: rola de novo e soma, uma vez.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Dados e testes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Em dados somados ainda é decisão em aberto."
+ },
+ {
+  "termo": "Dado na mesa",
+  "def": "O dado de quem acertou fica ao lado do alvo. Dá +1 degrau a um aliado.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "A v5 recomenda cortar. Muitas classes dependem dele."
+ },
+ {
+  "termo": "Armadura cede",
+  "def": "Após o 1º acerto da rodada, a armadura do alvo não conta para aliados.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Trava do herói",
+  "def": "Com a Vida cheia, nenhum golpe sozinho leva abaixo de 1.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Ferida",
+  "def": "Dano de verdade, que fica na ficha: Leve, Grave ou Mortal.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "Fere (v5)",
+  "duvida": ""
+ },
+ {
+  "termo": "Ferida Leve",
+  "def": "Cabe 2. Cada uma reduz a Vida máxima em 2.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Ferida Grave",
+  "def": "Dá −1 degrau físico e uma Cicatriz.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Ferida Mortal",
+  "def": "Deixa À Beira e leva à Pesagem.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Transbordo",
+  "def": "Quando a caixa de Ferida enche, passa para a caixa de cima.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "Transbordar (Andarilho)",
+  "duvida": ""
+ },
+ {
+  "termo": "Cicatriz",
+  "def": "Marca escrita pelo jogador em três palavras, vinda de Ferida Grave.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "Lesão",
+  "duvida": ""
+ },
+ {
+  "termo": "Lesão",
+  "def": "Ferida da Tabela Brutal que dura até o Interlúdio e vira Cicatriz.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "Cicatriz",
+  "duvida": ""
+ },
+ {
+  "termo": "Tabela Brutal",
+  "def": "Tabela rolada em golpes grandes, para um efeito marcante no corpo.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "À Beira",
+  "def": "Vida em 0: caído, sem agir, perto da morte.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "Caído",
+  "duvida": ""
+ },
+ {
+  "termo": "Golpe de Misericórdia",
+  "def": "Atacar quem está À Beira. Golpe de 12 ou mais mata.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Decisão em aberto. Como se mata quem está À Beira."
+ },
+ {
+  "termo": "Pesagem",
+  "def": "A cena da morte, em que você escolhe um entre três destinos.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "O Pesador",
+  "def": "Árbitro que traz você de volta, mas com um contrato a pagar.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "O Vazio na Pesagem",
+  "def": "O Vazio assumiu o lugar de Stolas. Se você o escolhe, morre com a dívida quitada.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Pena da Rainha Corvo",
+  "def": "Relíquia da Rainha Corvo na Pesagem. Você morre e o próximo personagem herda uma Cicatriz-Memória.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Cicatriz-Memória",
+  "def": "?",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Vida e morte",
+  "status": "livro",
+  "confunde": "Cicatriz",
+  "duvida": "Só dito que o próximo personagem herda. Falta o efeito."
+ },
+ {
+  "termo": "Bando",
+  "def": "3 a 6 lacaios que agem como um só, com um dado.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Lacaio",
+  "def": "Um inimigo fraco que faz parte de um bando.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Rival",
+  "def": "Inimigo com cerca de 35 de Vida e um truque próprio.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Chefe",
+  "def": "Inimigo de fases, 30 de Vida por fase (10 por herói na v5).",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Livro: 30 por fase. v5: 10 por herói."
+ },
+ {
+  "termo": "Fase (do chefe)",
+  "def": "Uma parte da luta em que o chefe usa outro pecado.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Quebrado",
+  "def": "O chefe fica assim quando a Vida da fase chega a 0.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "Quebra de Limite",
+  "duvida": ""
+ },
+ {
+  "termo": "Cláusula do Executor",
+  "def": "Uma Lesão na última fase deixa o chefe Exposto até o fim.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Ações Rápidas",
+  "def": "?",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "O chefe tem Ações Rápidas entre os turnos, mas não diz quantas nem o que fazem."
+ },
+ {
+  "termo": "Zona",
+  "def": "Uma área nomeada do campo de batalha, no lugar de um grid.",
+  "exemplo": "Tanque de Sebo.",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Etiqueta",
+  "def": "O pecado de uma zona, magia ou obstáculo. Com etiqueta, a Roda vale.",
+  "exemplo": "Cofre de mercador: Ganância.",
+  "cap": "combate.md",
+  "grupo": "Pecados e Roda",
+  "status": "livro",
+  "confunde": "etiqueta de terreno",
+  "duvida": "Etiqueta serve para pecado (magia, zona) e para terreno (Cobertura, Alto). Dois sentidos."
+ },
+ {
+  "termo": "Cobertura",
+  "def": "Zona em que tiros contra você ficam um degrau pior.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Alto",
+  "def": "Zona alta: +1 degrau atacando de cima.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Queda",
+  "def": "Cair de zona Alta: golpe contundente de dano 3 vezes N.",
+  "exemplo": "Queda 2: dano 6.",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Estreito",
+  "def": "Zona em que só 1 inimigo fica em contato de cada lado.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Escorregadio",
+  "def": "Zona em que quem falha numa manobra ou sofre margem 4+ cai.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Perigosa",
+  "def": "Zona que tira 2 Vida a quem começa o turno nela.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Escura",
+  "def": "Zona em que Inveja e tiros ficam pior e a emboscada fica melhor.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Lamaçal",
+  "def": "Zona em que sair custa o Movimento e Esquivar fica pior.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Zona Morta",
+  "def": "?",
+  "exemplo": "",
+  "cap": "magia.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Citada no Rasgo mais grave, sem regra."
+ },
+ {
+  "termo": "Emboscada",
+  "def": "Ataque de surpresa que sobe um degrau.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Só citada, sem regra completa."
+ },
+ {
+  "termo": "Surpreso",
+  "def": "?",
+  "exemplo": "",
+  "cap": "personagem.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Citado em Instinto Primitivo, sem regra."
+ },
+ {
+  "termo": "Haste",
+  "def": "Arma que dá golpe livre em quem chega perto de você.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Besta",
+  "def": "Arma que ignora 1 de armadura. Recarregar custa o Movimento.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Escudo",
+  "def": "Aparar sobe 1 degrau e vale contra tiro. Racha uma vez por cena.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Ombro de quem sobrou",
+  "def": "Aliado À Beira: o próximo ataque contra quem o derrubou sobe um dado.",
+  "exemplo": "",
+  "cap": "defesa_v5.md",
+  "grupo": "Combate",
+  "status": "proposta",
+  "confunde": "",
+  "duvida": "Só vale se o herói disser o nome de quem caiu."
+ },
+ {
+  "termo": "O cenário que ataca",
+  "def": "Diga antes o que quebra: o ataque sobe um dado e a coisa some.",
+  "exemplo": "Corto a corda do lustre.",
+  "cap": "defesa_v5.md",
+  "grupo": "Combate",
+  "status": "proposta",
+  "confunde": "Objeto de cena",
+  "duvida": ""
+ },
+ {
+  "termo": "Magia lenta",
+  "def": "Magia que começa numa Ação e sai na Ação do próximo turno.",
+  "exemplo": "",
+  "cap": "defesa_v5.md",
+  "grupo": "Magia",
+  "status": "proposta",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Ganha / Gasta recurso",
+  "def": "Todo recurso ganha 1 ao se defender bem e gasta 1 em usos gerais.",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "O ganho depende de Fechar a Guarda, que a v5 remove."
+ },
+ {
+  "termo": "Rancor",
+  "def": "Os d12 vermelhos do Brigão, plantados ao lado de quem o acertou.",
+  "exemplo": "",
+  "cap": "classes/brigao.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Plantar",
+  "def": "Pôr um Rancor ao lado do inimigo que acertou o Brigão.",
+  "exemplo": "",
+  "cap": "classes/brigao.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Troco",
+  "def": "Técnica do Brigão: bate usando o número do Rancor como dano.",
+  "exemplo": "",
+  "cap": "classes/brigao.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Ficha de Postura",
+  "def": "O triângulo do Veterano. A ponta para cima é a face.",
+  "exemplo": "",
+  "cap": "classes/veterano.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Face (Veterano)",
+  "def": "A postura atual: Ofensiva, Firme ou Ruptura.",
+  "exemplo": "",
+  "cap": "classes/veterano.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "Firme (v5)",
+  "duvida": "A face Firme conflita com o Firme da v5."
+ },
+ {
+  "termo": "Virada",
+  "def": "Técnica do Veterano: vira a ficha antes da rolagem.",
+  "exemplo": "",
+  "cap": "classes/veterano.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Endireitar (ficha)",
+  "def": "Voltar a ficha de torta para de pé, ficando pronta de novo.",
+  "exemplo": "",
+  "cap": "classes/veterano.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Gume",
+  "def": "As lascas (palitos) da Navalha, até 3.",
+  "exemplo": "",
+  "cap": "classes/navalha.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "Lasca",
+  "duvida": ""
+ },
+ {
+  "termo": "Desfecho",
+  "def": "Técnica da Navalha: gasta o Gume e colhe dados de aliados no corte.",
+  "exemplo": "",
+  "cap": "classes/navalha.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Colher",
+  "def": "Tirar da mesa os dados dos aliados, ao lado do alvo, para somar ao golpe.",
+  "exemplo": "",
+  "cap": "classes/navalha.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Mira (alfinetes)",
+  "def": "Os alfinetes do Vigia, até 3, sobre o dado da Marca.",
+  "exemplo": "",
+  "cap": "classes/vigia.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "Mirar",
+  "duvida": ""
+ },
+ {
+  "termo": "Marca (Vigia)",
+  "def": "O dado que fica ao lado do alvo, de qualquer distância, até ele cair.",
+  "exemplo": "",
+  "cap": "classes/vigia.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "Marca (dificuldade)",
+  "duvida": ""
+ },
+ {
+  "termo": "Fixar",
+  "def": "Manter a Marca num alvo: o verbo do Vigia.",
+  "exemplo": "",
+  "cap": "classes/vigia.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Tiro Paciente",
+  "def": "Ataque do Vigia que exige não ter se movido. Cria a Marca.",
+  "exemplo": "",
+  "cap": "classes/vigia.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Um Tiro",
+  "def": "Gasta 3 alfinetes: o tiro rola +2 degraus e explode até 2 vezes.",
+  "exemplo": "",
+  "cap": "classes/vigia.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Estaca",
+  "def": "Um pino do Armador cravado no mapa, com etiqueta ou armadilha.",
+  "exemplo": "",
+  "cap": "classes/armador.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Fincar",
+  "def": "Cravar uma Estaca. Custa o Movimento.",
+  "exemplo": "",
+  "cap": "classes/armador.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Armadilha (Estaca)",
+  "def": "Face do pino: dá +1 degrau para quem bate nos inimigos da zona.",
+  "exemplo": "",
+  "cap": "classes/armador.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "Etiqueta",
+  "duvida": ""
+ },
+ {
+  "termo": "Frasco",
+  "def": "Número guardado pelo Destilador. Vira dado na mesa ao pendurar numa Estaca.",
+  "exemplo": "",
+  "cap": "classes/armador.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "Essência",
+  "duvida": ""
+ },
+ {
+  "termo": "Sino e Conta",
+  "def": "O sino anda na trilha de iniciativa. As Contas pagam os usos do Confessor.",
+  "exemplo": "",
+  "cap": "classes/confessor.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Adiar",
+  "def": "Mover o próprio turno para depois. Dá uma Conta ao Confessor.",
+  "exemplo": "",
+  "cap": "classes/confessor.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Chamar",
+  "def": "Gasta 1 Conta: um aliado age agora, logo depois do turno atual.",
+  "exemplo": "",
+  "cap": "classes/confessor.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Badalada",
+  "def": "Gasta 2 Contas: os dados ao lado de um alvo ficam mais uma rodada.",
+  "exemplo": "",
+  "cap": "classes/confessor.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Penitência",
+  "def": "Condenação posta em um alvo. Define o que o Confessor faz com ele.",
+  "exemplo": "",
+  "cap": "classes/confessor.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "O livro cita Penitência como estado, mas só explica por exemplos."
+ },
+ {
+  "termo": "Confessar",
+  "def": "O aliado erra e diz em voz alta o pecado que o fez errar.",
+  "exemplo": "",
+  "cap": "classes/confessor.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Carta (Mago)",
+  "def": "Cada magia do Mago é uma carta com etiqueta, custo e efeito.",
+  "exemplo": "",
+  "cap": "classes/mago.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Ecoar",
+  "def": "Usar o número de um dado já na mesa como o resultado da sua magia.",
+  "exemplo": "",
+  "cap": "classes/mago.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "Eco (Rasgo)",
+  "duvida": ""
+ },
+ {
+  "termo": "Entrelaço",
+  "def": "Unir duas cartas de etiquetas vizinhas num feitiço só.",
+  "exemplo": "",
+  "cap": "classes/mago.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Fagulha",
+  "def": "A magia de custo 0, à vontade, sem carta.",
+  "exemplo": "",
+  "cap": "magia.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Grimório",
+  "def": "O livro de magias do conjurador. Cresce com o tempo.",
+  "exemplo": "",
+  "cap": "personagem.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Sangria",
+  "def": "Pagar até 2 Vida extra no feitiço. Cada Vida põe um dado de sangue.",
+  "exemplo": "",
+  "cap": "classes/herdeiro.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Fervura",
+  "def": "O termômetro do Herdeiro. Sobe com sangria.",
+  "exemplo": "",
+  "cap": "classes/herdeiro.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Dado de sangue",
+  "def": "d6 vermelho posto ao lado do alvo, com o número rolado.",
+  "exemplo": "",
+  "cap": "classes/herdeiro.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "Dado na mesa",
+  "duvida": ""
+ },
+ {
+  "termo": "Surto",
+  "def": "No lugar do Rasgo para o Herdeiro: o sangue obedece ou foge.",
+  "exemplo": "",
+  "cap": "classes/herdeiro.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "Rasgo",
+  "duvida": ""
+ },
+ {
+  "termo": "Linhagem",
+  "def": "A subclasse do Herdeiro, ligada pela Fervura 3.",
+  "exemplo": "",
+  "cap": "classes/herdeiro.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Graça",
+  "def": "A ficha dourada do Ungido, posta na mão de aliados.",
+  "exemplo": "",
+  "cap": "classes/ungido.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Consagrar",
+  "def": "Gastar uma Graça para virar um dado na mesa para a face máxima.",
+  "exemplo": "",
+  "cap": "classes/ungido.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Milagre",
+  "def": "O uso da Graça por quem a segura.",
+  "exemplo": "",
+  "cap": "classes/ungido.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Juramento",
+  "def": "Frase de até 5 palavras do Ungido. Cumprir dá 1 Graça.",
+  "exemplo": "Ninguém fica para trás.",
+  "cap": "classes/ungido.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "Voto",
+  "duvida": ""
+ },
+ {
+  "termo": "Silêncio do Bonzão",
+  "def": "Quebrar o Juramento: sem Graça inicial na próxima cena.",
+  "exemplo": "",
+  "cap": "classes/ungido.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Unção",
+  "def": "Reação do Ungido: recusa um degrau e põe uma Graça num aliado.",
+  "exemplo": "",
+  "cap": "classes/ungido.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Copo",
+  "def": "O copo de d6 do Andarilho. Cada poder põe dados nele.",
+  "exemplo": "",
+  "cap": "classes/andarilho-do-vazio.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Pressão",
+  "def": "O número de dados no copo. Soma ao dano dos golpes do Vazio.",
+  "exemplo": "",
+  "cap": "classes/andarilho-do-vazio.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Limite (Copo)",
+  "def": "Metade do maior valor da Âncora. Passou: o copo Transborda.",
+  "exemplo": "",
+  "cap": "classes/andarilho-do-vazio.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Âncora",
+  "def": "O pecado que você escolhe para definir o Limite do copo.",
+  "exemplo": "",
+  "cap": "classes/andarilho-do-vazio.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Derramar",
+  "def": "Virar o copo de propósito, ferindo os inimigos da zona.",
+  "exemplo": "",
+  "cap": "classes/andarilho-do-vazio.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "Transbordar",
+  "duvida": ""
+ },
+ {
+  "termo": "Transbordar",
+  "def": "O copo vira sozinho no fim do turno e fere todos, até aliados.",
+  "exemplo": "",
+  "cap": "classes/andarilho-do-vazio.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "Derramar",
+  "duvida": ""
+ },
+ {
+  "termo": "Cartela",
+  "def": "A folha do Avatar com 7 caixas, uma para cada pecado.",
+  "exemplo": "",
+  "cap": "classes/avatar.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Convergência",
+  "def": "Com as 7 caixas marcadas: golpe que acerta sozinho e rola os sete dados.",
+  "exemplo": "",
+  "cap": "classes/avatar.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Aprender (Avatar)",
+  "def": "Marcar na cartela o pecado dos dados dos aliados ao lado do alvo.",
+  "exemplo": "",
+  "cap": "classes/avatar.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Harmonia",
+  "def": "O pecado-assinatura do Avatar é o seu menor pecado.",
+  "exemplo": "",
+  "cap": "classes/avatar.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Harmonia também é nome de talento do Avatar. Dois usos."
+ },
+ {
+  "termo": "Custo (magia)",
+  "def": "O nível da magia, de 0 a 5. Dá a força do feitiço.",
+  "exemplo": "Custo 2: força +4.",
+  "cap": "magia.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Força (magia)",
+  "def": "O bônus de dano da magia: +2 para cada ponto de custo.",
+  "exemplo": "",
+  "cap": "magia.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Rasgo",
+  "def": "Quando a magia sai do controle: dado mostra 1 em custo 1 ou mais.",
+  "exemplo": "",
+  "cap": "magia.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "Surto",
+  "duvida": ""
+ },
+ {
+  "termo": "Trama",
+  "def": "A teia de energia partida de onde sai a magia.",
+  "exemplo": "",
+  "cap": "magia.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "Trama (custo 5)",
+  "duvida": "Trama é a fonte de magia e também o nome do custo 5."
+ },
+ {
+  "termo": "Fonte (da magia)",
+  "def": "De onde a magia vem: Trama, Sangue, Graça ou Dívida.",
+  "exemplo": "",
+  "cap": "magia.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Antítese",
+  "def": "Reação que contra-ataca a magia do inimigo. A Roda vale.",
+  "exemplo": "",
+  "cap": "magia.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Concentração",
+  "def": "Só uma magia por vez. Ferida pede teste de Preguiça.",
+  "exemplo": "",
+  "cap": "magia.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Ensaio",
+  "def": "Magia improvisada que deu certo em duas cenas.",
+  "exemplo": "",
+  "cap": "magia.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Cada magia deve ter uma só palavra. Hipótese, Ensaio e Lei dizem etapas da mesma coisa."
+ },
+ {
+  "termo": "Hipótese",
+  "def": "Uma magia que a mesa acabou de inventar.",
+  "exemplo": "",
+  "cap": "magia.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "Ensaio",
+  "duvida": ""
+ },
+ {
+  "termo": "Lei do mundo",
+  "def": "Magia confirmada por uma terceira pessoa. Quem descobriu dá o nome.",
+  "exemplo": "",
+  "cap": "magia.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "Ensaio",
+  "duvida": ""
+ },
+ {
+  "termo": "Descoberta",
+  "def": "Uma magia nova inventada pela mesa. Conta para progressão.",
+  "exemplo": "",
+  "cap": "magia.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Livro das Descobertas",
+  "def": "Regra que deixa a mesa inventar magias.",
+  "exemplo": "",
+  "cap": "magia.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Etiqueta da magia",
+  "def": "O pecado da magia. Ela decide a Roda, não o seu pecado de conjuração.",
+  "exemplo": "",
+  "cap": "magia.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "Etiqueta",
+  "duvida": ""
+ },
+ {
+  "termo": "Magia de Mente",
+  "def": "Magia de Orgulho: ninguém a domina e ignora cobertura.",
+  "exemplo": "",
+  "cap": "magia.md",
+  "grupo": "Magia",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Bruxa",
+  "def": "Uma das sete senhoras dos pecados que empresta poder em troca de Dívida.",
+  "exemplo": "",
+  "cap": "mundo.md",
+  "grupo": "Pactos e Dívida",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Pacto",
+  "def": "Um acordo opcional com uma Bruxa, com Votos e Bênçãos.",
+  "exemplo": "",
+  "cap": "pacto.md",
+  "grupo": "Pactos e Dívida",
+  "status": "livro",
+  "confunde": "Culto",
+  "duvida": ""
+ },
+ {
+  "termo": "Credor",
+  "def": "A Bruxa ou entidade a quem você deve.",
+  "exemplo": "",
+  "cap": "pacto.md",
+  "grupo": "Pactos e Dívida",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Dívida",
+  "def": "Uma marca na ficha do que você deve ao Credor.",
+  "exemplo": "",
+  "cap": "pacto.md",
+  "grupo": "Pactos e Dívida",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Ainda dá a entender que gasta ou paga; a escala de 0 a 7+ está na ficha com 10 caixas."
+ },
+ {
+  "termo": "Bênção",
+  "def": "Um poder emprestado pelo Credor. Tem tamanho Pequena, Média ou Grande.",
+  "exemplo": "",
+  "cap": "pacto.md",
+  "grupo": "Pactos e Dívida",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Credor atento / Cobrança / Execução",
+  "def": "As três faixas da Dívida: 0 a 3, 4 a 6 e 7 ou mais.",
+  "exemplo": "",
+  "cap": "pacto.md",
+  "grupo": "Pactos e Dívida",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Moeda da Bruxa",
+  "def": "?",
+  "exemplo": "",
+  "cap": "pacto.md",
+  "grupo": "Pactos e Dívida",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "A tabela mostra o que cada Credor cobra (sangue, tempo, ouro...). Não diz como o Mestre cobra a parcela."
+ },
+ {
+  "termo": "Voto",
+  "def": "A promessa do pacto, com 3 caixas de Tentação.",
+  "exemplo": "",
+  "cap": "pacto.md",
+  "grupo": "Pactos e Dívida",
+  "status": "livro",
+  "confunde": "Juramento",
+  "duvida": ""
+ },
+ {
+  "termo": "Condenação",
+  "def": "O efeito ruim que surge quando 2 caixas de Tentação estão cheias.",
+  "exemplo": "",
+  "cap": "pacto.md",
+  "grupo": "Pactos e Dívida",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Os efeitos de cada Condenação não estão escritos."
+ },
+ {
+  "termo": "Danação",
+  "def": "Com 3 caixas de Tentação: dura até cumprir a Prova de Redenção.",
+  "exemplo": "",
+  "cap": "pacto.md",
+  "grupo": "Pactos e Dívida",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Prova de Redenção",
+  "def": "Tarefa escrita na criação para sair da Danação.",
+  "exemplo": "",
+  "cap": "pacto.md",
+  "grupo": "Pactos e Dívida",
+  "status": "livro",
+  "confunde": "Prova",
+  "duvida": ""
+ },
+ {
+  "termo": "Servo",
+  "def": "Quem fica 7+ de Dívida duas vezes: vira servo da Bruxa.",
+  "exemplo": "",
+  "cap": "pacto.md",
+  "grupo": "Pactos e Dívida",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Herança da Gula",
+  "def": "A guerra por quem herda as dívidas da Bruxa morta.",
+  "exemplo": "",
+  "cap": "mundo.md",
+  "grupo": "Mundo e lore",
+  "status": "livro",
+  "confunde": "Herança",
+  "duvida": ""
+ },
+ {
+  "termo": "Lunária",
+  "def": "O mundo do livro. Penasia é o nome do sistema.",
+  "exemplo": "",
+  "cap": "mundo.md",
+  "grupo": "Mundo e lore",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Pena (mundo)",
+  "def": "O mundo antigo, com as Bruxas e os Cavaleiros.",
+  "exemplo": "",
+  "cap": "mundo.md",
+  "grupo": "Mundo e lore",
+  "status": "livro",
+  "confunde": "Pena",
+  "duvida": ""
+ },
+ {
+  "termo": "O Reset",
+  "def": "Quando a Morte matou as Bruxas e reiniciou o mundo.",
+  "exemplo": "",
+  "cap": "mundo.md",
+  "grupo": "Mundo e lore",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Anaviosi",
+  "def": "O mundo novo depois do Reset, de tecnologia avançada.",
+  "exemplo": "",
+  "cap": "mundo.md",
+  "grupo": "Mundo e lore",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Shar",
+  "def": "A presença primordial anterior à primeira luz. O Vazio cobra em apagamento.",
+  "exemplo": "",
+  "cap": "mundo.md",
+  "grupo": "Mundo e lore",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Bonzão e Malzão",
+  "def": "Os dois criadores da antiga Penasia. Estão vivos e há milênios não intervêm.",
+  "exemplo": "",
+  "cap": "mundo.md",
+  "grupo": "Mundo e lore",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "As Sete Bruxas",
+  "def": "As encarnações de Luxúria, Ira, Inveja, Gula, Preguiça, Ganância e Orgulho. Os Pecados continuam quando suas Bruxas morrem.",
+  "exemplo": "",
+  "cap": "mundo.md",
+  "grupo": "Mundo e lore",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Hécate",
+  "def": "A antiga deusa da magia. A Inveja a despedaçou. Hécate tirou a própria vida ao perceber que Galdalf a superara.",
+  "exemplo": "",
+  "cap": "mundo.md",
+  "grupo": "Mundo e lore",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Anomalias",
+  "def": "Evento que fez nascer elfos, humanos, anões, gnomos e halflings.",
+  "exemplo": "",
+  "cap": "mundo.md",
+  "grupo": "Mundo e lore",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "A Mancha",
+  "def": "?",
+  "exemplo": "",
+  "cap": "mundo.md",
+  "grupo": "Mundo e lore",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Ninguém sabe o que é, nem o livro."
+ },
+ {
+  "termo": "O Anel",
+  "def": "O mapa: seis regiões em volta do Mar da Queda.",
+  "exemplo": "",
+  "cap": "mundo.md",
+  "grupo": "Mundo e lore",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Ficha dourada",
+  "def": "?",
+  "exemplo": "",
+  "cap": "progressao.md",
+  "grupo": "Ficha",
+  "status": "livro",
+  "confunde": "Pena",
+  "duvida": "Citada junto da Pena, sem explicação."
+ },
+ {
+  "termo": "Marca da Maldição",
+  "def": "d12 dos Animais Amaldiçoados, rolado em Evolução Forçada.",
+  "exemplo": "",
+  "cap": "personagem.md",
+  "grupo": "Ficha",
+  "status": "livro",
+  "confunde": "Marca",
+  "duvida": ""
+ },
+ {
+  "termo": "Teimosia",
+  "def": "Humanos: role a Contenção de novo uma vez por sessão.",
+  "exemplo": "",
+  "cap": "personagem.md",
+  "grupo": "Ficha",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Evolução Forçada",
+  "def": "Animal Amaldiçoado: garra vira arma pesada, com risco de Contenção.",
+  "exemplo": "",
+  "cap": "personagem.md",
+  "grupo": "Ficha",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Ferida (ficha)",
+  "def": "Caixas Leve, Grave e Mortal na ficha. Marcam o dano que fica.",
+  "exemplo": "",
+  "cap": "ficha.astro",
+  "grupo": "Ficha",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Peso e Marcos (ficha)",
+  "def": "Campos da ficha para o seu Peso, Prova vencida e Marcos.",
+  "exemplo": "",
+  "cap": "ficha.astro",
+  "grupo": "Ficha",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "Marcos aparece na ficha sem explicação."
+ },
+ {
+  "termo": "Progressão por pagar",
+  "def": "Você sobe pelo que paga, não pelo que mata.",
+  "exemplo": "",
+  "cap": "progressao.md",
+  "grupo": "Progressão",
+  "status": "livro",
+  "confunde": "",
+  "duvida": "A ficha traz as quatro fontes: Feridas Graves, Dívida quitada, quedas na Contenção e Descobertas. Falta dizer quantas dão um Peso."
+ },
+ {
+  "termo": "Sangue na Mesa",
+  "def": "O nome do sistema de combate do livro.",
+  "exemplo": "",
+  "cap": "decisoes.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Tipos de dano",
+  "def": "Cortante, perfurante e contundente (mais dez a voltar).",
+  "exemplo": "",
+  "cap": "combate.md",
+  "grupo": "Combate",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Sinergia Holy Diver",
+  "def": "Rancor plantado vira Graça na mão de um aliado.",
+  "exemplo": "",
+  "cap": "classes/brigao.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "",
+  "duvida": ""
+ },
+ {
+  "termo": "Sinergia Overkill",
+  "def": "O Troco também colhe 1 dado de aliado.",
+  "exemplo": "",
+  "cap": "classes/brigao.md",
+  "grupo": "Classes",
+  "status": "livro",
+  "confunde": "Tudo ou Nada",
+  "duvida": "Overkill também é a herança de Tudo ou Nada."
+ }
+]

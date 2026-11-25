@@ -1,13 +1,14 @@
 ---
 import '../styles/ficha.css';
+import { origens } from '../data/origens.js';
 const nos = [['Ira','ira'],['Luxúria','lux'],['Preguiça','pre'],['Ganância','gan'],['Inveja','inv'],['Gula','gul']].map(([n,c],i)=>{
   const a=(-90+60*i)*Math.PI/180, m=(-90+60*i+30)*Math.PI/180;
   return {n,c,x:140+100*Math.cos(a),y:140+100*Math.sin(a),mx:140+100*Math.cos(m),my:140+100*Math.sin(m),rot:-90+60*i+30+90,ly:i===0?102:140+100*Math.sin(a)+43};
 });
 const q=(n)=>Array.from({length:n});
 const pecados=[['Ira','ira'],['Luxúria','lux'],['Gula','gul'],['Preguiça','pre'],['Inveja','inv'],['Ganância','gan'],['Orgulho','org']];
-const guardas=[['Aparar','Ira','ira'],['Esquivar','Preguiça','pre'],['Aguentar','Gula','gul'],['Antecipar','Inveja','inv'],['Desviar','Luxúria','lux'],['Calcular','Ganância','gan'],['Impor','Orgulho','org']];
-const credores=[['Rubra','ira'],['Carmina','lux'],['Fauce','gul'],['Modorra','pre'],['Cisma','inv'],['Usura','gan'],['Altiva','org'],['Ausa','']];
+const guardas=[['Ceder','Preguiça','pre','Reação ou Firmar · vence ¼, perde ¾ · sempre Caído'],['Aguentar','Gula','gul','Reação ou Firmar · vence −4, perde −2'],['Aparar','Ira','ira','Reação · vence: sem dano + Fere (margem, até 5)'],['Dançar','Luxúria','lux','Reação · vence: sem dano + inimigo Aberto'],['Antecipar','Inveja','inv','Firmar · vence: sem dano + 1 degrau no seu ataque'],['Calcular','Ganância','gan','Firmar · vence: sem dano + etiqueta · perde −1'],['Impor','Orgulho','org','Reação · vence: sem dano + Desafia (perdendo, Desafia igual)']];
+const credores=[['Ira','ira'],['Putária','lux'],['Herança da Gula','gul'],['Preguiça','pre'],['Inveja','inv'],['Ganância','gan'],['Orgulho','org'],['Vazio','']];
 ---
 <!doctype html>
 <html lang="pt-BR">
@@ -15,16 +16,17 @@ const credores=[['Rubra','ira'],['Carmina','lux'],['Fauce','gul'],['Modorra','pr
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ficha · Penasia</title>
-  <meta name="description" content="Ficha de personagem de Penasia, em branco, para imprimir em A4." />
+  <meta name="description" content="Ficha de personagem de Penasia para imprimir em A4, com escolha de Origem." />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pirata+One&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pirata+One&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 </head>
 <body>
   <div class="barra">
     <a href="/">← Voltar ao livro</a>
     <span>Ficha de personagem · A4, frente e verso</span>
+    <a href="/personagem#origens">Origens e talentos</a>
     <button type="button" onclick="window.print()">Imprimir</button>
   </div>
 
@@ -37,7 +39,13 @@ const credores=[['Rubra','ira'],['Carmina','lux'],['Fauce','gul'],['Modorra','pr
     <div class="id">
       <label class="campo"><b>Nome</b><i></i></label>
       <label class="campo"><b>Jogador</b><i></i></label>
-      <label class="campo"><b>Origem / Herança</b><i></i></label>
+      <label class="campo">
+        <b>Origem / Herança</b>
+        <select id="origem" class="origem-escolha" required>
+          <option value="" selected>Escolher Origem</option>
+          {origens.map(origem => <option value={origem}>{origem}</option>)}
+        </select>
+      </label>
       <label class="campo"><b>Classe</b><i></i></label>
       <label class="campo"><b>Subclasse / Culto</b><i></i></label>
       <label class="campo"><b>Peso</b><i></i></label>
@@ -48,11 +56,11 @@ const credores=[['Rubra','ira'],['Carmina','lux'],['Fauce','gul'],['Modorra','pr
     <div class="meio">
       <div class="col">
         <div class="bloco">
-          <h2>Guarda <small>declare no fim do turno</small></h2>
+          <h2>Minhas defesas <small>você fala primeiro</small></h2>
           <ul class="guardas">
-            {guardas.map(([g,p,c])=><li><span class="cx"></span><span class="dot" style={`background:var(--${c})`}></span><b>{g}</b><em>{p}</em><span class="dado peq"></span></li>)}
+            {guardas.map(([g,p,c,l])=><li><span class="cx"></span><span class="dot" style={`background:var(--${c})`}></span><b>{g}</b><em>{p}</em><span class="dado peq"></span><span class="lemb">{l}</span></li>)}
           </ul>
-          <p class="nota">Aparar, Esquivar e Aguentar: todos. As outras: a sua classe dá uma extra (teto d10).</p>
+          <p class="nota">Vencendo, toda defesa anula o dano, menos Ceder e Aguentar (só diminuem). Reação: 1 golpe. Firmar (gasta o Movimento): 2 golpes com o mesmo pecado. Até 3 por rodada; o 4º vem Aberto.</p>
         </div>
         <div class="bloco">
           <h2>Vida <small>10 + máx. do dado de Gula</small></h2>
@@ -107,7 +115,7 @@ const credores=[['Rubra','ira'],['Carmina','lux'],['Fauce','gul'],['Modorra','pr
           <label class="campo"><b>Nome</b><i></i></label>
           <div class="linha"><span>0 a 3, zera no fim da cena</span></div>
           <div class="cxs grande">{q(3).map(()=><span class="cx"></span>)}</div>
-          <p class="nota">Ganha 1: ataque contra você falha, leva Ferida, Fecha a Guarda. Gasta 1: trocar Guarda, Proteger, Revidar, manobra, Arrancada.</p>
+          <p class="nota">Ganha 1: ataque contra você falha ou leva Ferida. Gasta 1: Revidar, manobra, Arrancada.</p>
         </div>
         <div class="bloco">
           <h2>Feridas</h2>
